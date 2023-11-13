@@ -26,7 +26,7 @@ const ThemeButton = () => {
       case "system":
         return (
           <>
-            <ComputerDesktopIcon className="w-4" /> System
+            <ComputerDesktopIcon className="w-4" />
           </>
         );
 
@@ -34,7 +34,6 @@ const ThemeButton = () => {
         return (
           <>
             <SunIcon aria-hidden="true" className="w-4" />
-            Light
           </>
         );
 
@@ -42,7 +41,6 @@ const ThemeButton = () => {
         return (
           <>
             <MoonIcon aria-hidden="true" className="w-4" />
-            Dark
           </>
         );
 
@@ -58,12 +56,8 @@ const ThemeButton = () => {
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>
-        <Menu.Button className="inline-flex w-full justify-center gap-2 items-center rounded-md bg-black/50 px-4 py-2 text-sm font-medium text-white hover:bg-black/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75">
+        <Menu.Button className="inline-flex w-full justify-center gap-2 items-center rounded bg-black/30 dark:bg-black/20 p-3 text-sm font-medium text-white hover:bg-black/40 dark:hover:bg-black/70 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75">
           {currentTheme()}
-          <ChevronDownIcon
-            className="-mr-1 w-5 text-violet-200 hover:text-violet-100"
-            aria-hidden="true"
-          />
         </Menu.Button>
       </div>
       <Transition
@@ -75,7 +69,7 @@ const ThemeButton = () => {
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <Menu.Items className="absolute right-0 mt-2 w-40 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none">
+        <Menu.Items className="absolute right-0 mt-2 w-44 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none">
           <div className="p-1">
             <Menu.Item>
               {({ active }) => (
