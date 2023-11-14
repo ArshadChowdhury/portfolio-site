@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ThemeButton from "@/components/ThemeButton";
 import Link from "next/link";
+import HomePageSlider from "@/components/HomePageSlider";
 
 export default function Home() {
   return (
@@ -113,7 +114,7 @@ export default function Home() {
     // </main>
     // <h1>Hey</h1>
     <section className="h-screen">
-      <div className="flex flex-col gap-8 h-[620px] lg:h-[680px] justify-center items-center">
+      <div className="flex flex-col gap-8 h-[340px] lg:h-[540px] justify-end items-center mb-10 xl:mb-20">
         <h3 className="font-semibold text-xl lg:text-2xl">
           Code. Create. Captivate.
         </h3>
@@ -124,11 +125,11 @@ export default function Home() {
           Ready for a standout online presence? Explore my portfolio and
           let&apos;s make it happen together.
         </h4>
-        <button className="font-bold bg-slate-300 dark:bg-slate-100 px-6 py-2 rounded-md text-black hover:transform hover:scale-[115%] hover:bg-slate-500">
+        <button className="font-bold bg-slate-300 dark:bg-slate-100 px-6 py-2 rounded-md text-black hover:transform hover:scale-[115%] dark:hover:bg-violet-500 hover:bg-slate-500">
           Get Started{" "}
         </button>
       </div>
-      <div className="h-full">A</div>
+      <HomePageSlider />
     </section>
   );
 }

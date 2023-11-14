@@ -8,7 +8,7 @@ const linkStyles =
 
 const NavBar = () => {
   return (
-    <nav className="bg-white/80 backdrop-blur-sm dark:bg-slate-900/20 dark:text-gray-50 dark:ring-slate-800/80 px-2 w-full py-4 fixed top-0 left-0 ring-1 ring-slate-300">
+    <nav className="bg-white/80 backdrop-blur-sm dark:bg-slate-900/20 dark:text-gray-50 dark:ring-slate-800/80 px-2 w-full py-4 fixed top-0 left-0 ring-1 ring-slate-300 z-50">
       <div className="flex items-center justify-between max-w-7xl mx-auto">
         <Link href="/" className="flex items-center gap-4">
           <Image

@@ -2,6 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+.fadeContainer {
+  transition: opacity 2s ease-in-out;
+}
+
+.fadeIn {
+  opacity: 1;
+}
+
+.fadeIn:not(:first-child) {
+  opacity: 0;
+}
+
+/* .fadeContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.fadeIn {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+.fadeIn:not(:first-child) {
+  opacity: 0;
+} */
+
 /* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
