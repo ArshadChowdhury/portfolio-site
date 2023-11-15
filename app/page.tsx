@@ -114,22 +114,28 @@ export default function Home() {
     // </main>
     // <h1>Hey</h1>
     <section className="h-screen">
-      <div className="flex flex-col gap-8 h-[340px] lg:h-[540px] justify-end items-center mb-10 xl:mb-20">
-        <h3 className="font-semibold text-xl lg:text-2xl">
+      <div className="flex flex-col gap-6 h-[30rem] justify-center items-center mt-24 mb-10">
+        <h3 className="font-semibold text-lg lg:text-2xl">
           Code. Create. Captivate.
         </h3>
-        <h1 className="font-semibold text-4xl lg:text-6xl w-full lg:w-1/2 text-center">
+        <h1 className="font-semibold text-3xl lg:text-6xl w-full xl:w-1/2 text-center">
           I design and build captivating websites that users love.
         </h1>
         <h4 className="font-semibold text-md lg:text-xl break-words text-center lg:text-left">
           Ready for a standout online presence? Explore my portfolio and
           let&apos;s make it happen together.
         </h4>
-        <button className="font-bold bg-slate-300 dark:bg-slate-100 px-6 py-2 rounded-md text-black hover:transform hover:scale-[115%] dark:hover:bg-violet-500 hover:bg-slate-500">
+        <button className="font-bold bg-slate-300 dark:bg-slate-100 px-6 py-2 rounded-md text-black hover:transform hover:scale-[115%]">
           Get Started{" "}
         </button>
       </div>
       <HomePageSlider />
+      <div className="h-screen flex flex-col gap-8 items-center">
+        <h1 className="text-xl lg:text-5xl text-center">
+          What you need for a perfect website
+        </h1>
+        <div>Website Review</div>
+      </div>
     </section>
   );
 }
