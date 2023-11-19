@@ -2,6 +2,7 @@ import Image from "next/image";
 import ThemeButton from "@/components/ThemeButton";
 import Link from "next/link";
 import HomePageSlider from "@/components/HomePageSlider";
+import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 
 export default function Home() {
   return (
@@ -130,11 +131,31 @@ export default function Home() {
         </button>
       </div>
       <HomePageSlider />
-      <div className="h-screen flex flex-col gap-8 items-center">
+      <div className="h-screen flex flex-col gap-20 items-center">
         <h1 className="text-xl lg:text-5xl text-center">
           What you need for a perfect website
         </h1>
-        <div>Website Review</div>
+        <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <div className="flex gap-4">
+            <div className="bg-gray-600 p-4 rounded-xl h-fit">
+              <MagnifyingGlassIcon className="w-6" />
+            </div>
+            <div className="flex flex-col gap-4">
+              <h2 className="text-2xl font-semibold">Website Review</h2>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Placeat inventore accusamus tempora deserunt suscipit
+                consequuntur rem autem obcaecati rerum deleniti! Nihil.
+              </p>
+            </div>
+          </div>
+          <div>
+            <h2>Business Strategy</h2>
+          </div>
+          <div>
+            <h2>User Experience Design</h2>
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -32,8 +32,8 @@ const HomePageSlider = () => {
 
   return (
     <div className="h-full w-full flex justify-center">
-      <div className="xl:bg-[url('/mac_frame.png')] bg-no-repeat bg-none w-full z-10 ml-[3%] mb-20">
-        <div className="w-full relative">
+      <div className="xl:bg-[url('/mac_frame.png')] bg-no-repeat bg-none w-full z-10 ml-[3%] flex justify-center mb-20">
+        <div className="w-full relative flex justify-center">
           <Image
             src={imageSourcesDesktop[currentImageIndex]}
             height={400}
@@ -41,19 +41,19 @@ const HomePageSlider = () => {
             className="hidden xl:block absolute h-[598px] top-[28px] left-[128px] rounded"
             alt="macbook-xl-image"
           />
-          <div className="absolute -left-[1%] top-0 xl:top-32 w-full flex justify-center xl:w-[25%]">
+          <div className="absolute lg:-left-[1%] left-[0.5%] top-0 xl:top-32 w-full flex justify-center xl:w-[25%]">
             <Image
               src={"/iphone_frame.png"}
               height={400}
               width={480}
-              className="w-full md:w-[40%] xl:w-full relative z-50"
+              className="w-[80%] md:w-[40%] xl:w-full relative z-50"
               alt="iphone-lg-frame"
             />
             <Image
               src={imageSourcesMobile[currentImageIndex]}
               height={300}
               width={300}
-              className="absolute left-[5%] md:left-[32.5%] xl:left-[6%] top-[6%] w-[90%] md:w-[35%] xl:w-[88%] h-[92%] rounded"
+              className="absolute left-[15%] md:left-[32.5%] xl:left-[6%] top-[6%] w-[70%] md:w-[35%] xl:w-[88%] h-[92%] rounded"
               alt="iphone-lg-image"
             />
           </div>
