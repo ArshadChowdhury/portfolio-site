@@ -2,7 +2,43 @@ import Image from "next/image";
 import ThemeButton from "@/components/ThemeButton";
 import Link from "next/link";
 import HomePageSlider from "@/components/HomePageSlider";
-import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+import PerfectWebsiteGrid from "@/components/PerfectWebsiteGrid";
+import {
+  ArrowLongRightIcon,
+  ArrowUturnRightIcon,
+} from "@heroicons/react/20/solid";
+import RandomAdvice from "@/components/RandomAdvice";
+
+const data = [
+  {
+    id: 1,
+    name: "Mohammad Al-Amin",
+    title: "Senior Developer",
+    img: "/nirob_vai.jpg",
+    icon: "/twitter.png",
+    href: "https://twitter.com/0xweathered",
+    desc: "Arshad always had perseverance in the face of obstacles, he went above & beyond to solve any problem that was presented to him. He loves technology. He's friendly & easy to work with. I've known him for years, he's very reliable & trustworthy person. He'd be a great asset to any company he works for. ",
+  },
+  {
+    id: 2,
+    name: "Joshua Fluke",
+    title: "CEO at Grind Reel",
+    img: "/jshua.jpg",
+    icon: "/youtube.svg",
+    href: "https://www.youtube.com/c/JoshuaFluke1",
+    desc: "Arshad is a fast learner with great communication skills, he's tech-savvy & have worked on several small projects and shown great potential at Grind Reel. He's still a valuable member of Grind Reel community, He has a great understanding of the front-end technologies & great research capabilities. He's also very reliable, you can always expect him to get the job done in time. ",
+    featured: true,
+  },
+  {
+    id: 3,
+    name: "Iftekhar Ahmed",
+    title: "Data Scientist",
+    img: "/iftekhar.jpg",
+    href: "https://www.linkedin.com/in/ahmed-iftekhar/",
+    icon: "/linkedin.png",
+    desc: "Arshad has been collaborating with me & big communities for quite some time now, which has made him intimately familiar with all the stages of the web lifecycle from the initial architecture to final deployment, he's highly recommended for all kind of web projects.",
+  },
+];
 
 export default function Home() {
   return (
@@ -114,8 +150,9 @@ export default function Home() {
     //   </div>
     // </main>
     // <h1>Hey</h1>
-    <section className="h-screen">
-      <div className="flex flex-col gap-6 h-[30rem] justify-center items-center mt-24 mb-10">
+
+    <section>
+      <div className="flex flex-col gap-6 h-[30rem] lg:h-[34rem] justify-center items-center mt-24 mb-10">
         <h3 className="font-semibold text-lg lg:text-2xl">
           Code. Create. Captivate.
         </h3>
@@ -130,30 +167,64 @@ export default function Home() {
           Get Started{" "}
         </button>
       </div>
-      <HomePageSlider />
-      <div className="h-screen flex flex-col gap-20 items-center">
-        <h1 className="text-xl lg:text-5xl text-center">
-          What you need for a perfect website
-        </h1>
-        <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-          <div className="flex gap-4">
-            <div className="bg-gray-600 p-4 rounded-xl h-fit">
-              <MagnifyingGlassIcon className="w-6" />
-            </div>
-            <div className="flex flex-col gap-4">
-              <h2 className="text-2xl font-semibold">Website Review</h2>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Placeat inventore accusamus tempora deserunt suscipit
-                consequuntur rem autem obcaecati rerum deleniti! Nihil.
-              </p>
-            </div>
+      <div className="h-screen">
+        <HomePageSlider />
+        <div className="h-screen flex flex-col gap-20 items-center">
+          <h1 className="text-xl lg:text-4xl text-center font-semibold">
+            Everything you can possibly need to expand your business
+          </h1>
+          <PerfectWebsiteGrid />
+          <div className="flex items-center gap-4 cursor-pointer learn-more-container group">
+            {" "}
+            <h2>Learn more about our services</h2>
+            <ArrowLongRightIcon className="w-6 transition-transform transform group-hover:translate-x-1" />
           </div>
-          <div>
-            <h2>Business Strategy</h2>
-          </div>
-          <div>
-            <h2>User Experience Design</h2>
+          <RandomAdvice />
+          <div className="lg:w-3/4 w-full mx-4 lg:mx-0 flex flex-col gap-8">
+            <h1 className="text-xl lg:text-4xl text-center font-semibold py-4">
+              Testimonials{" "}
+            </h1>
+            <div className="grid grid-flow-row-dense gap-14">
+              {data.map((data, i) => (
+                <div
+                  className={`${
+                    data.featured
+                      ? "scale-105 hover:scale-[115%]"
+                      : "hover:scale-110"
+                  } bg-gray-600 rounded-lg p-6 transition-all duration-500`}
+                  key={i}
+                >
+                  <div className="flex justify-center items-center gap-4">
+                    <ArrowUturnRightIcon className="w-8" />
+                    <Image
+                      height={60}
+                      width={60}
+                      className="rounded-full"
+                      src={data.img}
+                      alt="Testimonial_Person"
+                    />
+                    <Link href={data.href} target="_blank" rel="noreferrer">
+                      {" "}
+                      <Image
+                        height={40}
+                        width={40}
+                        className="rounded-sm"
+                        src={data.icon}
+                        alt="icon"
+                      />
+                    </Link>
+                  </div>
+                  <div className="flex flex-col items-center gap-4 py-6 text-lg">
+                    {data.desc}
+                    <div className="flex flex-col gap-1 items-center">
+                      <h3>{data.name}</h3>
+                      <h4>{data.title}</h4>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div>Hello World</div>
           </div>
         </div>
       </div>
