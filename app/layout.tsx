@@ -7,7 +7,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Arshad - Full Stack Software Developer",
+  title: "Arshad - Full Stack Developer",
   description:
     "Arshad here, seasoned full-stack software developer from Bangladesh with 2 years of expertise. I excel in both React.js/Next.js for dynamic front-end experiences and Node.js/Express.js/Nest.js/Python/Django for robust back-end solutions. I'm dedicated to delivering innovative, user-centric web applications with a focus on clean, maintainable code. A collaborative team player, I thrive on meeting deadlines and stay abreast of industry best practices. Eager to leverage my skills to elevate your web development projects.",
 };

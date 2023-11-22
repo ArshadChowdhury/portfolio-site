@@ -5,17 +5,22 @@ import { useEffect, useState } from "react";
 const RandomAdvice = () => {
   const [adviceNumber, setAdviceNumber] = useState("");
   const [adviceText, setAdviceText] = useState("");
+  const [disabled, setDisabled] = useState(false);
 
   const fetchData = async () => {
-    const res = await fetch("https://api.adviceslip.com/advice");
-    const data = await res.json();
-    setAdviceNumber(data.slip.id);
-    setAdviceText(data.slip.advice);
-
-    // var advice_number = document.getElementById("adviceNumber");
-    // advice_number.innerText = `ADVICE #${data.slip.id}`;
-    // var advice_text = document.getElementById("adviceText");
-    // advice_text.innerText = `“${data.slip.advice}”`;
+    setDisabled(true);
+    try {
+      const res = await fetch("https://api.adviceslip.com/advice");
+      const data = await res.json();
+      setAdviceNumber(data.slip.id);
+      setAdviceText(data.slip.advice);
+    } catch (error) {
+      // Handle errors if any
+      console.error("Error fetching data:", error);
+    } finally {
+      // This block will be executed whether the promise is resolved or rejected
+      setDisabled(false);
+    }
   };
 
   useEffect(() => {
@@ -24,7 +29,7 @@ const RandomAdvice = () => {
 
   return (
     <>
-      <h3 className="text-3xl mt-4 font-semibold">
+      <h3 className="text-3xl mt-4 font-semibold text-center">
         Here&apos;s an advice for you
       </h3>
       <div className="bg-gray-700 rounded-lg w-full lg:w-[65%] py-12 flex flex-col gap-14">
@@ -38,15 +43,15 @@ const RandomAdvice = () => {
         </div>
         <div className="relative w-[90%] mx-auto my-8">
           <hr className="w-full" />
-          <div className="bg-gray-200 hover:bg-teal-500 cursor-pointer absolute -bottom-7 left-[49%] lg:left-[46%] p-3 rounded-full">
-            <Image
-              onClick={fetchData}
-              width={30}
-              height={30}
-              src="/icon-dice.svg"
-              alt=""
-            />
-          </div>
+          <button
+            onClick={fetchData}
+            disabled={disabled}
+            className={`bg-gray-200 hover:bg-teal-500 absolute -bottom-7 left-[45.5%] lg:left-[46%] p-3 rounded-full ${
+              disabled ? "cursor-not-allowed" : "cursor-pointer"
+            }`}
+          >
+            <Image width={30} height={30} src="/icon-dice.svg" alt="" />
+          </button>
         </div>
       </div>
     </>

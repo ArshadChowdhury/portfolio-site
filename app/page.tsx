@@ -214,7 +214,7 @@ export default function Home() {
                       />
                     </Link>
                   </div>
-                  <div className="flex flex-col items-center gap-4 py-6 text-lg">
+                  <div className="flex flex-col items-center gap-4 pt-6 text-lg text-center">
                     {data.desc}
                     <div className="flex flex-col gap-1 items-center">
                       <h3>{data.name}</h3>
