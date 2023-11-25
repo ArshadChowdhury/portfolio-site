@@ -10,7 +10,7 @@ const testimonialsData = [
     img: "/nirob_vai.jpg",
     icon: "/twitter.png",
     href: "https://twitter.com/0xweathered",
-    desc: "Arshad always had perseverance in the face of obstacles, he went above & beyond to solve any problem that was presented to him. He loves technology. He's friendly & easy to work with. I've known him for years, he's very reliable & trustworthy person. He'd be a great asset to any company he works for. ",
+    desc: "Arshad always had perseverance in the face of obstacles, he went above & beyond to solve any problem that was presented to him. He loves technology. He's friendly & easy to work with. I've known him for years, he's very reliable & trustworthy person. He'd be a great asset to any company he works for.",
     featured: false,
   },
   {
@@ -20,7 +20,7 @@ const testimonialsData = [
     img: "/jshua.jpg",
     icon: "/youtube.svg",
     href: "https://www.youtube.com/c/JoshuaFluke1",
-    desc: "Arshad is a fast learner with great communication skills, he's tech-savvy & have worked on several projects and shown great potential at Grind Reel. He's still a valuable member of Grind Reel community, He has a great understanding of the front-end technologies & great research capabilities. He's also very reliable, you can always expect him to get the job done in time. ",
+    desc: "Arshad is a fast learner with great communication skills, he's tech-savvy & have worked on several projects and shown great potential at Grind Reel. He's still a valuable member of Grind Reel community, He has a great understanding of the front-end technologies & great research capabilities. He's also very reliable, you can always expect him to get the job done in time.",
     featured: true,
   },
   {
@@ -59,7 +59,7 @@ const Testimonials = () => (
             data.featured
               ? "lg:scale-[115%] lg:hover:scale-125"
               : "lg:hover:scale-110"
-          } dark:bg-gray-600 bg-gray-200 rounded-lg p-3 md:p-6 transition-all duration-500`}
+          } dark:bg-gray-700 bg-gray-200 rounded-lg p-3 md:p-6 transition-all duration-500`}
         >
           <div className="flex justify-center items-center gap-4">
             <ArrowUturnRightIcon className="w-8" />

@@ -11,7 +11,7 @@ const Footer = () => (
       <div className="mx-4 flex flex-col items-center md:items-start gap-6 w-full md:w-1/2">
         <Link href="/" className="flex items-center gap-4">
           <Image
-            src="/logo.svg"
+            src="/logo.png"
             className="rounded-full"
             alt="Logo"
             height={50}

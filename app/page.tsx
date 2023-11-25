@@ -11,7 +11,6 @@ import RandomAdvice from "@/components/RandomAdvice";
 import ContactMe from "@/components/ContactMe";
 import EverythingNeeded from "@/components/EverythingNeeded";
 import Testimonials from "@/components/Testimonials";
-import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -131,7 +130,6 @@ export default function Home() {
       <Testimonials />
       <RandomAdvice />
       <ContactMe />
-      <Footer />
     </main>
   );
 }

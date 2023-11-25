@@ -12,7 +12,7 @@ const NavBar = () => {
       <div className="flex items-center justify-between max-w-7xl mx-auto">
         <Link role="link" href="/" className="flex items-center gap-4">
           <Image
-            src="/logo.svg"
+            src="/logo.png"
             className="rounded-full"
             alt="Logo"
             height={50}

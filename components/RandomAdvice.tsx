@@ -40,7 +40,7 @@ const RandomAdvice = () => {
           Advice Slip
         </Link>
       </h2>
-      <div className="dark:bg-gray-600 bg-gray-200 rounded-lg lg:w-4/5 w-full py-12 flex flex-col items-center justify-center gap-14">
+      <div className="dark:bg-gray-700 bg-gray-200 rounded-lg lg:w-4/5 w-full py-12 flex flex-col items-center justify-center gap-14">
         <div className="flex flex-col items-center gap-6 px-6">
           <span className="text-teal-500 tracking-widest text-lg">{`Advice Number : #${
             adviceNumber || "Loading"
