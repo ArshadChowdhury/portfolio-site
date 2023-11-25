@@ -47,7 +47,7 @@ type TestimonialDataTypes = {
 };
 
 const Testimonials = () => (
-  <section className="flex flex-col items-center mx-4 lg:mx-auto gap-12">
+  <section className="flex flex-col items-center mx-auto gap-12">
     <h1 className="text-xl lg:text-4xl text-center font-semibold py-4">
       Testimonials{" "}
     </h1>
@@ -56,8 +56,10 @@ const Testimonials = () => (
         <div
           key={index}
           className={`${
-            data.featured ? "scale-[115%] hover:scale-125" : "hover:scale-110"
-          } dark:bg-gray-600 bg-gray-200 rounded-lg p-6 transition-all duration-500`}
+            data.featured
+              ? "lg:scale-[115%] lg:hover:scale-125"
+              : "lg:hover:scale-110"
+          } dark:bg-gray-600 bg-gray-200 rounded-lg p-3 md:p-6 transition-all duration-500`}
         >
           <div className="flex justify-center items-center gap-4">
             <ArrowUturnRightIcon className="w-8" />
