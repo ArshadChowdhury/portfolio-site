@@ -21,23 +21,23 @@ const NavBar = () => {
           <h1>Mohammed Arshad</h1>
         </Link>
         <div className="hidden lg:flex items-center gap-4">
-          <Link className={linkStyles} href={"#"}>
+          <Link className={linkStyles} href={"/about"}>
             About
           </Link>
-          <Link className={linkStyles} href={"#"}>
+          <Link className={linkStyles} href={"/projects"}>
             Projects
           </Link>
-          <Link className={linkStyles} href={"#"}>
+          <Link className={linkStyles} href={"/services"}>
             Services
           </Link>
-          <Link className={linkStyles} href={"#"}>
+          <Link className={linkStyles} href={"/youtube"}>
             YouTube
           </Link>
           <Link
             className={
               "px-6 py-2 rounded-md font-semibold text-gray-50 bg-violet-500 dark:bg-violet-700 hover:bg-violet-700 dark:hover:bg-violet-800 hover:transform hover:scale-[105%]"
             }
-            href={"#"}
+            href={"/contact"}
           >
             Contact Me
           </Link>

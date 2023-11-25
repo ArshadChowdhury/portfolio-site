@@ -31,7 +31,7 @@ const HomePageSlider = () => {
   }, []);
 
   return (
-    <div className="h-full w-full flex justify-center">
+    <div className="h-[75vh] lg:h-screen w-full flex justify-center">
       <div className="xl:bg-[url('/mac_frame.png')] bg-no-repeat bg-none w-full z-10 ml-[3%] flex justify-center mb-20">
         <div className="w-full relative flex justify-center">
           <Image

@@ -1,13 +1,15 @@
 import Image from "next/image";
 import ThemeButton from "@/components/ThemeButton";
+import GetStarted from "@/components/GetStarted";
 import Link from "next/link";
 import HomePageSlider from "@/components/HomePageSlider";
-import PerfectWebsiteGrid from "@/components/PerfectWebsiteGrid";
 import {
   ArrowLongRightIcon,
   ArrowUturnRightIcon,
 } from "@heroicons/react/20/solid";
 import RandomAdvice from "@/components/RandomAdvice";
+import ContactMe from "@/components/ContactMe";
+import EverythingNeeded from "@/components/EverythingNeeded";
 
 const data = [
   {
@@ -151,83 +153,61 @@ export default function Home() {
     // </main>
     // <h1>Hey</h1>
 
-    <section>
-      <div className="flex flex-col gap-6 h-[30rem] lg:h-[34rem] justify-center items-center mt-24 mb-10">
-        <h3 className="font-semibold text-lg lg:text-2xl">
-          Code. Create. Captivate.
-        </h3>
-        <h1 className="font-semibold text-3xl lg:text-6xl w-full xl:w-1/2 text-center">
-          I design and build captivating websites that users love.
-        </h1>
-        <h4 className="font-semibold text-md lg:text-xl break-words text-center lg:text-left">
-          Ready for a standout online presence? Explore my portfolio and
-          let&apos;s make it happen together.
-        </h4>
-        <button className="font-bold bg-slate-300 dark:bg-slate-100 px-6 py-2 rounded-md text-black hover:transform hover:scale-[115%]">
-          Get Started{" "}
-        </button>
-      </div>
-      <div className="h-screen">
+    <main className="flex flex-col gap-8">
+      <section>
+        <GetStarted />
         <HomePageSlider />
-        <div className="h-screen flex flex-col gap-20 items-center">
-          <h1 className="text-xl lg:text-4xl text-center font-semibold">
-            Everything you can possibly need to expand your business
-          </h1>
-          <PerfectWebsiteGrid />
-          <div className="flex items-center gap-4 cursor-pointer learn-more-container group">
-            {" "}
-            <h2>Learn more about our services</h2>
-            <ArrowLongRightIcon className="w-6 transition-transform transform group-hover:translate-x-1" />
-          </div>
-          <RandomAdvice />
-          <div className="lg:w-3/4 w-full mx-4 lg:mx-0 flex flex-col gap-8">
-            <h1 className="text-xl lg:text-4xl text-center font-semibold py-4">
-              Testimonials{" "}
-            </h1>
-            <div className="grid grid-flow-row-dense gap-14">
-              {data.map((data, i) => (
-                <div
-                  className={`${
-                    data.featured
-                      ? "scale-105 hover:scale-[115%]"
-                      : "hover:scale-110"
-                  } bg-gray-600 rounded-lg p-6 transition-all duration-500`}
-                  key={i}
-                >
-                  <div className="flex justify-center items-center gap-4">
-                    <ArrowUturnRightIcon className="w-8" />
-                    <Image
-                      height={60}
-                      width={60}
-                      className="rounded-full"
-                      src={data.img}
-                      alt="Testimonial_Person"
-                    />
-                    <Link href={data.href} target="_blank" rel="noreferrer">
-                      {" "}
-                      <Image
-                        height={40}
-                        width={40}
-                        className="rounded-sm"
-                        src={data.icon}
-                        alt="icon"
-                      />
-                    </Link>
-                  </div>
-                  <div className="flex flex-col items-center gap-4 pt-6 text-lg text-center">
-                    {data.desc}
-                    <div className="flex flex-col gap-1 items-center">
-                      <h3>{data.name}</h3>
-                      <h4>{data.title}</h4>
-                    </div>
-                  </div>
+      </section>
+      <EverythingNeeded />
+      <section className="flex flex-col items-center lg:w-3/4 w-full mx-4 lg:mx-auto gap-8">
+        <h1 className="text-xl lg:text-4xl text-center font-semibold py-4">
+          Testimonials{" "}
+        </h1>
+        <div className="grid grid-flow-row-dense gap-14">
+          {data.map((data, i) => (
+            <div
+              className={`${
+                data.featured
+                  ? "scale-105 hover:scale-[115%]"
+                  : "hover:scale-110"
+              } bg-gray-600 rounded-lg p-6 transition-all duration-500`}
+              key={i}
+            >
+              <div className="flex justify-center items-center gap-4">
+                <ArrowUturnRightIcon className="w-8" />
+                <Image
+                  height={60}
+                  width={60}
+                  className="rounded-full"
+                  src={data.img}
+                  alt="Testimonial_Person"
+                />
+                <Link href={data.href} target="_blank" rel="noreferrer">
+                  {" "}
+                  <Image
+                    height={40}
+                    width={40}
+                    className="rounded-sm"
+                    src={data.icon}
+                    alt="icon"
+                  />
+                </Link>
+              </div>
+              <div className="flex flex-col items-center gap-4 pt-6 text-lg text-center">
+                {data.desc}
+                <div className="flex flex-col gap-1 items-center">
+                  <h3>{data.name}</h3>
+                  <h4>{data.title}</h4>
                 </div>
-              ))}
+              </div>
             </div>
-            <div>Hello World</div>
-          </div>
+          ))}
         </div>
-      </div>
-    </section>
+      </section>
+      <RandomAdvice />
+      <ContactMe />
+
+      <section>Hello World</section>
+    </main>
   );
 }
