@@ -10,7 +10,7 @@ const NavBar = () => {
   return (
     <nav className="bg-white/90 backdrop-blur-sm dark:bg-slate-900/20 dark:text-gray-50 dark:ring-slate-800/80 px-2 w-full py-4 fixed top-0 left-0 ring-1 ring-slate-300 z-50">
       <div className="flex items-center justify-between max-w-7xl mx-auto">
-        <Link href="/" className="flex items-center gap-4">
+        <Link role="link" href="/" className="flex items-center gap-4">
           <Image
             src="/logo.svg"
             className="rounded-full"
@@ -21,19 +21,20 @@ const NavBar = () => {
           <h1>Arshad Chowdhury</h1>
         </Link>
         <div className="hidden lg:flex items-center gap-4">
-          <Link className={linkStyles} href={"/about"}>
+          <Link role="link" className={linkStyles} href={"/about"}>
             About
           </Link>
-          <Link className={linkStyles} href={"/projects"}>
+          <Link role="link" className={linkStyles} href={"/projects"}>
             Projects
           </Link>
-          <Link className={linkStyles} href={"/services"}>
+          <Link role="link" className={linkStyles} href={"/services"}>
             Services
           </Link>
-          <Link className={linkStyles} href={"/youtube"}>
+          <Link role="link" className={linkStyles} href={"/youtube"}>
             YouTube
           </Link>
           <Link
+            role="link"
             className={
               "px-6 py-2 rounded-md font-semibold text-gray-50 bg-violet-500 dark:bg-violet-700 hover:bg-violet-700 dark:hover:bg-violet-800 hover:transform hover:scale-[105%]"
             }

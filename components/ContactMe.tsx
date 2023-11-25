@@ -4,7 +4,7 @@ import { SocialIcon } from "react-social-icons";
 
 const ContactMe = () => (
   <section className="p-10 flex flex-col gap-4 items-center text-center my-10">
-    <h3 className="text-3xl">Contact me on other platforms</h3>
+    <h2 className="text-3xl">Contact me on other platforms</h2>
     <p className="flex justify-center flex-wrap">
       <span>&nbsp;&bull;&nbsp; Infinite Learner</span>
       <span> &nbsp;&bull;&nbsp; Tech Alchemist </span>

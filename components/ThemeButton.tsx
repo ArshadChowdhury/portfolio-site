@@ -2,7 +2,7 @@
 
 import { useTheme } from "next-themes";
 import { Menu, Transition } from "@headlessui/react";
-import { Fragment, useEffect, useState } from "react";
+import { Fragment } from "react";
 import {
   ComputerDesktopIcon,
   SunIcon,
@@ -12,13 +12,6 @@ import { MoonIcon } from "@heroicons/react/24/solid";
 
 const ThemeButton = () => {
   const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) return null;
 
   function currentTheme() {
     switch (theme) {
@@ -55,7 +48,11 @@ const ThemeButton = () => {
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>
-        <Menu.Button className="inline-flex w-full justify-center gap-2 items-center rounded bg-black/30 dark:bg-black/20 p-3 text-sm font-medium text-white hover:bg-black/40 dark:hover:bg-black/70 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75">
+        <Menu.Button
+          role="button"
+          aria-label="Current Theme"
+          className="inline-flex w-full justify-center gap-2 items-center rounded bg-black/30 dark:bg-black/20 p-3 text-sm font-medium text-white hover:bg-black/40 dark:hover:bg-black/70 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75"
+        >
           {currentTheme()}
         </Menu.Button>
       </div>
@@ -73,6 +70,8 @@ const ThemeButton = () => {
             <Menu.Item>
               {({ active }) => (
                 <button
+                  role="button"
+                  aria-label="System Theme"
                   onClick={() => setTheme("system")}
                   className={`${
                     active ? "bg-violet-500 text-white" : "text-gray-900"
@@ -89,6 +88,8 @@ const ThemeButton = () => {
             <Menu.Item>
               {({ active }) => (
                 <button
+                  role="button"
+                  aria-label="Light Theme"
                   onClick={() => setTheme("light")}
                   className={`${
                     active ? "bg-violet-500 text-white" : "text-gray-900"
@@ -105,6 +106,8 @@ const ThemeButton = () => {
             <Menu.Item>
               {({ active }) => (
                 <button
+                  role="button"
+                  aria-label="Dark Theme"
                   onClick={() => setTheme("dark")}
                   className={`${
                     active ? "bg-violet-500 text-white" : "text-gray-900"

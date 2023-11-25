@@ -48,9 +48,9 @@ type TestimonialDataTypes = {
 
 const Testimonials = () => (
   <section className="flex flex-col items-center mx-auto gap-12">
-    <h1 className="text-xl lg:text-4xl text-center font-semibold py-4">
+    <h2 className="text-xl lg:text-4xl text-center font-semibold py-4">
       Testimonials{" "}
-    </h1>
+    </h2>
     <div className="lg:w-4/5 w-full grid grid-flow-row-dense gap-14">
       {testimonialsData.map((data: TestimonialDataTypes, index: number) => (
         <div
