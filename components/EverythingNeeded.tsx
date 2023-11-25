@@ -21,7 +21,7 @@ const servicesData = [
     title: "User Experience Design",
     icon: <PresentationChartLineIcon className="w-7" />,
     content:
-      "Craft visually stunning and intuitively designed user interfaces that enhance the overall user experience. Our design process focuses on creating seamless interactions, intuitive navigation, and aesthetically pleasing interfaces.",
+      "Craft visually stunning and intuitively designed user interfaces that enhance the overall user experience. My design process focuses on creating seamless interactions, intuitive navigation, and aesthetically pleasing interfaces.",
   },
   {
     title: "User Experience Review",
@@ -33,19 +33,19 @@ const servicesData = [
     title: "Website Development",
     icon: <CodeBracketIcon className="w-7" />,
     content:
-      "Bring your vision to life with our robust website development services. From front-end to back-end development, we build scalable and high-performance websites tailored to your specific needs.",
+      "Bring your vision to life with my robust website development services. From front-end to back-end development, we build scalable and high-performance websites tailored to your specific needs.",
   },
   {
     title: "Rigorous Testing",
     icon: <ShieldCheckIcon className="w-7" />,
     content:
-      "Ensure the reliability and functionality of your website through rigorous testing procedures. Our testing methodologies cover everything from functionality and performance to security and compatibility.",
+      "Ensure the reliability and functionality of your website through rigorous testing procedures. My testing methodologies cover everything from functionality and performance to security and compatibility.",
   },
   {
     title: "Ongoing Support",
     icon: <ChatBubbleLeftRightIcon className="w-7" />,
     content:
-      "Our dedicated support team is committed to keeping your website running smoothly, addressing any issues promptly, and implementing updates to ensure optimal performance.",
+      "My dedicated support team is committed to keeping your website running smoothly, addressing any issues promptly, and implementing updates to ensure optimal performance.",
   },
 ];
 
@@ -56,9 +56,9 @@ type ServicesDataTypes = {
 };
 
 const EverythingNeeded = () => (
-  <section className="flex flex-col gap-16 items-center my-10">
+  <section className="flex flex-col gap-16 items-center mb-10">
     <h1 className="text-2xl lg:text-4xl text-center font-semibold">
-      Our services to expand your business
+      My services to expand your business
     </h1>
     <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
       {servicesData.map((serviceData: ServicesDataTypes, index: number) => (
@@ -81,7 +81,7 @@ const EverythingNeeded = () => (
       href={"/services"}
       className="flex items-center gap-4 cursor-pointer learn-more-container group"
     >
-      Learn more about our services
+      Learn more about my services
       <ArrowLongRightIcon className="w-6 transition-transform transform group-hover:translate-x-1" />
     </Link>
   </section>

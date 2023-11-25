@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const GetStarted = () => (
-  <div className="flex flex-col gap-4 lg:gap-6 h-[24rem] lg:h-[28rem] justify-end text-center items-center my-10">
+  <section className="flex flex-col gap-4 lg:gap-6 h-[24rem] lg:h-[28rem] justify-end text-center items-center my-10">
     <h4 className="font-semibold text-base lg:text-2xl">
       Code Create Captivate
     </h4>
@@ -18,7 +18,7 @@ const GetStarted = () => (
     >
       Get Started{" "}
     </Link>
-  </div>
+  </section>
 );
 
 export default GetStarted;

@@ -31,11 +31,11 @@ const HomePageSlider = () => {
   }, []);
 
   return (
-    <div className="h-[75vh] lg:h-screen w-full flex justify-center">
-      <div className="xl:bg-[url('/mac_frame.png')] bg-no-repeat bg-none w-full z-10 ml-[3%] flex justify-center mb-20">
+    <section className="h-[75vh] lg:h-screen w-full flex justify-center">
+      <div className="xl:bg-[url('/mac_frame.png')] bg-no-repeat bg-none w-full z-10 ml-[3%] flex justify-center mb-16">
         <div className="w-full relative flex justify-center">
           <Image
-            src={imageSourcesDesktop[currentImageIndex]}
+            src={imageSourcesDesktop[currentImageIndex] || "/project_1.png"}
             height={400}
             width={944}
             className="hidden xl:block absolute h-[598px] top-[28px] left-[128px] rounded"
@@ -59,7 +59,7 @@ const HomePageSlider = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -10,37 +10,7 @@ import {
 import RandomAdvice from "@/components/RandomAdvice";
 import ContactMe from "@/components/ContactMe";
 import EverythingNeeded from "@/components/EverythingNeeded";
-
-const data = [
-  {
-    id: 1,
-    name: "Mohammad Al-Amin",
-    title: "Senior Developer",
-    img: "/nirob_vai.jpg",
-    icon: "/twitter.png",
-    href: "https://twitter.com/0xweathered",
-    desc: "Arshad always had perseverance in the face of obstacles, he went above & beyond to solve any problem that was presented to him. He loves technology. He's friendly & easy to work with. I've known him for years, he's very reliable & trustworthy person. He'd be a great asset to any company he works for. ",
-  },
-  {
-    id: 2,
-    name: "Joshua Fluke",
-    title: "CEO at Grind Reel",
-    img: "/jshua.jpg",
-    icon: "/youtube.svg",
-    href: "https://www.youtube.com/c/JoshuaFluke1",
-    desc: "Arshad is a fast learner with great communication skills, he's tech-savvy & have worked on several small projects and shown great potential at Grind Reel. He's still a valuable member of Grind Reel community, He has a great understanding of the front-end technologies & great research capabilities. He's also very reliable, you can always expect him to get the job done in time. ",
-    featured: true,
-  },
-  {
-    id: 3,
-    name: "Iftekhar Ahmed",
-    title: "Data Scientist",
-    img: "/iftekhar.jpg",
-    href: "https://www.linkedin.com/in/ahmed-iftekhar/",
-    icon: "/linkedin.png",
-    desc: "Arshad has been collaborating with me & big communities for quite some time now, which has made him intimately familiar with all the stages of the web lifecycle from the initial architecture to final deployment, he's highly recommended for all kind of web projects.",
-  },
-];
+import Testimonials from "@/components/Testimonials";
 
 export default function Home() {
   return (
@@ -154,59 +124,12 @@ export default function Home() {
     // <h1>Hey</h1>
 
     <main className="flex flex-col gap-8">
-      <section>
-        <GetStarted />
-        <HomePageSlider />
-      </section>
+      <GetStarted />
+      <HomePageSlider />
       <EverythingNeeded />
-      <section className="flex flex-col items-center lg:w-3/4 w-full mx-4 lg:mx-auto gap-8">
-        <h1 className="text-xl lg:text-4xl text-center font-semibold py-4">
-          Testimonials{" "}
-        </h1>
-        <div className="grid grid-flow-row-dense gap-14">
-          {data.map((data, i) => (
-            <div
-              className={`${
-                data.featured
-                  ? "scale-105 hover:scale-[115%]"
-                  : "hover:scale-110"
-              } bg-gray-600 rounded-lg p-6 transition-all duration-500`}
-              key={i}
-            >
-              <div className="flex justify-center items-center gap-4">
-                <ArrowUturnRightIcon className="w-8" />
-                <Image
-                  height={60}
-                  width={60}
-                  className="rounded-full"
-                  src={data.img}
-                  alt="Testimonial_Person"
-                />
-                <Link href={data.href} target="_blank" rel="noreferrer">
-                  {" "}
-                  <Image
-                    height={40}
-                    width={40}
-                    className="rounded-sm"
-                    src={data.icon}
-                    alt="icon"
-                  />
-                </Link>
-              </div>
-              <div className="flex flex-col items-center gap-4 pt-6 text-lg text-center">
-                {data.desc}
-                <div className="flex flex-col gap-1 items-center">
-                  <h3>{data.name}</h3>
-                  <h4>{data.title}</h4>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+      <Testimonials />
       <RandomAdvice />
       <ContactMe />
-
       <section>Hello World</section>
     </main>
   );

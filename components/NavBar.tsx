@@ -18,7 +18,7 @@ const NavBar = () => {
             height={50}
             width={50}
           />
-          <h1>Mohammed Arshad</h1>
+          <h1>Arshad Chowdhury</h1>
         </Link>
         <div className="hidden lg:flex items-center gap-4">
           <Link className={linkStyles} href={"/about"}>

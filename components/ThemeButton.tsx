@@ -3,7 +3,6 @@
 import { useTheme } from "next-themes";
 import { Menu, Transition } from "@headlessui/react";
 import { Fragment, useEffect, useState } from "react";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import {
   ComputerDesktopIcon,
   SunIcon,
