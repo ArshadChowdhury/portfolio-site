@@ -57,7 +57,7 @@ const Testimonials = () => (
           key={index}
           className={`${
             data.featured ? "scale-[115%] hover:scale-125" : "hover:scale-110"
-          } bg-gray-600 rounded-lg p-6 transition-all duration-500`}
+          } dark:bg-gray-600 bg-gray-200 rounded-lg p-6 transition-all duration-500`}
         >
           <div className="flex justify-center items-center gap-4">
             <ArrowUturnRightIcon className="w-8" />

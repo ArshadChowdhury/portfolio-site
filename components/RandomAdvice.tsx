@@ -40,7 +40,7 @@ const RandomAdvice = () => {
           Advice Slip
         </Link>
       </h3>
-      <div className="bg-gray-700 rounded-lg lg:w-4/5 w-full py-12 flex flex-col items-center justify-center gap-14">
+      <div className="dark:bg-gray-600 bg-gray-200 rounded-lg lg:w-4/5 w-full py-12 flex flex-col items-center justify-center gap-14">
         <div className="flex flex-col items-center gap-6 px-6">
           <span className="text-teal-500 tracking-widest text-lg">{`Advice Number : #${
             adviceNumber || "Loading"
@@ -50,11 +50,11 @@ const RandomAdvice = () => {
           }"`}</span>
         </div>
         <div className="relative w-[90%] mx-auto my-8">
-          <hr className="w-full" />
+          <hr className="w-full border-gray-400" />
           <button
             onClick={fetchData}
             disabled={disabled}
-            className={`bg-gray-200 hover:bg-teal-500 absolute -bottom-7 left-[45.5%] lg:left-[47%] p-3 rounded-full ${
+            className={`bg-gray-300 hover:bg-teal-500 absolute -bottom-7 left-[45.5%] lg:left-[47%] p-3 rounded-full ${
               disabled ? "cursor-not-allowed" : "cursor-pointer"
             }`}
           >
