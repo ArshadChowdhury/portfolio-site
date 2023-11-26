@@ -4,7 +4,7 @@ import Image from "next/image";
 const ServicesPage = () => (
   <div className="flex flex-col items-center gap-6 my-20">
     <h1 className="mt-16 mb-10 text-4xl font-semibold">My Services</h1>{" "}
-    <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
+    {/* <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
       <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
         Get started by editing&nbsp;
         <code className="font-mono font-bold">app/page.tsx</code>
@@ -106,7 +106,7 @@ const ServicesPage = () => (
           Instantly deploy your Next.js site to a shareable URL with Vercel.
         </p>
       </a>
-    </div>
+    </div> */}
   </div>
 );
 export default ServicesPage;

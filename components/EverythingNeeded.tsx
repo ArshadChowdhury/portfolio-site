@@ -70,7 +70,7 @@ const EverythingNeeded = () => (
             <h3 className="text-sm lg:text-2xl font-medium">
               {serviceData.title}
             </h3>
-            <p className="text-xs lg:text-lg font-light">
+            <p className="text-xs lg:text-lg">
               {serviceData.content.length > 100
                 ? serviceData.content.slice(0, 100).concat("...")
                 : serviceData.content}

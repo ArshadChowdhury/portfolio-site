@@ -12,9 +12,9 @@ const Footer = () => {
         <div className="flex flex-col items-center md:items-start gap-6 w-full md:w-1/2">
           <Link href="/" className="flex items-center gap-4">
             <Image
-              style={{ width: "auto", height: "auto" }}
+              // style={{ width: "auto", height: "auto" }}
               src="/logo.png"
-              className="rounded-full"
+              className="rounded-full w-12 h-12"
               alt="Logo"
               height={50}
               width={50}
