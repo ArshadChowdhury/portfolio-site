@@ -1,17 +1,17 @@
-import Link from "next/link";
-import React from "react";
 import { SocialIcon } from "react-social-icons";
 
 const ContactMe = () => (
-  <section className="p-10 flex flex-col gap-4 items-center text-center my-10">
-    <h2 className="text-3xl">Contact me on other platforms</h2>
+  <section className="p-10 flex flex-col gap-2 lg:gap-4 items-center text-center my-10">
+    <h2 className="text-2xl lg:text-4xl text-center my-3 font-semibold">
+      Connect with me
+    </h2>
     <p className="flex justify-center flex-wrap">
       <span>&nbsp;&bull;&nbsp; Infinite Learner</span>
       <span> &nbsp;&bull;&nbsp; Tech Alchemist </span>
       <span> &nbsp;&bull;&nbsp; Always ready for challenges</span>
     </p>
     <nav>
-      <ul className="flex flex-wrap items-center gap-4">
+      <ul className="flex flex-wrap items-center justify-center gap-4">
         <li>
           <SocialIcon
             className="hover:scale-125"

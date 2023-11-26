@@ -8,7 +8,7 @@ const linkStyles =
 const Footer = () => (
   <footer className="mb-10">
     <div className="flex flex-col md:flex-row justify-around gap-4 md:gap-0">
-      <div className="mx-4 flex flex-col items-center md:items-start gap-6 w-full md:w-1/2">
+      <div className="flex flex-col items-center md:items-start gap-6 w-full md:w-1/2">
         <Link href="/" className="flex items-center gap-4">
           <Image
             src="/logo.png"
@@ -19,7 +19,7 @@ const Footer = () => (
           />
           <h3>Arshad Chowdhury</h3>
         </Link>
-        <p className="flex flex-col gap-2 pr-4 text-center md:text-left">
+        <p className="flex flex-col gap-2 text-center md:text-left text-sm lg:text-base">
           <span>Arshad - Full Stack Developer & Tech Enthusiast </span>I am a
           passionate Full Stack Developer with a relentless commitment to
           turning ideas into powerful digital solutions. Specializing in
