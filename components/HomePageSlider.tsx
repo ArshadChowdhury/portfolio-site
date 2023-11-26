@@ -8,7 +8,6 @@ const imageSourcesDesktop = [
   "/project_2.png",
   "/project_3.png",
   "/project_4.png",
-  "/project_5.png",
 ];
 
 const imageSourcesMobile = [
@@ -16,7 +15,6 @@ const imageSourcesMobile = [
   "/project_2_mb.png",
   "/project_3_mb.png",
   "/project_4_mb.png",
-  "/project_5_mb.png",
 ];
 
 const HomePageSlider = () => {

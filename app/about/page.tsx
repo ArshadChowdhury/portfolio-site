@@ -3,11 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 const AboutPage = () => (
-  <section className="mt-32 mb-20 flex flex-col gap-4 items-center">
-    <h1 className="text-3xl">About me</h1>
+  <section className="my-20 flex flex-col gap-4 items-center">
+    <h1 className="mt-16 mb-10 text-4xl font-semibold">About me</h1>
     <Image
       priority
-      className="rounded-md my-4"
+      className="rounded-md"
       src={"/arshad_pic.jpg"}
       height={300}
       width={300}
