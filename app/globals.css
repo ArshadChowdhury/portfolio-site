@@ -6,6 +6,19 @@
   transition: opacity 2s ease-in-out;
 }
 
+.PhoneInputInput {
+  background: none;
+}
+
+.PhoneInputInput:focus {
+  outline: none;
+  border-color: blue;
+}
+
+.custom-shadow {
+  box-shadow: inset 0 4px 4px 0 rgb(0 0 0 / 0.25);
+}
+
 .fadeIn {
   opacity: 1;
 }
