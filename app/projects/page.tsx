@@ -82,13 +82,21 @@ const ProjectsPage = () => (
           <div className="mx-2 md:mx-6 my-4 md:my-0 flex flex-col gap-4">
             <h4 className="text-2xl">{project.projectHeading}</h4>
             <p className="text-sm md:text-base">{project.projectDetails}</p>
-            <div className="flex gap-4 underline text-sky-500">
+            <div className="flex gap-4 underline">
               {project.github.length > 1 ? (
-                <Link target="_blank" href={project?.github}>
+                <Link
+                  className="hover:text-sky-900 text-sky-600"
+                  target="_blank"
+                  href={project?.github}
+                >
                   Github
                 </Link>
               ) : null}
-              <Link target="_blank" href={project?.liveLink}>
+              <Link
+                className="hover:text-sky-900 text-sky-600"
+                target="_blank"
+                href={project?.liveLink}
+              >
                 Live Link
               </Link>
             </div>

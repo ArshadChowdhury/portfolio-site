@@ -8,8 +8,8 @@ const linkStyles =
 const Footer = () => {
   return (
     <footer className="mb-10">
-      <div className="flex flex-col md:flex-row justify-around gap-4 md:gap-0">
-        <div className="flex flex-col items-center md:items-start gap-6 w-full md:w-1/2">
+      <div className="flex flex-col md:flex-row justify-around gap-10 mx-8">
+        <div className="flex flex-col items-center md:items-start gap-6 w-full md:flex-1">
           <Link href="/" className="flex items-center gap-4">
             <Image
               // style={{ width: "auto", height: "auto" }}
@@ -33,7 +33,7 @@ const Footer = () => {
             your vision to life!
           </p>
         </div>
-        <div className="flex flex-col justify-center items-center gap-4">
+        <div className="flex flex-col justify-center items-center gap-4 px-10">
           <Link className={linkStyles} href={"/about"}>
             About
           </Link>

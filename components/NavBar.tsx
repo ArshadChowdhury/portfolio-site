@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import ThemeButton from "./ThemeButton";
-import { Bars3BottomRightIcon } from "@heroicons/react/24/outline";
+import RightSideDrawer from "./RightSideDrawer";
 
 const linkStyles =
   "px-6 py-2 rounded-md font-semibold hover:bg-gray-300 dark:hover:bg-gray-900 hover:transform hover:scale-[115%]";
@@ -47,7 +47,7 @@ const NavBar = () => {
         </div>
         <div className="flex gap-4 items-center lg:hidden">
           <ThemeButton />
-          <Bars3BottomRightIcon className="w-8" />
+          <RightSideDrawer />
         </div>
       </div>
     </nav>

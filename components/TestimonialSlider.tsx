@@ -57,7 +57,7 @@ export default function TestimonialSlider() {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 1000,
+    speed: 1200,
     slidesToShow: 1,
     slidesToScroll: 1,
   };
@@ -66,11 +66,12 @@ export default function TestimonialSlider() {
       {testimonialsData.map((data: TestimonialDataTypes, index: number) => (
         <div
           key={index}
-          className={`dark:bg-gray-700 bg-gray-200 rounded-lg p-3 md:p-6 transition-all duration-500`}
+          className={`dark:bg-gray-700 bg-gray-200 rounded-lg p-3 md:p-6 transition-all duration-1000`}
         >
           <div className="flex justify-center items-center gap-4">
             <ArrowUturnRightIcon className="w-8" />
             <Image
+              priority
               height={60}
               width={60}
               className="rounded-full"
@@ -80,6 +81,7 @@ export default function TestimonialSlider() {
             <Link href={data.href} target="_blank" rel="noreferrer">
               {" "}
               <Image
+                priority
                 height={40}
                 width={40}
                 className="rounded-sm"
