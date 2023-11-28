@@ -8,7 +8,7 @@ const AboutPage = () => (
     <Image
       priority
       className="rounded-md"
-      src={"/arshad_pic.jpg"}
+      src={"/arshad_pic.png"}
       height={300}
       width={300}
       alt="Arshad Image"

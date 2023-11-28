@@ -1,33 +1,29 @@
 "use client";
 
-import { useState } from "react";
-
 import { useForm, Controller } from "react-hook-form";
 import { ErrorMessage } from "@hookform/error-message";
 import PhoneInput from "react-phone-number-input";
+import { request } from "../common/APIFunction";
 
 import "react-phone-number-input/style.css";
 
 const ContactForm = () => {
-  const [value, setValue] = useState();
   const { register, handleSubmit, formState, reset, control } = useForm();
   const { errors } = formState;
+
   const onSubmit = (data: any) => {
     console.log(data);
+    request
+      .post("contact/portfolio", data)
+      .then((response: any) => {
+        console.log(response.data);
+      })
+      .catch((error: any) => {
+        console.log(error.data);
+      });
     reset();
-    // instance
-    //   .post(`submit-customer-interest/${contactModalInfo.id}`, data, {
-    //     headers: { "Content-Type": "application/json" },
-    //   })
-    //   .then((response) => {
-    //     console.log(response.data);
-    //   })
-    //   .catch((error) => {
-    //     console.log(error.data);
-    //   });
-    reset();
-    return;
   };
+
   return (
     <form
       className="mt-8 flex flex-col gap-4"
@@ -37,8 +33,8 @@ const ContactForm = () => {
       <div className="flex flex-col">
         <input
           type="text"
-          id="fullName"
-          {...register("fullName", {
+          id="name"
+          {...register("name", {
             required: {
               value: true,
               message: "Your name is required",
@@ -49,7 +45,7 @@ const ContactForm = () => {
         />
         <ErrorMessage
           errors={errors}
-          name="fullName"
+          name="name"
           render={({ message }) => <p className="text-red-500">{message}</p>}
         />
       </div>
@@ -107,11 +103,11 @@ const ContactForm = () => {
       <div className="flex flex-col">
         <textarea
           placeholder={"Enter your message here"}
-          id="description"
+          id="message"
           cols={30}
           rows={3}
           className="resize-none w-full px-5 py-3 rounded-sm placeholder:font-montserrat text-lg custom-shadow bg-white bg-opacity-10 placeholder:text-gray-400 outline-none text-black dark:text-slate-100"
-          {...register("description", {
+          {...register("message", {
             required: {
               value: true,
               message: "Description is required",
@@ -120,7 +116,7 @@ const ContactForm = () => {
         />
         <ErrorMessage
           errors={errors}
-          name="description"
+          name="message"
           render={({ message }) => <p className="text-red-500">{message}</p>}
         />
       </div>

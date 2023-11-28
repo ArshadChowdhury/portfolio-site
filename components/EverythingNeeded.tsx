@@ -74,8 +74,8 @@ const EverythingNeeded = () => (
               {serviceData.title}
             </h3>
             <p className="text-xs lg:text-base">
-              {serviceData.content.length > 100
-                ? serviceData.content.slice(0, 100).concat("...")
+              {serviceData.content.length > 80
+                ? serviceData.content.slice(0, 80).concat("...")
                 : serviceData.content}
             </p>
           </div>

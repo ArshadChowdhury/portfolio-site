@@ -66,7 +66,7 @@ export default function TestimonialSlider() {
       {testimonialsData.map((data: TestimonialDataTypes, index: number) => (
         <div
           key={index}
-          className={`dark:bg-gray-700 bg-gray-200 rounded-lg p-3 md:p-6 transition-all duration-1000`}
+          className={`dark:bg-gray-700 bg-gray-100 rounded-lg p-3 md:p-6 transition-all duration-1000`}
         >
           <div className="flex justify-center items-center gap-4">
             <ArrowUturnRightIcon className="w-8" />
