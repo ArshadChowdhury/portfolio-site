@@ -4,6 +4,7 @@ import { useForm, Controller } from "react-hook-form";
 import { ErrorMessage } from "@hookform/error-message";
 import PhoneInput from "react-phone-number-input";
 import { request } from "../common/APIFunction";
+import toast from "react-hot-toast";
 
 import "react-phone-number-input/style.css";
 
@@ -12,16 +13,18 @@ const ContactForm = () => {
   const { errors } = formState;
 
   const onSubmit = (data: any) => {
-    console.log(data);
-    request
+    const myPromise = request
       .post("contact/portfolio", data)
-      .then((response: any) => {
-        console.log(response.data);
-      })
+      .then(() => reset())
       .catch((error: any) => {
         console.log(error.data);
       });
-    reset();
+
+    return toast.promise(myPromise, {
+      loading: "Sending message",
+      success: "Message sent !!",
+      error: "Message was not sent",
+    });
   };
 
   return (

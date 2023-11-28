@@ -9,6 +9,7 @@ import {
   CheckIcon,
 } from "@heroicons/react/24/outline";
 import { MoonIcon } from "@heroicons/react/24/solid";
+import toast from "react-hot-toast";
 
 const ThemeButton = () => {
   const { theme, setTheme } = useTheme();
@@ -72,7 +73,10 @@ const ThemeButton = () => {
                 <button
                   role="button"
                   aria-label="System Theme"
-                  onClick={() => setTheme("system")}
+                  onClick={() => {
+                    setTheme("system");
+                    toast.success("System theme is selected");
+                  }}
                   className={`${
                     active ? "bg-violet-500 text-white" : "text-gray-900"
                   } group flex items-center gap-2 w-full rounded-md px-2 py-2 text-sm`}
@@ -90,7 +94,10 @@ const ThemeButton = () => {
                 <button
                   role="button"
                   aria-label="Light Theme"
-                  onClick={() => setTheme("light")}
+                  onClick={() => {
+                    setTheme("light");
+                    toast.success("Light theme is selected");
+                  }}
                   className={`${
                     active ? "bg-violet-500 text-white" : "text-gray-900"
                   } group flex gap-2 w-full items-center rounded-md px-2 py-2 text-sm`}
@@ -108,7 +115,10 @@ const ThemeButton = () => {
                 <button
                   role="button"
                   aria-label="Dark Theme"
-                  onClick={() => setTheme("dark")}
+                  onClick={() => {
+                    setTheme("dark");
+                    toast.success("Dark theme is selected");
+                  }}
                   className={`${
                     active ? "bg-violet-500 text-white" : "text-gray-900"
                   } group flex gap-2 w-full items-center rounded-md px-2 py-2 text-sm`}

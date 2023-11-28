@@ -34,6 +34,9 @@ const Footer = () => {
           </p>
         </div>
         <div className="flex flex-col justify-center items-center gap-4 px-10">
+          <Link className={linkStyles} href={"/"}>
+            Home
+          </Link>
           <Link className={linkStyles} href={"/about"}>
             About
           </Link>
@@ -43,9 +46,9 @@ const Footer = () => {
           <Link className={linkStyles} href={"/services"}>
             Services
           </Link>
-          <Link className={linkStyles} href={"/youtube"}>
+          {/* <Link className={linkStyles} href={"/youtube"}>
             YouTube
-          </Link>
+          </Link> */}
           <Link className={linkStyles} href={"/contact"}>
             Contact Me
           </Link>

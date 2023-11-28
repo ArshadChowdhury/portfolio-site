@@ -91,6 +91,14 @@ function NavigationDrawer({ open, setOpen }: Props) {
                               onClick={() => setOpen(false)}
                               role="link"
                               className={linkStyles}
+                              href={"/"}
+                            >
+                              Home
+                            </Link>
+                            <Link
+                              onClick={() => setOpen(false)}
+                              role="link"
+                              className={linkStyles}
                               href={"/about"}
                             >
                               About
@@ -111,14 +119,14 @@ function NavigationDrawer({ open, setOpen }: Props) {
                             >
                               Services
                             </Link>
-                            <Link
+                            {/* <Link
                               onClick={() => setOpen(false)}
                               role="link"
                               className={linkStyles}
                               href={"/youtube"}
                             >
                               YouTube
-                            </Link>
+                            </Link> */}
                             <Link
                               onClick={() => setOpen(false)}
                               role="link"

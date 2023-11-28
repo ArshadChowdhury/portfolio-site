@@ -93,7 +93,7 @@ const ProjectsPage = () => (
                 </Link>
               ) : null}
               <Link
-                className="hover:text-sky-900 text-sky-600"
+                className="hover:text-sky-600 text-sky-500"
                 target="_blank"
                 href={project?.liveLink}
               >
