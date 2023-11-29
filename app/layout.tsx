@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`max-w-7xl transition-all duration-500 bg-gray-50 dark:bg-gray-800 mx-4 lg:mx-auto ${inter.className}`}
+        className={`max-w-7xl transition-all duration-500 bg-gray-50 dark:bg-gray-800 mx-4 xl:mx-auto ${inter.className}`}
       >
         <Providers>
           <Toaster

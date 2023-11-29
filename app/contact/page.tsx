@@ -1,10 +1,15 @@
 import React from "react";
 import ContactForm from "@/components/ContactForm";
 import { SocialIcon } from "react-social-icons";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact",
+};
 
 const ContactPage = () => {
   return (
-    <div className="flex flex-col items-center gap-6 mt-20 lg:mb-10 h-screen">
+    <section className="flex flex-col items-center gap-6 mt-20 mb-20 lg:mb-10 min-h-screen">
       <h1 className="mt-10 lg:mt-16 mb-4 lg:mb-2 text-2xl lg:text-4xl font-semibold">
         Contact Me
       </h1>{" "}
@@ -67,7 +72,7 @@ const ContactPage = () => {
           <ContactForm />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

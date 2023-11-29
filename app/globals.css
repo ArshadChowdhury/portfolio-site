@@ -53,6 +53,25 @@
   width: 100%;
 }
 
+.learn-more-container-about {
+  position: relative;
+}
+
+.learn-more-container-about::after {
+  content: "";
+  position: absolute;
+  background-color: #3081d0;
+  bottom: -10px;
+  height: 4px;
+  width: 0;
+  border-radius: 10px;
+  transition: 0.3s linear;
+}
+
+.learn-more-container-about:hover::after {
+  width: 100%;
+}
+
 ::-webkit-scrollbar-button {
   height: 12px;
 }

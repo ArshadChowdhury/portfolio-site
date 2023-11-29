@@ -2,6 +2,12 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Projects",
+};
+
 const projectsInfo = [
   {
     imageSrc: "/project_1.png",
@@ -63,7 +69,8 @@ const projectsInfo = [
 ];
 
 const ProjectsPage = () => (
-  <div className="flex flex-col items-center gap-6 my-20">
+  // <section className="flex flex-col items-center gap-6 my-20 min-h-screen">
+  <section className="my-20 flex flex-col gap-8 items-center min-h-screen">
     <h1 className="mt-16 mb-10 text-4xl font-semibold">My Projects</h1>
     {projectsInfo.map((project, index) => (
       <div key={index} className="flex flex-col md:flex-row w-full">
@@ -104,7 +111,7 @@ const ProjectsPage = () => (
         </div>
       </div>
     ))}
-  </div>
+  </section>
 );
 
 export default ProjectsPage;
