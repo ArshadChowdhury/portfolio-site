@@ -12,14 +12,16 @@ const NavBar = () => {
       <div className="flex items-center justify-between max-w-7xl mx-auto">
         <Link role="link" href="/" className="flex items-center gap-4">
           <Image
-            // style={{ width: "auto", height: "auto" }}
             src="/logo.png"
-            className="rounded-full w-12 h-12"
+            className="rounded-md max-w-full h-auto"
             alt="Logo"
             height={50}
             width={50}
           />
-          <h1>Arshad Chowdhury</h1>
+          <div>
+            <h3 className="text-lg">Arshad Chowdhury</h3>
+            <p className="text-xs">Full Stack Developer & Tech Enthusiast</p>
+          </div>
         </Link>
         <div className="hidden lg:flex items-center gap-4">
           <Link role="link" className={linkStyles} href={"/about"}>

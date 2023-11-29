@@ -9,28 +9,30 @@ const Footer = () => {
   return (
     <footer className="mb-10">
       <div className="flex flex-col md:flex-row justify-around gap-10 mx-8">
-        <div className="flex flex-col items-center md:items-start gap-6 w-full md:flex-1">
-          <Link href="/" className="flex items-center gap-4">
+        <div className="flex flex-col items-center md:items-start gap-6 w-full lg:flex-1">
+          <Link role="link" href="/" className="flex items-center gap-4">
             <Image
-              // style={{ width: "auto", height: "auto" }}
               src="/logo.png"
-              className="rounded-full w-12 h-12"
+              className="rounded-md max-w-full h-auto"
               alt="Logo"
               height={50}
               width={50}
             />
-            <h3>Arshad Chowdhury</h3>
+            <div>
+              <h3 className="text-lg">Arshad Chowdhury</h3>
+              <p className="text-xs">Full Stack Developer & Tech Enthusiast</p>
+            </div>
           </Link>
           <p className="flex flex-col gap-2 text-center md:text-left text-sm lg:text-base">
-            <span>Arshad - Full Stack Developer & Tech Enthusiast </span>I am a
-            passionate Full Stack Developer with a relentless commitment to
-            turning ideas into powerful digital solutions. Specializing in
-            end-to-end development, I thrive on crafting seamless, user-centric
-            experiences. My expertise spans a range of programming languages and
-            frameworks, allowing me to tailor solutions to your unique needs.
-            From innovative problem-solving to collaborative project management,
-            I am dedicated to elevating your digital presence. Let&apos;s bring
-            your vision to life!
+            As a dedicated Full Stack Developer, I am passionate about
+            transforming concepts into robust digital solutions. With a focus on
+            end-to-end development, I specialize in creating seamless,
+            user-centric experiences. My proficiency extends across diverse
+            programming languages and frameworks, enabling me to customize
+            solutions that align with your unique requirements. From inventive
+            problem-solving to collaborative project management, I am committed
+            to enhancing your digital presence. Let&apos;s work together to
+            bring your vision to vibrant life!
           </p>
         </div>
         <div className="flex flex-col justify-center items-center gap-4 px-10">

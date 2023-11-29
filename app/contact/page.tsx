@@ -13,9 +13,18 @@ const ContactPage = () => {
       <h1 className="mt-10 lg:mt-16 mb-4 lg:mb-2 text-2xl lg:text-4xl font-semibold">
         Contact Me
       </h1>{" "}
+      <div className="w-full md:w-2/3">
+        <div className="w-full">
+          <h5 className={"text-lg leading-6 text-center font-medium"}>
+            You can fill this form if you wanna deliver a message
+          </h5>
+          <ContactForm />
+        </div>
+      </div>
       <div className="flex flex-col justify-center gap-4">
+        <span className="text-center">OR</span>
         <h4 className="text-center font-medium">
-          You can contact me in any of these platforms
+          You can contact me on any of these platforms as well
         </h4>
         <nav>
           <ul className="flex flex-wrap items-center justify-center gap-4">
@@ -23,7 +32,21 @@ const ContactPage = () => {
               <SocialIcon
                 className="hover:scale-125"
                 target="_blank"
+                url="https://www.linkedin.com/in/mohammed-arshad-67920b213/"
+              />
+            </li>
+            <li>
+              <SocialIcon
+                className="hover:scale-125"
+                target="_blank"
                 url="https://twitter.com/Arshaaaaaaaaaad"
+              />
+            </li>
+            <li>
+              <SocialIcon
+                className="hover:scale-125"
+                target="_blank"
+                url="mailto:arshadchowdhury46@gmail.com"
               />
             </li>
             <li>
@@ -40,37 +63,8 @@ const ContactPage = () => {
                 url="https://github.com/ArshadChowdhury"
               />
             </li>
-            <li>
-              <SocialIcon
-                className="hover:scale-125"
-                target="_blank"
-                url="https://github.com/arshad-repliq"
-              />
-            </li>
-            <li>
-              <SocialIcon
-                className="hover:scale-125"
-                target="_blank"
-                url="mailto:arshadchowdhury46@gmail.com"
-              />
-            </li>
-            <li>
-              <SocialIcon
-                className="hover:scale-125"
-                target="_blank"
-                url="https://www.linkedin.com/in/mohammed-arshad-67920b213/"
-              />
-            </li>
           </ul>
         </nav>
-      </div>
-      <div className="w-full md:w-2/3">
-        <div className="w-full">
-          <h5 className={"text-lg leading-6 text-center font-medium"}>
-            Or, You can fill this form if you wanna just deliver a message
-          </h5>
-          <ContactForm />
-        </div>
       </div>
     </section>
   );

@@ -19,8 +19,9 @@ const RandomAdvice = () => {
       // Handle errors if any
       console.error("Error fetching data:", error);
     } finally {
-      // This block will be executed whether the promise is resolved or rejected
-      setDisabled(false);
+      setTimeout(() => {
+        setDisabled(false);
+      }, 2000);
     }
   };
 
@@ -30,7 +31,7 @@ const RandomAdvice = () => {
 
   return (
     <section className="flex flex-col items-center gap-8 my-10">
-      <h2 className="text-2xl lg:text-4xl text-center my-3 font-semibold">
+      <h2 className="text-2xl lg:text-4xl text-center my-4 font-semibold">
         Here&apos;s an advice <br /> by{" "}
         <Link
           target="_blank"
@@ -56,8 +57,10 @@ const RandomAdvice = () => {
             aria-label="Dice"
             onClick={fetchData}
             disabled={disabled}
-            className={`bg-gray-300 hover:bg-sky-400 dark:hover:bg-teal-500 absolute -bottom-7 left-[43.5%] lg:left-[47%] p-3 rounded-full ${
-              disabled ? "cursor-not-allowed" : "cursor-pointer"
+            className={`bg-gray-300 absolute -bottom-7 left-[43.5%] lg:left-[47%] p-3 rounded-full ${
+              disabled
+                ? "cursor-not-allowed hover:bg-red-500"
+                : "cursor-pointer hover:bg-sky-400 dark:hover:bg-teal-500"
             }`}
           >
             <Image width={30} height={30} src="/icon-dice.svg" alt="" />

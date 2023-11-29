@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { ArrowSmallUpIcon } from "@heroicons/react/24/outline";
+import { ArrowUpIcon } from "@heroicons/react/24/outline";
 
 const ScrollToTop = () => {
   const [showButton, setShowButton] = useState(false);
@@ -23,7 +23,7 @@ const ScrollToTop = () => {
 
   return (
     <button
-      className="fixed right-[5%] bottom-[10%]"
+      className="fixed right-[5%] bottom-[10%] bg-slate-300 dark:bg-slate-600 rounded-full p-2 lg:p-3"
       onClick={() => {
         window.scrollTo({
           top: 0,
@@ -32,7 +32,7 @@ const ScrollToTop = () => {
       }}
       style={{ display: showButton ? "block" : "none" }}
     >
-      <ArrowSmallUpIcon className="w-7 lg:w-10 bg-slate-300 dark:bg-slate-600 blur-xs rounded-full text-gray-600 dark:text-gray-200" />
+      <ArrowUpIcon className="w-7 md:w-8 blur-xs text-gray-600 dark:text-gray-200" />
     </button>
   );
 };

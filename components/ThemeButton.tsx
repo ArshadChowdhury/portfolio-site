@@ -75,7 +75,7 @@ const ThemeButton = () => {
                   aria-label="System Theme"
                   onClick={() => {
                     setTheme("system");
-                    toast.success("System theme is selected");
+                    toast.success("System theme activated");
                   }}
                   className={`${
                     active ? "bg-violet-500 text-white" : "text-gray-900"
@@ -96,7 +96,7 @@ const ThemeButton = () => {
                   aria-label="Light Theme"
                   onClick={() => {
                     setTheme("light");
-                    toast.success("Light theme is selected");
+                    toast.success("Light theme activated");
                   }}
                   className={`${
                     active ? "bg-violet-500 text-white" : "text-gray-900"
@@ -117,7 +117,7 @@ const ThemeButton = () => {
                   aria-label="Dark Theme"
                   onClick={() => {
                     setTheme("dark");
-                    toast.success("Dark theme is selected");
+                    toast.success("Dark theme activated");
                   }}
                   className={`${
                     active ? "bg-violet-500 text-white" : "text-gray-900"
