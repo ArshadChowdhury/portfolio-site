@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
 
-export const projectsInfo = [
+const projectsInfo = [
   {
     imageSrc: "/project_1.png",
     projectHeading: "My Dubai Properties",
