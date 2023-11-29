@@ -1,11 +1,10 @@
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "About Arshad",
 };
 
 const AboutPage = () => (

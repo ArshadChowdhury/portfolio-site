@@ -4,19 +4,19 @@ import { SocialIcon } from "react-social-icons";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Contact Arshad",
 };
 
 const ContactPage = () => {
   return (
-    <section className="flex flex-col items-center gap-6 mt-20 mb-20 lg:mb-10 min-h-screen">
+    <section className="flex flex-col items-center gap-8 mt-20 mb-20 lg:mb-10 min-h-screen">
       <h1 className="mt-10 lg:mt-16 mb-4 lg:mb-2 text-2xl lg:text-4xl font-semibold">
         Contact Me
       </h1>{" "}
       <div className="w-full md:w-2/3">
         <div className="w-full">
           <h5 className={"text-lg leading-6 text-center font-medium"}>
-            You can fill this form if you wanna deliver a message
+            Fill this form and deliver a message to discuss your project !!
           </h5>
           <ContactForm />
         </div>

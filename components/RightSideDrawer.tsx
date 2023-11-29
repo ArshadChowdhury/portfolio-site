@@ -1,7 +1,7 @@
 "use client";
 
 import { Bars3BottomRightIcon } from "@heroicons/react/24/outline";
-import { Fragment, ReactNode, useState } from "react";
+import { Fragment, useState } from "react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import Image from "next/image";

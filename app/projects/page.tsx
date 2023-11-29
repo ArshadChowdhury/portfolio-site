@@ -1,14 +1,8 @@
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-
 import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Projects",
-};
-
-const projectsInfo = [
+export const projectsInfo = [
   {
     imageSrc: "/project_1.png",
     projectHeading: "My Dubai Properties",
@@ -68,8 +62,11 @@ const projectsInfo = [
   },
 ];
 
+export const metadata: Metadata = {
+  title: "Arshad's Projects",
+};
+
 const ProjectsPage = () => (
-  // <section className="flex flex-col items-center gap-6 my-20 min-h-screen">
   <section className="my-20 flex flex-col gap-8 items-center min-h-screen">
     <h1 className="mt-16 mb-10 text-4xl font-semibold">My Projects</h1>
     {projectsInfo.map((project, index) => (
