@@ -70,9 +70,9 @@ const ProjectsPage = () => (
   <section className="my-20 flex flex-col gap-8 items-center min-h-screen">
     <h1 className="mt-16 mb-10 text-4xl font-semibold">My Projects</h1>
     {projectsInfo.map((project, index) => (
-      <div key={index} className="flex flex-col md:flex-row w-full">
+      <div key={index} className="flex flex-col lg:flex-row w-full">
         {" "}
-        <div className="w-full md:w-1/2">
+        <div className="w-full lg:w-1/2">
           <Image
             priority
             src={project.imageSrc}
@@ -82,8 +82,8 @@ const ProjectsPage = () => (
             alt="Project_image"
           />
         </div>
-        <div className="w-full md:w-1/2">
-          <div className="mx-2 md:mx-6 my-4 md:my-0 flex flex-col gap-4">
+        <div className="w-full lg:w-1/2">
+          <div className="mx-2 lg:mx-6 my-4 lg:my-2 flex flex-col gap-4">
             <h4 className="text-2xl">{project.projectHeading}</h4>
             <p className="text-sm md:text-base">{project.projectDetails}</p>
             <div className="flex gap-4 underline">
