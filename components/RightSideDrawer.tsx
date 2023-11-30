@@ -1,12 +1,20 @@
 "use client";
 
-import { Bars3BottomRightIcon } from "@heroicons/react/24/outline";
+import {
+  Bars3BottomRightIcon,
+  HomeIcon,
+  InformationCircleIcon,
+  BriefcaseIcon,
+  WrenchScrewdriverIcon,
+  ChatBubbleOvalLeftEllipsisIcon,
+} from "@heroicons/react/24/outline";
 import { Fragment, useState } from "react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import Image from "next/image";
-
+import { SocialIcon } from "react-social-icons";
 import { Dialog, Transition } from "@headlessui/react";
+import { usePathname } from "next/navigation";
 
 // The prop types defind
 type Props = {
@@ -19,7 +27,10 @@ const RightSideDrawer = () => {
 
   return (
     <>
-      <button onClick={() => setDrawerOpen(!drawerOpen)}>
+      <button
+        aria-label="Open Navbar"
+        onClick={() => setDrawerOpen(!drawerOpen)}
+      >
         <Bars3BottomRightIcon className="w-8" />
       </button>
       <NavigationDrawer open={drawerOpen} setOpen={setDrawerOpen} />
@@ -30,7 +41,13 @@ const RightSideDrawer = () => {
 export default RightSideDrawer;
 
 function NavigationDrawer({ open, setOpen }: Props) {
-  const linkStyles = "px-6 py-2 underline font-semibold";
+  const linkStyles = "px-6 py-2 font-semibold flex items-center gap-6 w-2/3";
+
+  const currentPathname = usePathname();
+
+  const isCurrentPage = (pathname: string): boolean =>
+    currentPathname === pathname;
+
   return (
     <>
       <Transition.Root show={open} as={Fragment}>
@@ -62,7 +79,7 @@ function NavigationDrawer({ open, setOpen }: Props) {
                   <Dialog.Panel className="pointer-events-auto w-screen h-screen max-w-xl">
                     <div className="flex h-full flex-col bg-gray-50 dark:bg-gray-800 shadow-xl">
                       <div className="h-0 flex-1 overflow-y-auto">
-                        <div className="flex flex-col gap-10 p-4">
+                        <div className="flex flex-col gap-20 p-4">
                           <div className="flex border-b border-gray-600 py-2 justify-between items-center">
                             <Link
                               onClick={() => setOpen(false)}
@@ -90,39 +107,63 @@ function NavigationDrawer({ open, setOpen }: Props) {
                             <Link
                               onClick={() => setOpen(false)}
                               role="link"
-                              className={linkStyles}
+                              className={`${linkStyles} ${
+                                isCurrentPage("/")
+                                  ? "text-sky-900 dark:text-sky-500"
+                                  : ""
+                              }`}
                               href={"/"}
                             >
+                              <HomeIcon className="w-5" />
                               Home
                             </Link>
                             <Link
                               onClick={() => setOpen(false)}
                               role="link"
-                              className={linkStyles}
+                              className={`${linkStyles} ${
+                                isCurrentPage("/about")
+                                  ? "text-sky-900 dark:text-sky-500"
+                                  : ""
+                              }`}
                               href={"/about"}
                             >
+                              <InformationCircleIcon className="w-5" />
                               About
                             </Link>
                             <Link
                               onClick={() => setOpen(false)}
                               role="link"
-                              className={linkStyles}
+                              className={`${linkStyles} ${
+                                isCurrentPage("/projects")
+                                  ? "text-sky-900 dark:text-sky-500"
+                                  : ""
+                              }`}
                               href={"/projects"}
                             >
+                              <BriefcaseIcon className="w-5" />
                               Projects
                             </Link>
                             <Link
                               onClick={() => setOpen(false)}
                               role="link"
-                              className={linkStyles}
+                              className={`${linkStyles} ${
+                                isCurrentPage("/services")
+                                  ? "text-sky-900 dark:text-sky-500"
+                                  : ""
+                              }`}
                               href={"/services"}
                             >
+                              <WrenchScrewdriverIcon className="w-5" />
                               Services
                             </Link>
                             {/* <Link
                               onClick={() => setOpen(false)}
                               role="link"
-                              className={linkStyles}
+                             className={`${linkStyles} ${
+                                isCurrentPage("/youtube")
+                                  ? "text-sky-900 dark:text-sky-500"
+                                  : ""
+                              }`}
                               href={"/youtube"}
                             >
                               YouTube
@@ -130,13 +171,57 @@ function NavigationDrawer({ open, setOpen }: Props) {
                             <Link
                               onClick={() => setOpen(false)}
                               role="link"
-                              className={linkStyles}
+                              className={`${linkStyles} ${
+                                isCurrentPage("/contact")
+                                  ? "text-sky-900 dark:text-sky-500"
+                                  : ""
+                              }`}
                               href={"/contact"}
                             >
+                              <ChatBubbleOvalLeftEllipsisIcon className="w-5" />
                               Contact Me
                             </Link>
-                            {/* <ThemeButton /> */}
                           </div>
+
+                          <nav>
+                            <ul className="flex flex-wrap items-center justify-center gap-4">
+                              <li>
+                                <SocialIcon
+                                  className="scale-90"
+                                  target="_blank"
+                                  url="https://www.linkedin.com/in/mohammed-arshad-67920b213/"
+                                />
+                              </li>
+                              <li>
+                                <SocialIcon
+                                  className="scale-90"
+                                  target="_blank"
+                                  url="https://twitter.com/Arshaaaaaaaaaad"
+                                />
+                              </li>
+                              <li>
+                                <SocialIcon
+                                  className="scale-90"
+                                  target="_blank"
+                                  url="mailto:arshadchowdhury46@gmail.com"
+                                />
+                              </li>
+                              <li>
+                                <SocialIcon
+                                  className="scale-90"
+                                  target="_blank"
+                                  url="https://www.facebook.com/arshad.chowdhury23/"
+                                />
+                              </li>
+                              <li>
+                                <SocialIcon
+                                  className="scale-90"
+                                  target="_blank"
+                                  url="https://github.com/ArshadChowdhury"
+                                />
+                              </li>
+                            </ul>
+                          </nav>
                         </div>
                       </div>
                     </div>

@@ -9,17 +9,17 @@ const Footer = () => {
     <footer className="mb-10">
       <div className="flex flex-col md:flex-row justify-around gap-10 mx-8">
         <div className="flex flex-col items-center md:items-start gap-6 w-full lg:flex-1">
-          <Link role="link" href="/" className="flex items-center gap-4">
+          <Link role="link" href="/" className="flex items-center gap-2">
             <Image
               src="/logo.png"
-              className="rounded-md max-w-full h-auto"
+              className="rounded-md"
               alt="Logo"
-              height={50}
-              width={50}
+              height={60}
+              width={60}
             />
             <div>
               <h3 className="text-lg">Arshad Chowdhury</h3>
-              <p className="text-xs">Full Stack Developer & Tech Enthusiast</p>
+              <p className="text-xs">Full Stack Developer</p>
             </div>
           </Link>
           <p className="flex flex-col gap-2 text-center md:text-left text-sm lg:text-base">
@@ -34,7 +34,7 @@ const Footer = () => {
             bring your vision to vibrant life!
           </p>
         </div>
-        <div className="flex flex-col justify-center items-center gap-4 px-10">
+        <div className="flex flex-col justify-center items-center gap-4 px-6">
           <Link className={linkStyles} href={"/"}>
             Home
           </Link>
@@ -51,7 +51,7 @@ const Footer = () => {
             YouTube
           </Link> */}
           <Link className={linkStyles} href={"/contact"}>
-            Contact Me
+            Contact
           </Link>
         </div>
       </div>
