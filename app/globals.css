@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.fadeContainer {
-  transition: opacity 2s ease-in-out;
-}
-
 .PhoneInputInput {
   background: none;
 }

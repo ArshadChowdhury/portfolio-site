@@ -19,51 +19,63 @@ const imageSourcesMobile = [
 
 const HomePageSlider = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  // const [isImageChanging, setIsImageChanging] = useState(false);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
+      // setIsImageChanging(true);
       // Change the image source every 5 seconds
       setCurrentImageIndex(
         (prevIndex) => (prevIndex + 1) % imageSourcesDesktop.length
       );
-    }, 5000);
+    }, 8000);
 
     // Clear the interval when the component unmounts
     return () => clearInterval(intervalId);
   }, []);
 
   return (
-    <section className="min-h-[650px] lg:min-h-[780px] xl:bg-[url('/mac_frame.png')] bg-no-repeat bg-none w-full z-10 ml-[3%]">
-      {/* <div className="flex justify-center mb-16"> */}
-      <div className="w-full relative flex justify-center">
-        <Image
-          priority
-          src={imageSourcesDesktop[currentImageIndex] || "/project_1.png"}
-          height={400}
-          width={944}
-          className="hidden xl:block absolute h-[598px] top-[28px] left-[128px] rounded"
-          alt="macbook-xl-image"
-        />
-        <div className="absolute lg:-left-[1%] -left-[0.5%] top-0 xl:top-32 w-full flex justify-center xl:w-[25%]">
+    <section className="w-full mb-20">
+      <div>
+        <div className="relative">
+          <Image
+            priority
+            src={"/mac_frame.png"}
+            height={400}
+            width={1280}
+            className="hidden md:block"
+            alt="macbook-frame"
+          />
+          <Image
+            priority
+            src={imageSourcesDesktop[currentImageIndex]}
+            height={700}
+            width={1044}
+            className="hidden md:block rounded-md absolute top-[4%] left-[10.5%] w-[79%] h-[88%]"
+            // className={`hidden md:block rounded-md absolute top-[4%] left-[10.5%] w-[79%] h-[88%] ${
+            //   isImageChanging ? "transition-image" : ""
+            // }`}
+            // onLoad={() => setIsImageChanging(false)}
+            alt="macbook-xl-image"
+          />
           <Image
             priority
             src={"/iphone_frame.png"}
             height={400}
-            width={480}
-            className="w-[80%] md:w-[40%] xl:w-full relative z-50"
-            alt="iphone-lg-frame"
+            width={744}
+            className="w-full md:w-[27%] md:absolute top-[20%] -left-[1%] rounded z-30"
+            alt="macbook-xl-image"
           />
           <Image
             priority
-            src={imageSourcesMobile[currentImageIndex] || "/project_1_mb.png"}
+            src={imageSourcesMobile[currentImageIndex]}
             height={300}
             width={300}
-            className="absolute left-[15%] md:left-[32.5%] xl:left-[6%] top-[6%] w-[70%] md:w-[35%] xl:w-[88%] h-[92%] rounded"
+            className="w-[89%] md:w-[23.5%] absolute top-[8%] md:top-[26.5%] left-[5.5%] md:left-[.8%] rounded h-[89%] md:h-[86%] -z-[1] md:z-10"
             alt="iphone-lg-image"
           />
         </div>
       </div>
-      {/* </div> */}
     </section>
   );
 };

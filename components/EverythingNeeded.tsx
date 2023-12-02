@@ -56,11 +56,11 @@ type ServicesDataTypes = {
 };
 
 const EverythingNeeded = () => (
-  <section className="flex flex-col gap-4 items-center lg:my-10">
+  <section className="flex flex-col gap-8 items-center lg:my-10">
     <h2 className="text-2xl lg:text-4xl text-center my-4 font-semibold">
       My services
     </h2>
-    <div className="grid gap-4 lg:gap-0 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+    <div className="grid gap-4 lg:gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
       {servicesData.map((serviceData: ServicesDataTypes, index: number) => (
         <div
           key={index}
@@ -74,8 +74,8 @@ const EverythingNeeded = () => (
               {serviceData.title}
             </h3>
             <p className="text-xs lg:text-base">
-              {serviceData.content.length > 100
-                ? serviceData.content.slice(0, 100).concat("...")
+              {serviceData.content.length > 90
+                ? serviceData.content.slice(0, 90).concat("...")
                 : serviceData.content}
             </p>
           </div>

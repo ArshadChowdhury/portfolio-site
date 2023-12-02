@@ -5,7 +5,7 @@ const GetStarted = () => (
     <span className="font-semibold text-base lg:text-2xl tracking-widest">
       Research. Design. Develop.
     </span>
-    <h1 className="font-semibold text-3xl lg:text-5xl w-full lg:w-1/2">
+    <h1 className="font-semibold text-3xl lg:text-5xl">
       I build amazing websites that users love
     </h1>
     <p className="font-medium text-sm lg:text-xl flex flex-col gap-2">
