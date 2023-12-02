@@ -19,16 +19,16 @@ const imageSourcesMobile = [
 
 const HomePageSlider = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  // const [isImageChanging, setIsImageChanging] = useState(false);
+  const [isImageChanging, setIsImageChanging] = useState(false);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      // setIsImageChanging(true);
+      setIsImageChanging(true);
       // Change the image source every 5 seconds
       setCurrentImageIndex(
         (prevIndex) => (prevIndex + 1) % imageSourcesDesktop.length
       );
-    }, 8000);
+    }, 6000);
 
     // Clear the interval when the component unmounts
     return () => clearInterval(intervalId);
@@ -51,13 +51,13 @@ const HomePageSlider = () => {
             src={imageSourcesDesktop[currentImageIndex]}
             height={700}
             width={1044}
-            className="hidden md:block rounded-md absolute top-[4%] left-[10.5%] w-[79%] h-[88%]"
-            // className={`hidden md:block rounded-md absolute top-[4%] left-[10.5%] w-[79%] h-[88%] ${
-            //   isImageChanging ? "transition-image" : ""
-            // }`}
-            // onLoad={() => setIsImageChanging(false)}
+            className={`hidden md:block rounded-md absolute top-[4%] left-[10.5%] w-[79%] h-[88%] ${
+              isImageChanging ? "fade-enter" : "fade-enter-active"
+            }`}
+            onLoad={() => setIsImageChanging(false)}
             alt="macbook-xl-image"
           />
+
           <Image
             priority
             src={"/iphone_frame.png"}
@@ -71,7 +71,10 @@ const HomePageSlider = () => {
             src={imageSourcesMobile[currentImageIndex]}
             height={300}
             width={300}
-            className="w-[89%] md:w-[23.5%] absolute top-[8%] md:top-[26.5%] left-[5.5%] md:left-[.8%] rounded h-[89%] md:h-[86%] -z-[1] md:z-10"
+            className={`w-[89%] md:w-[23.5%] absolute top-[8%] md:top-[26.5%] left-[5.5%] md:left-[.8%] rounded h-[89%] md:h-[86%] ${
+              isImageChanging ? "fade-enter" : "fade-enter-active"
+            }`}
+            onLoad={() => setIsImageChanging(false)}
             alt="iphone-lg-image"
           />
         </div>
