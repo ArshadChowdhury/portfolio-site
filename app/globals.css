@@ -4,13 +4,13 @@
 
 .fade-enter {
   opacity: 0;
-  transform: translateX(-20px);
+  transform: translate(-10px, 5px);
 }
 
 .fade-enter-active {
   opacity: 1;
-  transform: translateX(0);
-  transition: opacity 500ms linear, transform 500ms linear;
+  transform: translate(0);
+  transition: opacity 500ms linear, transform 350ms linear;
 }
 
 .PhoneInputInput {
@@ -99,6 +99,43 @@
 
 .learn-more-container-about:hover::after {
   width: 100%;
+}
+
+.single-project-container {
+  position: relative;
+}
+
+.single-project-container::after {
+  content: "";
+  position: absolute;
+  background-color: #7743db;
+  left: 0;
+  bottom: -10px;
+  height: 4px;
+  width: 0;
+  border-radius: 10px;
+  transition: 0.3s linear;
+}
+
+.single-project-container:hover::after {
+  width: 100%;
+}
+
+.project-container-current {
+  position: relative;
+}
+
+.project-container-current::after {
+  content: "";
+  position: absolute;
+  background-color: #7743db;
+  width: 100%;
+  left: 0;
+  bottom: -10px;
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
+  transition: 0.3s linear;
 }
 
 ::-webkit-scrollbar-button {

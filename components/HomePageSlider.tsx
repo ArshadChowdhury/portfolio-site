@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
 
 const imageSourcesDesktop = [
   "/project_1.png",
@@ -28,15 +30,15 @@ const HomePageSlider = () => {
       setCurrentImageIndex(
         (prevIndex) => (prevIndex + 1) % imageSourcesDesktop.length
       );
-    }, 6000);
+    }, 4000);
 
     // Clear the interval when the component unmounts
     return () => clearInterval(intervalId);
-  }, []);
+  }, [currentImageIndex]);
 
   return (
-    <section className="w-full mb-20">
-      <div>
+    <>
+      <section className="w-full mb-20">
         <div className="relative">
           <Image
             priority
@@ -73,13 +75,55 @@ const HomePageSlider = () => {
             width={300}
             className={`w-[89%] md:w-[23.5%] absolute top-[8%] md:top-[26.5%] left-[5.5%] md:left-[.8%] rounded h-[89%] md:h-[86%] ${
               isImageChanging ? "fade-enter" : "fade-enter-active"
-            }`}
+            } -z-[1] md:z-10`}
             onLoad={() => setIsImageChanging(false)}
             alt="iphone-lg-image"
           />
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section className="mt-20 flex justify-around">
+        <button
+          onClick={() => setCurrentImageIndex(0)}
+          className={`${
+            currentImageIndex === 0 ? "project-container-current" : ""
+          } single-project-container`}
+        >
+          My Dubai Properties
+        </button>
+        <button
+          onClick={() => setCurrentImageIndex(1)}
+          className={`${
+            currentImageIndex === 1 ? "project-container-current" : ""
+          } single-project-container`}
+        >
+          Youbie Token
+        </button>
+        <button
+          onClick={() => setCurrentImageIndex(2)}
+          className={`${
+            currentImageIndex === 2 ? "project-container-current" : ""
+          } single-project-container`}
+        >
+          E-bazaar
+        </button>
+        <button
+          onClick={() => setCurrentImageIndex(3)}
+          className={`${
+            currentImageIndex === 3 ? "project-container-current" : ""
+          } single-project-container`}
+        >
+          Shop Now
+        </button>
+        <Link
+          className="single-project-container flex items-center gap-4 cursor-pointer group text-sm lg:text-lg"
+          href={"/projects"}
+        >
+          See all my projects
+          <ArrowLongRightIcon className="w-6 transition-transform transform group-hover:translate-x-1" />
+        </Link>
+      </section>
+    </>
   );
 };
 
