@@ -82,10 +82,10 @@ const HomePageSlider = () => {
         </div>
       </section>
 
-      <section className="mt-20 flex justify-around">
+      <section className="md:my-16 flex justify-around">
         <button
           onClick={() => setCurrentImageIndex(0)}
-          className={`${
+          className={`hidden md:block ${
             currentImageIndex === 0 ? "project-container-current" : ""
           } single-project-container`}
         >
@@ -93,7 +93,7 @@ const HomePageSlider = () => {
         </button>
         <button
           onClick={() => setCurrentImageIndex(1)}
-          className={`${
+          className={`hidden md:block ${
             currentImageIndex === 1 ? "project-container-current" : ""
           } single-project-container`}
         >
@@ -101,7 +101,7 @@ const HomePageSlider = () => {
         </button>
         <button
           onClick={() => setCurrentImageIndex(2)}
-          className={`${
+          className={`hidden md:block ${
             currentImageIndex === 2 ? "project-container-current" : ""
           } single-project-container`}
         >
@@ -109,7 +109,7 @@ const HomePageSlider = () => {
         </button>
         <button
           onClick={() => setCurrentImageIndex(3)}
-          className={`${
+          className={`hidden md:block ${
             currentImageIndex === 3 ? "project-container-current" : ""
           } single-project-container`}
         >
