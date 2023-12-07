@@ -74,11 +74,13 @@ const ProjectsPage = () => (
         {" "}
         <div className="w-full lg:w-1/2">
           <Image
-            priority
+          
             src={project.imageSrc}
             className="w-full h-full rounded-md border border-gray-300 dark:border-gray-500 shadow-lg"
             height="650"
             width="650"
+              placeholder="blur"
+            blurDataURL={project.imageSrc}
             alt="Project_image"
           />
         </div>

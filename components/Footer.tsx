@@ -11,11 +11,13 @@ const Footer = () => {
         <div className="flex flex-col items-center md:items-start gap-6 w-full lg:flex-1">
           <Link role="link" href="/" className="flex items-center gap-2">
             <Image
-              src="/logo.png"
+              src={"/logo.png"}
               className="rounded-md"
-              alt="Logo"
               height={60}
               width={60}
+              placeholder="blur"
+              blurDataURL={"/logo.png"}
+              alt="Logo"
             />
             <div>
               <h3 className="text-lg">Arshad Chowdhury</h3>

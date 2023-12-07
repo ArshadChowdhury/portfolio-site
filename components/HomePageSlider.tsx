@@ -30,7 +30,7 @@ const HomePageSlider = () => {
       setCurrentImageIndex(
         (prevIndex) => (prevIndex + 1) % imageSourcesDesktop.length
       );
-    }, 4000);
+    }, 5000);
 
     // Clear the interval when the component unmounts
     return () => clearInterval(intervalId);
@@ -49,7 +49,6 @@ const HomePageSlider = () => {
             alt="macbook-frame"
           />
           <Image
-            priority
             src={imageSourcesDesktop[currentImageIndex]}
             height={700}
             width={1044}
@@ -57,6 +56,8 @@ const HomePageSlider = () => {
               isImageChanging ? "fade-enter" : "fade-enter-active"
             }`}
             onLoad={() => setIsImageChanging(false)}
+            placeholder="blur"
+            blurDataURL={imageSourcesDesktop[0]}
             alt="macbook-xl-image"
           />
 
@@ -69,7 +70,6 @@ const HomePageSlider = () => {
             alt="macbook-xl-image"
           />
           <Image
-            priority
             src={imageSourcesMobile[currentImageIndex]}
             height={300}
             width={300}
@@ -77,6 +77,8 @@ const HomePageSlider = () => {
               isImageChanging ? "fade-enter" : "fade-enter-active"
             } -z-[1] md:z-10`}
             onLoad={() => setIsImageChanging(false)}
+            placeholder="blur"
+            blurDataURL={imageSourcesMobile[0]}
             alt="iphone-lg-image"
           />
         </div>

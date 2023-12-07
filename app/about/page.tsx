@@ -46,6 +46,8 @@ const AboutPage = () => (
         src={"/arshad_pic_3.png"}
         height={400}
         width={400}
+         placeholder="blur"
+            blurDataURL={"/arshad_pic_3.png"}
         alt="Arshad Image"
       />
       <div className="flex flex-col items-center gap-4">
@@ -95,6 +97,8 @@ const AboutPage = () => (
         src={"/arshad_pic_2.png"}
         height={400}
         width={400}
+          placeholder="blur"
+            blurDataURL={"/arshad_pic_2.png"}
         alt="Arshad Image"
       />
       <div className="flex flex-col items-center gap-4">
