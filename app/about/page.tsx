@@ -10,27 +10,27 @@ export const metadata: Metadata = {
 const AboutPage = () => (
   <section className="my-20 flex flex-col gap-8 items-center min-h-screen">
     <h1 className="mt-16 mb-10 text-4xl font-semibold">About me</h1>
-    <div className="flex flex-col lg:flex-row justify-center items-center gap-8">
+    <div className="flex flex-col lg:flex-row justify-center items-center gap-8 xl:gap-16">
       <Image
         priority
-        className="rounded-md border border-black dark:border-sky-200"
-        src={"/arshad_pic.png"}
+        className="rounded-md border border-black dark:border-sky-200 pr-4"
+        src={"/arshad_pic_3.png"}
         height={400}
         width={400}
         alt="Arshad Image"
       />
       <p className="flex flex-col gap-4">
-        I&apos;m Arshad, a seasoned full-stack developer from Bangladesh.
+        Hey 👋 I&apos;m Arshad, a seasoned full-stack developer from Bangladesh.
         Specializing in end-to-end website design and development, I prioritize
         user experience and client satisfaction. Let&apos;s connect and explore
         new possibilities!
         <span>
-          Over the course of my two-year career as a full stack developer,
-          I&apos;ve consistently cultivated a deep passion for enhancing the
-          functionality and user experience of websites. This journey has not
-          only fueled my technical expertise but also instilled a dedicated
-          commitment to ensuring that websites I work on are optimized to their
-          fullest potential, catering to the needs of every user.
+          Over the course of my career as a full stack developer, I&apos;ve
+          consistently cultivated a deep passion for enhancing the functionality
+          and user experience of websites. This journey has not only fueled my
+          technical expertise but also instilled a dedicated commitment to
+          ensuring that websites I work on are optimized to their fullest
+          potential, catering to the needs of every user.
         </span>
         <span>
           This continuous pursuit of excellence in web development reflects my
@@ -41,21 +41,12 @@ const AboutPage = () => (
       </p>
     </div>
     <div className="flex flex-col lg:flex-row-reverse justify-center items-center gap-8">
-      <Image
-        className="rounded-md border border-black dark:border-sky-200"
-        src={"/arshad_pic_3.png"}
-        height={400}
-        width={400}
-         placeholder="blur"
-            blurDataURL={"/arshad_pic_3.png"}
-        alt="Arshad Image"
-      />
       <div className="flex flex-col items-center gap-4">
         <h4 className="text-center text-2xl">More about me</h4>
         <p className="flex flex-col gap-4">
           My journey into software development started nearly three years ago.
-          I&apos;m proficient in HTML, CSS, JavaScript, React.js, Next.js,
-          Node.js, Nest.js, Django, WordPress, PostgreSQL, MongoDB and more.
+          I&apos;m proficient in JavaScript, React.js, Next.js, Node.js,
+          Nest.js, Django, WordPress, PostgreSQL, MongoDB, HTML, CSS and more.
           I&apos;ve been consistently broadening my skillset as well, currently
           learning the nuances of C/C++.
           <span>
@@ -77,7 +68,7 @@ const AboutPage = () => (
             >
               arshadchowdhury
             </Link>{" "}
-            <br /> If you decide to hire me I&apos;d be able to do all these
+            <br /> If you wanna work with me I&apos;d be able to do all those
             amazing things for you 😊
           </span>
           <Link
@@ -92,15 +83,6 @@ const AboutPage = () => (
     </div>
 
     <div className="flex flex-col lg:flex-row justify-center items-center gap-8">
-      <Image
-        className="rounded-md border border-black dark:border-sky-200 pl-4"
-        src={"/arshad_pic_2.png"}
-        height={400}
-        width={400}
-          placeholder="blur"
-            blurDataURL={"/arshad_pic_2.png"}
-        alt="Arshad Image"
-      />
       <div className="flex flex-col items-center gap-4">
         <h4 className="text-center text-2xl">About my projects</h4>
         <p className="flex flex-col gap-4">
@@ -122,6 +104,28 @@ const AboutPage = () => (
             className="flex items-center self-center my-4 gap-4 cursor-pointer learn-more-container-about group text-sm lg:text-lg text-[#3081d0] w-fit"
           >
             Learn about my projects
+            <ArrowLongRightIcon className="w-6 transition-transform transform group-hover:translate-x-1" />
+          </Link>
+        </p>
+      </div>
+    </div>
+
+    <div className="flex flex-col lg:flex-row justify-center items-center gap-8">
+      <div className="flex flex-col items-center gap-4">
+        <h4 className="text-center text-2xl">About my YouTube Channel</h4>
+        <p className="flex flex-col gap-4">
+          Beyond my professional endeavors, I actively share my knowledge in
+          programming and web development through my YouTube channel. This
+          platform serves as a teaching space where I engage with an audience
+          eager to learn about the intricacies of programming. If given the
+          opportunity, I am excited to bring my wealth of experience, passion,
+          and commitment to your projects.
+          <Link
+            target="_blank"
+            href={"https://www.youtube.com/@LearnCodingWithArshad"}
+            className="flex items-center self-center my-4 gap-4 cursor-pointer learn-more-container-about group text-sm lg:text-lg text-[#3081d0] w-fit"
+          >
+            Explore my YouTube Channel
             <ArrowLongRightIcon className="w-6 transition-transform transform group-hover:translate-x-1" />
           </Link>
         </p>

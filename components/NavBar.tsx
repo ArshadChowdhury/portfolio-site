@@ -34,17 +34,18 @@ const NavBar = () => {
           <Link role="link" className={linkStyles} href={"/services"}>
             Services
           </Link>
-          {/* <Link role="link" className={linkStyles} href={"/youtube"}>
-            YouTube
-          </Link> */}
+          <Link role="link" className={linkStyles} href={"/contact"}>
+            Contact
+          </Link>
           <Link
             role="link"
             className={
               "px-6 py-2 rounded-md font-semibold text-gray-50 bg-violet-500 dark:bg-violet-700 hover:bg-violet-700 dark:hover:bg-violet-800 hover:transform hover:scale-[105%]"
             }
-            href={"/contact"}
+            target="_blank"
+            href={"/Arshad_CV.pdf"}
           >
-            Contact Me
+            My Resume
           </Link>
           <ThemeButton />
         </div>
