@@ -46,6 +46,13 @@ const ContactPage = () => {
               <SocialIcon
                 className="hover:scale-125"
                 target="_blank"
+                url="https://api.whatsapp.com/send?phone=8801317089432"
+              />
+            </li>
+            <li>
+              <SocialIcon
+                className="hover:scale-125"
+                target="_blank"
                 url="mailto:arshadchowdhury46@gmail.com"
               />
             </li>

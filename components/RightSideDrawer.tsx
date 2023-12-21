@@ -7,6 +7,7 @@ import {
   BriefcaseIcon,
   WrenchScrewdriverIcon,
   ChatBubbleOvalLeftEllipsisIcon,
+  BookOpenIcon,
 } from "@heroicons/react/24/outline";
 import { Fragment, useState } from "react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
@@ -156,18 +157,20 @@ function NavigationDrawer({ open, setOpen }: Props) {
                               <WrenchScrewdriverIcon className="w-5" />
                               Services
                             </Link>
-                            {/* <Link
+                            <Link
                               onClick={() => setOpen(false)}
                               role="link"
-                             className={`${linkStyles} ${
-                                isCurrentPage("/youtube")
+                              className={`${linkStyles} ${
+                                isCurrentPage("/Arshad_CV.pdf")
                                   ? "text-sky-900 dark:text-sky-500"
                                   : ""
                               }`}
-                              href={"/youtube"}
+                              target="_blank"
+                              href={"/Arshad_CV.pdf"}
                             >
-                              YouTube
-                            </Link> */}
+                              <BookOpenIcon className="w-5" />
+                              Resume
+                            </Link>
                             <Link
                               onClick={() => setOpen(false)}
                               role="link"
