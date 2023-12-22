@@ -8,14 +8,14 @@ import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
 const imageSourcesDesktop = [
   "/project_1.png",
   "/project_2.png",
-  "/project_3.png",
+  "/project_5.png",
   "/project_4.png",
 ];
 
 const imageSourcesMobile = [
   "/project_1_mb.png",
   "/project_2_mb.png",
-  "/project_3_mb.png",
+  "/project_5_mb.png",
   "/project_4_mb.png",
 ];
 
@@ -107,7 +107,7 @@ const HomePageSlider = () => {
             currentImageIndex === 2 ? "project-container-current" : ""
           } single-project-container`}
         >
-          E-bazaar
+          Daraz Clone
         </button>
         <button
           onClick={() => setCurrentImageIndex(3)}

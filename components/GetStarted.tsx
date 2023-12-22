@@ -6,7 +6,7 @@ const GetStarted = () => (
       Research. Design. Develop.
     </span>
     <h1 className="font-semibold text-3xl lg:text-5xl">
-      I build amazing websites that users love
+      Transforming Ideas into Digital Solutions.
     </h1>
     <p className="font-medium text-sm lg:text-xl flex flex-col gap-2">
       Ready for a standout online presence?{" "}

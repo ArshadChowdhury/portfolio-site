@@ -20,15 +20,6 @@ const projectsInfo = [
     github: "#",
   },
   {
-    imageSrc: "/project_3.png",
-    projectHeading: "E-bazaar",
-    projectDetails:
-      "Introducing E-bazaar, an innovative e-commerce frontend project I've developed. This user-friendly platform allows seamless addition of new products, efficient product search and navigation, cart management including item addition, quantity updates, and deletions. Notably, the use of MongoDB ensures persistent storage of the cart and all products, offering a seamless experience even after page reloads. The project boasts full responsiveness across devices and features intuitive modals and side drawers for convenient product management and cart viewing. With added functionalities such as discount start and end dates, E-bazaar is designed to enhance the overall e-commerce experience.",
-    liveLink: "https://e-bazaar-by-arshad.netlify.app/",
-    github: "https://github.com/ArshadChowdhury/e-bazaar-frontend",
-  },
-
-  {
     imageSrc: "/project_5.png",
     projectHeading: "Daraz clone",
     projectDetails:
@@ -43,6 +34,14 @@ const projectsInfo = [
       "Shop Clone represents my inaugural foray into Next.js and Tailwind for an e-commerce project. Leveraging Next.js routing, and incorporating essential elements like Link and Image, this project marks a significant leap in my understanding of these technologies. Despite my initial limited knowledge of Next.js and Tailwind, the Shop Clone is a testament to my ability to quickly grasp and implement these tools for a seamless and responsive e-commerce experience.",
     liveLink: "https://nextjs-ecommercebyarshad.netlify.app/",
     github: "https://github.com/ArshadChowdhury/e-commerce-demo-app",
+  },
+  {
+    imageSrc: "/project_3.png",
+    projectHeading: "E-bazaar",
+    projectDetails:
+      "Introducing E-bazaar, an innovative e-commerce frontend project I've developed. This user-friendly platform allows seamless addition of new products, efficient product search and navigation, cart management including item addition, quantity updates, and deletions. Notably, the use of MongoDB ensures persistent storage of the cart and all products, offering a seamless experience even after page reloads. The project boasts full responsiveness across devices and features intuitive modals and side drawers for convenient product management and cart viewing. With added functionalities such as discount start and end dates, E-bazaar is designed to enhance the overall e-commerce experience.",
+    liveLink: "https://e-bazaar-by-arshad.netlify.app/",
+    github: "https://github.com/ArshadChowdhury/e-bazaar-frontend",
   },
   {
     imageSrc: "/project_6.png",
@@ -74,12 +73,11 @@ const ProjectsPage = () => (
         {" "}
         <div className="w-full lg:w-1/2">
           <Image
-          
             src={project.imageSrc}
             className="w-full h-full rounded-md border border-gray-300 dark:border-gray-500 shadow-lg"
             height="650"
             width="650"
-              placeholder="blur"
+            placeholder="blur"
             blurDataURL={project.imageSrc}
             alt="Project_image"
           />
@@ -91,7 +89,7 @@ const ProjectsPage = () => (
             <div className="flex gap-4 underline">
               {project.github.length > 1 ? (
                 <Link
-                  className="hover:text-sky-900 text-sky-600"
+                  className="hover:text-sky-600 text-sky-500"
                   target="_blank"
                   href={project?.github}
                 >
