@@ -36,7 +36,7 @@ const NavBar = () => {
           </Link>
           <Link
             target="_blank"
-            href={"/Arshad_CV.pdf"}
+            href={"/Arshad_Resume.pdf"}
             role="link"
             className={linkStyles}
           >

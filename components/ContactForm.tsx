@@ -42,6 +42,10 @@ const ContactForm = () => {
               value: true,
               message: "Your name is required",
             },
+            maxLength: {
+              value: 30,
+              message: "Your name must not exceed 30 characters",
+            },
           })}
           placeholder={"Enter your name"}
           className="w-full px-5 py-3 rounded-sm placeholder:font-montserrat text-lg custom-shadow bg-white bg-opacity-10 placeholder:text-gray-400 outline-none text-black dark:text-slate-100"
@@ -60,6 +64,14 @@ const ContactForm = () => {
             required: {
               value: true,
               message: "Email is required",
+            },
+            pattern: {
+              value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,8}$/i,
+              message: "Invalid email address",
+            },
+            maxLength: {
+              value: 50,
+              message: "Your email must not exceed 50 characters",
             },
           })}
           placeholder={"Enter your Email adress"}
@@ -114,6 +126,10 @@ const ContactForm = () => {
             required: {
               value: true,
               message: "Description is required",
+            },
+            maxLength: {
+              value: 500,
+              message: "Your message must not exceed 500 characters",
             },
           })}
         />

@@ -28,14 +28,6 @@ const projectsInfo = [
     github: "https://github.com/ArshadChowdhury/react-eCommerce-app-interview",
   },
   {
-    imageSrc: "/project_4.png",
-    projectHeading: "Shop clone",
-    projectDetails:
-      "Shop Clone represents my inaugural foray into Next.js and Tailwind for an e-commerce project. Leveraging Next.js routing, and incorporating essential elements like Link and Image, this project marks a significant leap in my understanding of these technologies. Despite my initial limited knowledge of Next.js and Tailwind, the Shop Clone is a testament to my ability to quickly grasp and implement these tools for a seamless and responsive e-commerce experience.",
-    liveLink: "https://nextjs-ecommercebyarshad.netlify.app/",
-    github: "https://github.com/ArshadChowdhury/e-commerce-demo-app",
-  },
-  {
     imageSrc: "/project_3.png",
     projectHeading: "E-bazaar",
     projectDetails:
@@ -43,6 +35,15 @@ const projectsInfo = [
     liveLink: "https://e-bazaar-by-arshad.netlify.app/",
     github: "https://github.com/ArshadChowdhury/e-bazaar-frontend",
   },
+  {
+    imageSrc: "/project_4.png",
+    projectHeading: "Shop clone",
+    projectDetails:
+      "Shop Clone represents my inaugural foray into Next.js and Tailwind for an e-commerce project. Leveraging Next.js routing, and incorporating essential elements like Link and Image, this project marks a significant leap in my understanding of these technologies. Despite my initial limited knowledge of Next.js and Tailwind, the Shop Clone is a testament to my ability to quickly grasp and implement these tools for a seamless and responsive e-commerce experience.",
+    liveLink: "https://nextjs-ecommercebyarshad.netlify.app/",
+    github: "https://github.com/ArshadChowdhury/e-commerce-demo-app",
+  },
+  
   {
     imageSrc: "/project_6.png",
     projectHeading: "CSV Parser app",
