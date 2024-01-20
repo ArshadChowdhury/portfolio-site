@@ -26,7 +26,7 @@ const testimonialsData = [
     img: "/jshua.jpg",
     icon: "/youtube.svg",
     href: "https://www.youtube.com/c/JoshuaFluke1",
-    desc: "Arshad is a fast learner with great communication skills, he's tech-savvy & have worked on several projects and shown great potential at Grind Reel. He's still a valuable member of Grind Reel community. He's also very reliable, you can always expect him to get the job done in time.",
+    desc: "Arshad is a fast learner with great communication skills, he's tech-savvy & have worked on several projects and shown great potential at Grind Reel. He's a valuable member of Grind Reel community. He's also reliable, you can always expect him to get the job done.",
   },
   {
     id: 3,
@@ -45,7 +45,7 @@ const testimonialsData = [
     img: "/iftekhar.jpg",
     href: "https://www.linkedin.com/in/ahmed-iftekhar/",
     icon: "/linkedin.png",
-    desc: "Arshad has been collaborating with me & big open source communities for quite some time now, which has made him intimately familiar with all the stages of the web lifecycle from the initial architecture to final deployment, he's highly recommended for all kind of projects.",
+    desc: "Arshad has been collaborating with me & big open source communities for quite some time, which has made him familiar with all stages of the software lifecycle from the initial architecture to final deployment, he's highly recommended for all kind of projects.",
   },
 ];
 
