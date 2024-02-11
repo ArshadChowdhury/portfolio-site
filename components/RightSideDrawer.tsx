@@ -148,12 +148,12 @@ function NavigationDrawer({ open, setOpen }: Props) {
                               onClick={() => setOpen(false)}
                               role="link"
                               className={`${linkStyles} ${
-                                isCurrentPage("/Arshad_CV.pdf")
+                                isCurrentPage("/Arshad_Resume.pdf")
                                   ? "text-sky-900 dark:text-sky-500"
                                   : ""
                               }`}
                               target="_blank"
-                              href={"/Arshad_CV.pdf"}
+                              href={"/Arshad_Resume.pdf"}
                             >
                               <BookOpenIcon className="w-5" />
                               Resume
