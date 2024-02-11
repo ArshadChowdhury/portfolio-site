@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
+import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
 
 const projectsInfo = [
   {
@@ -89,7 +90,7 @@ const ProjectsPage = () => (
             <p className="text-sm md:text-base">{project.projectDetails}</p>
             <div className="flex gap-4 underline">
               <Link
-                className="hover:text-sky-600 text-sky-500"
+                className="hover:text-sky-900 text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 font-semibold"
                 target="_blank"
                 href={project?.liveLink}
               >
@@ -97,7 +98,7 @@ const ProjectsPage = () => (
               </Link>
               {project.github.length > 1 ? (
                 <Link
-                  className="hover:text-sky-600 text-sky-500"
+                  className="hover:text-sky-900 text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 font-semibold"
                   target="_blank"
                   href={project?.github}
                 >
@@ -109,6 +110,14 @@ const ProjectsPage = () => (
         </div>
       </div>
     ))}
+
+    <Link
+      href={"/contact"}
+      className="flex items-center self-center my-4 gap-4 cursor-pointer learn-more-container-about group text-sm lg:text-lg text-[#3081d0] dark:text-sky-400 font-semibold w-fit"
+    >
+      Let&apos;s get started on your project
+      <ArrowLongRightIcon className="w-6 transition-transform transform group-hover:translate-x-1" />
+    </Link>
   </section>
 );
 

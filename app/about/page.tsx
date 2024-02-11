@@ -21,7 +21,7 @@ const AboutPage = () => (
       />
       <p className="flex flex-col gap-4">
         Hey 👋 I&apos;m Arshad, a seasoned full-stack developer from Bangladesh.
-        Specializing in end-to-end website design and development, I prioritize
+        Specializing in end-to-end web app design and development, I prioritize
         user experience and client satisfaction. Let&apos;s connect and explore
         new possibilities!
         <span>
@@ -62,7 +62,7 @@ const AboutPage = () => (
             development. I&apos;ve contributed and still contributing to open
             source projects. Here&apos;s my GitHub account:{" "}
             <Link
-              className="underline text-[#3081d0] dark:text-sky-400"
+              className="underline text-[#3081d0] dark:text-sky-400 hover:font-semibold"
               target="_blank"
               href="https://github.com/ArshadChowdhury"
             >
@@ -73,7 +73,7 @@ const AboutPage = () => (
           </span>
           <Link
             href={"/services"}
-            className="flex items-center self-center my-4 gap-4 cursor-pointer learn-more-container-about group text-sm lg:text-lg text-[#3081d0] w-fit"
+            className="flex items-center self-center my-4 gap-4 cursor-pointer learn-more-container-about group text-sm lg:text-lg text-[#3081d0] dark:text-sky-400 font-semibold w-fit"
           >
             Learn about my services
             <ArrowLongRightIcon className="w-6 transition-transform transform group-hover:translate-x-1" />
@@ -101,7 +101,7 @@ const AboutPage = () => (
           </span>{" "}
           <Link
             href={"/projects"}
-            className="flex items-center self-center my-4 gap-4 cursor-pointer learn-more-container-about group text-sm lg:text-lg text-[#3081d0] w-fit"
+            className="flex items-center self-center my-4 gap-4 cursor-pointer learn-more-container-about group text-sm lg:text-lg text-[#3081d0] dark:text-sky-400 font-semibold w-fit"
           >
             Learn about my projects
             <ArrowLongRightIcon className="w-6 transition-transform transform group-hover:translate-x-1" />
@@ -123,7 +123,7 @@ const AboutPage = () => (
           <Link
             target="_blank"
             href={"https://www.youtube.com/@LearnCodingWithArshad"}
-            className="flex items-center self-center my-4 gap-4 cursor-pointer learn-more-container-about group text-sm lg:text-lg text-[#3081d0] w-fit"
+            className="flex items-center self-center my-4 gap-4 cursor-pointer learn-more-container-about group text-sm lg:text-lg text-[#3081d0] dark:text-sky-400 font-semibold w-fit"
           >
             Explore my YouTube Channel
             <ArrowLongRightIcon className="w-6 transition-transform transform group-hover:translate-x-1" />

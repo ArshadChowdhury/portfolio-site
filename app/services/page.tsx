@@ -79,7 +79,7 @@ const ServicesPage = () => (
     </div>
     <Link
       href={"/contact"}
-      className="flex items-center self-center my-4 gap-4 cursor-pointer learn-more-container-about group text-sm lg:text-lg text-[#3081d0] w-fit"
+      className="flex items-center self-center my-4 gap-4 cursor-pointer learn-more-container-about group text-sm lg:text-lg text-[#3081d0] dark:text-sky-400 font-semibold w-fit"
     >
       Start from any of these stages
       <ArrowLongRightIcon className="w-6 transition-transform transform group-hover:translate-x-1" />
