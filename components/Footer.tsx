@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const linkStyles =
-  "px-6 py-2 text-center rounded-md font-semibold text-gray-600 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 hover:underline";
+  "px-6 py-2 text-center rounded-md font-semibold text-gray-700 dark:text-gray-200 hover:underline";
 
 const Footer = () => {
   return (
