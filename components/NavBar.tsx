@@ -31,9 +31,6 @@ const NavBar = () => {
           <Link role="link" className={linkStyles} href={"/projects"}>
             Projects
           </Link>
-          <Link role="link" className={linkStyles} href={"/services"}>
-            Services
-          </Link>
           <Link
             target="_blank"
             href={"/Arshad_Resume.pdf"}
@@ -41,6 +38,9 @@ const NavBar = () => {
             className={linkStyles}
           >
             Resume
+          </Link>
+          <Link role="link" className={linkStyles} href={"/services"}>
+            Services
           </Link>
           <Link
             href={"/contact"}

@@ -13,10 +13,10 @@ const projectsInfo = [
   },
   {
     imageSrc: "/project_2.png",
-    projectHeading: "Youbie Token",
+    projectHeading: "Supplers",
     projectDetails:
-      "Presenting Youbie.tv, the game-changing, crypto-powered streaming platform I developed for a visionary client in the heart of innovation, Dubai. This DAO-operated 5-in-1 platform offers streamers unprecedented revenue streams, from NFT sales to gaming tournaments. With a user-friendly design, creators can start streaming, mint NFTs, and sell products within minutes. Youbie.tv accepts over 5 cryptocurrencies for seamless transactions, making it a revolutionary all-in-one solution for content creators.",
-    liveLink: "https://youbie-token.vercel.app/",
+      "Here's Supplers AB, a leading platform in the furniture and interior design industry, to enhance its functionality and user experience. As a software developer, my role was pivotal in implementing robust data management solutions by designing and integrating APIs for CRUD operations. Utilizing a diverse set of technologies including Next.js 12/13, Axios, TanStack Query, Formik, yup, react-hot-toast, react slick, swiper.js, and mobX, I contributed to significant improvements in UI/UX through various feature implementations. Our efforts aimed at delivering a seamless experience for users within the platform, further solidifying Supplers' position as a global community for the furniture and interior design industry.",
+    liveLink: "https://www.supplers.com/",
     github: "#",
   },
   {
@@ -43,7 +43,7 @@ const projectsInfo = [
     liveLink: "https://nextjs-ecommercebyarshad.netlify.app/",
     github: "https://github.com/ArshadChowdhury/e-commerce-demo-app",
   },
-  
+
   {
     imageSrc: "/project_6.png",
     projectHeading: "CSV Parser app",
@@ -88,6 +88,13 @@ const ProjectsPage = () => (
             <h4 className="text-2xl">{project.projectHeading}</h4>
             <p className="text-sm md:text-base">{project.projectDetails}</p>
             <div className="flex gap-4 underline">
+              <Link
+                className="hover:text-sky-600 text-sky-500"
+                target="_blank"
+                href={project?.liveLink}
+              >
+                Live Link
+              </Link>
               {project.github.length > 1 ? (
                 <Link
                   className="hover:text-sky-600 text-sky-500"
@@ -97,13 +104,6 @@ const ProjectsPage = () => (
                   Github
                 </Link>
               ) : null}
-              <Link
-                className="hover:text-sky-600 text-sky-500"
-                target="_blank"
-                href={project?.liveLink}
-              >
-                Live Link
-              </Link>
             </div>
           </div>
         </div>

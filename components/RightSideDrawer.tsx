@@ -148,19 +148,6 @@ function NavigationDrawer({ open, setOpen }: Props) {
                               onClick={() => setOpen(false)}
                               role="link"
                               className={`${linkStyles} ${
-                                isCurrentPage("/services")
-                                  ? "text-sky-900 dark:text-sky-500"
-                                  : ""
-                              }`}
-                              href={"/services"}
-                            >
-                              <WrenchScrewdriverIcon className="w-5" />
-                              Services
-                            </Link>
-                            <Link
-                              onClick={() => setOpen(false)}
-                              role="link"
-                              className={`${linkStyles} ${
                                 isCurrentPage("/Arshad_CV.pdf")
                                   ? "text-sky-900 dark:text-sky-500"
                                   : ""
@@ -170,6 +157,19 @@ function NavigationDrawer({ open, setOpen }: Props) {
                             >
                               <BookOpenIcon className="w-5" />
                               Resume
+                            </Link>
+                            <Link
+                              onClick={() => setOpen(false)}
+                              role="link"
+                              className={`${linkStyles} ${
+                                isCurrentPage("/services")
+                                  ? "text-sky-900 dark:text-sky-500"
+                                  : ""
+                              }`}
+                              href={"/services"}
+                            >
+                              <WrenchScrewdriverIcon className="w-5" />
+                              Services
                             </Link>
                             <Link
                               onClick={() => setOpen(false)}

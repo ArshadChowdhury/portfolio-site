@@ -99,7 +99,7 @@ const HomePageSlider = () => {
             currentImageIndex === 1 ? "project-container-current" : ""
           } single-project-container`}
         >
-          Youbie Token
+          Supplers
         </button>
         <button
           onClick={() => setCurrentImageIndex(2)}
