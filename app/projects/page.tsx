@@ -5,14 +5,6 @@ import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
 
 const projectsInfo = [
   {
-    imageSrc: "/project_1.png",
-    projectHeading: "My Dubai Properties",
-    projectDetails:
-      "My Dubai Properties is a sophisticated real estate platform meticulously crafted for seamless property transactions in the vibrant city of Dubai. Developed by a dedicated client, the website offers an extensive array of properties including apartments, villas, duplexes, and more. Its user-centric design ensures a delightful experience, enhanced by the integration of an intuitive map feature for effortless property location. The cutting-edge technology stack comprises Next.js for the frontend and Express for the backend, providing a robust foundation for a secure and efficient real estate marketplace.",
-    liveLink: "https://my-dubaiproperties.com/",
-    github: "#",
-  },
-  {
     imageSrc: "/project_2.png",
     projectHeading: "Supplers",
     projectDetails:
@@ -21,10 +13,18 @@ const projectsInfo = [
     github: "#",
   },
   {
-    imageSrc: "/project_5.png",
-    projectHeading: "Daraz clone",
+    imageSrc: "/project_1.png",
+    projectHeading: "My Dubai Properties",
     projectDetails:
-      "The Daraz Clone project serves as a valuable hands-on exercise to enhance my skills in React and gain practical insights into the functionalities of e-commerce websites. Through features such as cart management, add to cart, delete from cart, checkout, and user authentication pages like login and signup, this project provides a comprehensive understanding of the mechanics behind e-commerce platforms. It stands as a significant step in my learning journey, allowing me to apply React concepts and grasp the intricacies of user interactions within an e-commerce context",
+      "My Dubai Properties is a sophisticated real estate platform meticulously crafted for seamless property transactions in the vibrant city of Dubai. Developed by a dedicated client, the website offers an extensive array of properties including apartments, villas, duplexes, and more. Its user-centric design ensures a delightful experience, enhanced by the integration of an intuitive map feature for effortless property location. The cutting-edge technology stack comprises Next.js for the frontend and Express for the backend, providing a robust foundation for a secure and efficient real estate marketplace.",
+    liveLink: "https://my-dubaiproperties.com/",
+    github: "#",
+  },
+  {
+    imageSrc: "/project_5.png",
+    projectHeading: "Daraz",
+    projectDetails:
+      "The Daraz project serves as a valuable hands-on exercise to enhance my skills in React and gain practical insights into the functionalities of e-commerce websites. Through features such as cart management, add to cart, delete from cart, checkout, and user authentication pages like login and signup, this project provides a comprehensive understanding of the mechanics behind e-commerce platforms. It stands as a significant step in my learning journey, allowing me to apply React concepts and grasp the intricacies of user interactions within an e-commerce context",
     liveLink: "https://react-daraz-clone.netlify.app/",
     github: "https://github.com/ArshadChowdhury/react-eCommerce-app-interview",
   },
@@ -38,9 +38,9 @@ const projectsInfo = [
   },
   {
     imageSrc: "/project_4.png",
-    projectHeading: "Shop clone",
+    projectHeading: "Shop Now",
     projectDetails:
-      "Shop Clone represents my inaugural foray into Next.js and Tailwind for an e-commerce project. Leveraging Next.js routing, and incorporating essential elements like Link and Image, this project marks a significant leap in my understanding of these technologies. Despite my initial limited knowledge of Next.js and Tailwind, the Shop Clone is a testament to my ability to quickly grasp and implement these tools for a seamless and responsive e-commerce experience.",
+      "Shop Now represents my inaugural foray into Next.js and Tailwind for an e-commerce project. Leveraging Next.js routing, and incorporating essential elements like Link and Image, this project marks a significant leap in my understanding of these technologies. Despite my initial limited knowledge of Next.js and Tailwind, the Shop Clone is a testament to my ability to quickly grasp and implement these tools for a seamless and responsive e-commerce experience.",
     liveLink: "https://nextjs-ecommercebyarshad.netlify.app/",
     github: "https://github.com/ArshadChowdhury/e-commerce-demo-app",
   },
