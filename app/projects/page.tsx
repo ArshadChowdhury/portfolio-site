@@ -13,6 +13,14 @@ const projectsInfo = [
     github: "#",
   },
   {
+    imageSrc: "/chefk_desktop.png",
+    projectHeading: "Chef Koochooloo",
+    projectDetails:
+      "Chef Koochooloo, is an NSF award winner backed company, provides a curriculum and technological platform that teaches kids Social Responsibility, Global Competency, and STEAM (science, technology, engineering, art, and math) through cooking healthy international recipes, via dynamic educational apps, interactive services, and engaging curriculum. I played a pivotal role in the development & enhancement of this educational platform. The project was in Angular 10, migrated it to Angular 16. Despite having no experience in Angular. I managed to learn Angular basics within 2 weeks & swiftly tackle 250-300 issues within the next 1 month, transforming a previously paused project into a smoothly running application within 1.5 months and built a lot of features in express as well.",
+    liveLink: "https://app.staging.chefkoochooloo.com/#/",
+    github: "#",
+  },
+  {
     imageSrc: "/project_1.png",
     projectHeading: "My Dubai Properties",
     projectDetails:

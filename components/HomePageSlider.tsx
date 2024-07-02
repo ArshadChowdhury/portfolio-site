@@ -7,14 +7,14 @@ import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
 
 const imageSourcesDesktop = [
   "/project_2.png",
-  "/project_1.png",
+  "/chefk_desktop.png",
   "/project_5.png",
   "/project_4.png",
 ];
 
 const imageSourcesMobile = [
   "/project_2_mb.png",
-  "/project_1_mb.png",
+  "/chefk_mobile.png",
   "/project_5_mb.png",
   "/project_4_mb.png",
 ];
@@ -99,7 +99,7 @@ const HomePageSlider = () => {
             currentImageIndex === 1 ? "project-container-current" : ""
           } single-project-container`}
         >
-          My Dubai Properties
+          Chef Koochooloo
         </button>
         <button
           onClick={() => setCurrentImageIndex(2)}
