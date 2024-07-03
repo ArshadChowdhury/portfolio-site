@@ -8,15 +8,15 @@ import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
 const imageSourcesDesktop = [
   "/project_2.png",
   "/chefk_desktop.png",
+  "/project_1.png",
   "/project_5.png",
-  "/project_4.png",
 ];
 
 const imageSourcesMobile = [
   "/project_2_mb.png",
   "/chefk_mobile.png",
+  "/project_1_mb.png",
   "/project_5_mb.png",
-  "/project_4_mb.png",
 ];
 
 const HomePageSlider = () => {
@@ -107,7 +107,7 @@ const HomePageSlider = () => {
             currentImageIndex === 2 ? "project-container-current" : ""
           } single-project-container`}
         >
-          Daraz
+          My Dubai Properties
         </button>
         <button
           onClick={() => setCurrentImageIndex(3)}
@@ -115,7 +115,7 @@ const HomePageSlider = () => {
             currentImageIndex === 3 ? "project-container-current" : ""
           } single-project-container`}
         >
-          E-bazaar
+          Daraz
         </button>
         <Link
           className="single-project-container flex items-center gap-4 cursor-pointer group text-sm lg:text-lg"

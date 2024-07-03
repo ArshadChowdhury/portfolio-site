@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="mb-10">
       <div className="flex flex-col md:flex-row justify-around gap-10 mx-8">
-        <div className="flex flex-col items-center md:items-start gap-6 w-full lg:flex-1">
+        <div className="flex flex-col justify-center items-center md:items-start gap-6 w-full lg:flex-1">
           <Link role="link" href="/" className="flex items-center gap-2">
             <Image
               src={"/logo.png"}
@@ -36,7 +36,7 @@ const Footer = () => {
             bring your vision to vibrant life!
           </p>
         </div>
-        <div className="flex flex-col justify-center items-center gap-4 px-6">
+        <div className="flex flex-wrap md:flex-col justify-center items-center gap-4 px-6">
           <Link className={linkStyles} href={"/"}>
             Home
           </Link>
