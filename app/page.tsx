@@ -12,7 +12,7 @@ export default function Home() {
       <HomePageSlider />
       <EverythingNeeded />
       <Testimonials />
-      <RandomAdvice />
+      {/* <RandomAdvice /> */}
       <ContactMe />
     </main>
   );
