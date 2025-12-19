@@ -14,7 +14,7 @@ const GetStarted = () => (
     </p>
     <Link
       role="link"
-      href={"/contact"}
+      href={"/projects"}
       className="font-bold bg-sky-400 dark:bg-slate-100 px-6 py-2 rounded-md text-black/80 hover:transform hover:scale-[115%]"
     >
       Get Started{" "}

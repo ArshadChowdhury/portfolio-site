@@ -8,7 +8,7 @@ const projectsInfo = [
     imageSrc: "/project_2.png",
     projectHeading: "Supplers",
     projectDetails:
-      "Here's Supplers, a leading platform in the furniture and interior design industry, to enhance its functionality and user experience. As a developer, my role was pivotal in implementing robust data management solutions by designing and integrating APIs for CRUD operations. Utilizing a diverse set of technologies including Next.js 12/13, Axios, TanStack Query, Formik, yup, react-hot-toast, react slick, swiper.js, and mobX, I contributed to significant improvements in UI/UX through various feature implementations. Our efforts aimed at delivering a seamless experience for users within the platform, further solidifying Supplers' position as a global community for the furniture and interior design industry.",
+      "Here's Supplers, a leading platform in the furniture and interior design industry, to enhance its functionality and user experience. As a developer, my role was pivotal in implementing robust data management solutions by designing and integrating APIs for CRUD operations. Utilizing a diverse set of technologies including Next.js 12/13, Axios, TanStack Query, Formik, yup, react-hot-toast, react slick, swiper.js and mobX, I contributed to significant improvements in UI/UX through various feature implementations. Our team of 5-6 developer's efforts aimed at delivering a seamless experience for users within the platform, further solidifying Supplers' position as a global community for the furniture and interior design industry.",
     liveLink: "https://supplers.com/",
     github: "#",
   },
@@ -16,7 +16,7 @@ const projectsInfo = [
     imageSrc: "/chefk_desktop.png",
     projectHeading: "Chef Koochooloo",
     projectDetails:
-      "Chef Koochooloo, is an NSF award winner backed company, provides a curriculum and technological platform that teaches kids Social Responsibility, Global Competency, and STEAM (science, technology, engineering, art, and math) through cooking healthy international recipes, via dynamic educational apps, interactive services, and engaging curriculum. I played a pivotal role in the development & enhancement of this educational platform. The project was in Angular 10, we migrated it to Angular 16. Despite having no experience in Angular I managed to learn Angular basics within 2 weeks & swiftly tackle 250-300 bugs within the next 1 month, transforming a previously dead project into a smoothly running application within 1.5 months, built a lot of features in express and migrated assets from Google Cloud Bucket to AWS s3 Bucket as well.",
+      "Chef Koochooloo, is an NSF award winner backed company, provides a curriculum and technological platform that teaches kids Social Responsibility, Global Competency, and STEAM (science, technology, engineering, art and math) through cooking healthy international recipes, via dynamic educational apps, interactive services and engaging curriculum. I played a pivotal role in the development & enhancement of this educational platform. The project was in Angular 10, we migrated it to Angular 16. Despite having no experience in Angular I managed to learn Angular basics within 2 weeks & swiftly tackle 300-350 bugs within the next 1.5 month, transforming a previously dead project into a smoothly running application, built a lot of features in express & migrated assets from Google Cloud Bucket to AWS s3 Bucket as well through a Python script.",
     liveLink: "https://app.chefkoochooloo.com/#/",
     github: "#",
   },
@@ -24,7 +24,7 @@ const projectsInfo = [
     imageSrc: "/project_1.png",
     projectHeading: "My Dubai Properties",
     projectDetails:
-      "My Dubai Properties is a sophisticated real estate platform meticulously crafted for seamless property transactions in the vibrant city of Dubai. Developed by a dedicated client, the website offers an extensive array of properties including apartments, villas, duplexes, and more. Its user-centric design ensures a delightful experience, enhanced by the integration of an intuitive map feature for effortless property location. The cutting-edge technology stack comprises Next.js for the frontend and Express for the backend, complemented by technologies such as Axios, TanStack Query, React Hook Form, yup, react-hot-toast, react slick, swiper.js, gsap and many more providing a robust foundation for a secure and efficient real estate marketplace. ",
+      "My Dubai Properties is a sophisticated real estate platform meticulously crafted for seamless property transactions in the vibrant city of Dubai. Developed by a dedicated client, the website offers an extensive array of properties including apartments, villas, duplexes and more. Its user-centric design ensures a delightful experience, enhanced by the integration of an intuitive map feature for effortless property location. The cutting-edge technology stack comprises Next.js for the frontend and Express for the backend, complemented by technologies such as Axios, TanStack Query, React Hook Form, yup, react-hot-toast, react slick, swiper.js, gsap and many more providing a robust foundation for a secure and efficient real estate marketplace. ",
     liveLink: "#",
     github: "https://github.com/ArshadChowdhury/my-dubai-properties",
   },
@@ -44,31 +44,31 @@ const projectsInfo = [
     liveLink: "https://e-bazaar-by-arshad.netlify.app/",
     github: "https://github.com/ArshadChowdhury/e-bazaar-frontend",
   },
-  {
-    imageSrc: "/project_4.png",
-    projectHeading: "Shop Now",
-    projectDetails:
-      "Shop Now represents my inaugural foray into Next.js and Tailwind for an e-commerce project. Leveraging Next.js routing, and incorporating essential elements like Link and Image, this project marks a significant leap in my understanding of these technologies. Despite my initial limited knowledge of Next.js and Tailwind, the Shop Clone is a testament to my ability to quickly grasp and implement these tools for a seamless and responsive e-commerce experience.",
-    liveLink: "https://nextjs-ecommercebyarshad.netlify.app/",
-    github: "https://github.com/ArshadChowdhury/e-commerce-demo-app",
-  },
+  // {
+  //   imageSrc: "/project_4.png",
+  //   projectHeading: "Shop Now",
+  //   projectDetails:
+  //     "Shop Now represents my inaugural foray into Next.js and Tailwind for an e-commerce project. Leveraging Next.js routing, and incorporating essential elements like Link and Image, this project marks a significant leap in my understanding of these technologies. Despite my initial limited knowledge of Next.js and Tailwind, the Shop Clone is a testament to my ability to quickly grasp and implement these tools for a seamless and responsive e-commerce experience.",
+  //   liveLink: "https://nextjs-ecommercebyarshad.netlify.app/",
+  //   github: "https://github.com/ArshadChowdhury/e-commerce-demo-app",
+  // },
 
-  {
-    imageSrc: "/project_6.png",
-    projectHeading: "CSV Parser app",
-    projectDetails:
-      "The CSV Parser App is a specialized tool designed for parsing CSV files containing XYZ values. This app efficiently reads the file, identifies the maximum and minimum XYZ values, and visually represents the maximum X value on a graph. Additionally, users can download the parsed results in a convenient PDF format. This application streamlines the process of extracting and visualizing key data points from CSV files, offering a user-friendly solution for data analysis and visualization.",
-    liveLink: "https://xyz-petroleum.netlify.app/",
-    github: "https://github.com/ArshadChowdhury/csv-parser-app",
-  },
-  {
-    imageSrc: "/project_7.png",
-    projectHeading: "Image Gallery app",
-    projectDetails:
-      "The Image Gallery App is a visually appealing solution crafted for efficient image management. Developed with React and Vite, this application allows users to sort and delete multiple images seamlessly. Moreover, it features the capability to add an image for preview, enhancing the overall user experience. The deployment on Netlify ensures accessibility and convenience, making it a versatile and user-friendly image gallery solution.",
-    liveLink: "https://image-gallery-by-arshad.netlify.app/",
-    github: "https://github.com/ArshadChowdhury/image-gallery",
-  },
+  // {
+  //   imageSrc: "/project_6.png",
+  //   projectHeading: "CSV Parser app",
+  //   projectDetails:
+  //     "The CSV Parser App is a specialized tool designed for parsing CSV files containing XYZ values. This app efficiently reads the file, identifies the maximum and minimum XYZ values, and visually represents the maximum X value on a graph. Additionally, users can download the parsed results in a convenient PDF format. This application streamlines the process of extracting and visualizing key data points from CSV files, offering a user-friendly solution for data analysis and visualization.",
+  //   liveLink: "https://xyz-petroleum.netlify.app/",
+  //   github: "https://github.com/ArshadChowdhury/csv-parser-app",
+  // },
+  // {
+  //   imageSrc: "/project_7.png",
+  //   projectHeading: "Image Gallery app",
+  //   projectDetails:
+  //     "The Image Gallery App is a visually appealing solution crafted for efficient image management. Developed with React and Vite, this application allows users to sort and delete multiple images seamlessly. Moreover, it features the capability to add an image for preview, enhancing the overall user experience. The deployment on Netlify ensures accessibility and convenience, making it a versatile and user-friendly image gallery solution.",
+  //   liveLink: "https://image-gallery-by-arshad.netlify.app/",
+  //   github: "https://github.com/ArshadChowdhury/image-gallery",
+  // },
 ];
 
 export const metadata: Metadata = {
@@ -112,7 +112,7 @@ const ProjectsPage = () => (
                   target="_blank"
                   href={project?.github}
                 >
-                  Github
+                  GitHub
                 </Link>
               ) : null}
             </div>
