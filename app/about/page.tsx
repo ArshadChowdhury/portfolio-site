@@ -44,15 +44,15 @@ const AboutPage = () => (
       <div className="flex flex-col items-center gap-4">
         <h4 className="text-center text-2xl">More about me</h4>
         <p className="flex flex-col gap-4">
-          My journey into software development started nearly three years ago.
-          I&apos;m proficient in JavaScript, React.js, Next.js, Node.js,
-          Nest.js, Django, WordPress, PostgreSQL, MongoDB, HTML, CSS and more.
+          My journey into software development started nearly four years ago.
+          I&apos;m proficient in JavaScript, TypeScript, React.js, Next.js, Node.js, Express,
+          Nest.js, PostgreSQL, MongoDB, Git, GitHub, AWS and more.
           I&apos;ve been consistently broadening my skillset as well, currently
           learning the nuances of C/C++.
           <span>
-            I thrive on challenges. With almost 1 year of invaluable job
-            experience at a software firm, I&apos;ve left an indelible mark on
-            all three of the company&apos;s flagship projects, showcasing
+            I thrive on challenges. With almost 4 year of invaluable job
+            experience at software firms, I&apos;ve left an indelible mark on
+            all 8 of the company&apos;s flagship projects, showcasing
             expertise in both frontend and backend of those projects.
           </span>{" "}
           <span>
