@@ -24,7 +24,7 @@ const projectsInfo = [
     imageSrc: "/project_1.png",
     projectHeading: "My Dubai Properties",
     projectDetails:
-      "My Dubai Properties is a sophisticated real estate platform meticulously crafted for seamless property transactions in the vibrant city of Dubai. Developed by a dedicated client, the website offers an extensive array of properties including apartments, villas, duplexes and more. Its user-centric design ensures a delightful experience, enhanced by the integration of an intuitive map feature for effortless property location. The cutting-edge technology stack comprises Next.js for the frontend and Express for the backend, complemented by technologies such as Axios, TanStack Query, React Hook Form, yup, react-hot-toast, react slick, swiper.js, gsap and many more providing a robust foundation for a secure and efficient real estate marketplace. ",
+      "My Dubai Properties is a sophisticated real estate platform meticulously crafted for seamless property transactions in the vibrant city of Dubai. Developed by a dedicated client, the app offers an extensive array of properties including apartments, villas, duplexes and more. Its user-centric design ensures a delightful experience, enhanced by the integration of an intuitive map feature for effortless property location. The cutting-edge technology stack comprises Next.js for the frontend and Express for the backend, complemented by technologies such as Axios, TanStack Query, React Hook Form, yup, react-hot-toast, react slick, swiper.js, gsap and many more providing a robust foundation for a secure and efficient real estate marketplace. ",
     liveLink: "#",
     github: "https://github.com/ArshadChowdhury/my-dubai-properties",
   },

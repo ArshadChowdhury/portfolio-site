@@ -21,19 +21,19 @@ const AboutPage = () => (
       />
       <p className="flex flex-col gap-4">
         Hey 👋 I&apos;m Arshad, a seasoned full-stack developer from Bangladesh.
-        Specializing in end-to-end web app design and development, I prioritize
+        Specializing in end-to-end software system design and development, I prioritize
         user experience and client satisfaction. Let&apos;s connect and explore
         new possibilities!
         <span>
           Over the course of my career as a full stack developer, I&apos;ve
           consistently cultivated a deep passion for enhancing the functionality
-          and user experience of websites. This journey has not only fueled my
+          and user experience of softwars. This journey has not only fueled my
           technical expertise but also instilled a dedicated commitment to
-          ensuring that websites I work on are optimized to their fullest
+          ensuring that softwar I work on are optimized to their fullest
           potential, catering to the needs of every user.
         </span>
         <span>
-          This continuous pursuit of excellence in web development reflects my
+          This continuous pursuit of excellence in software development reflects my
           unwavering dedication to creating online spaces that are not only
           visually appealing but also seamlessly accessible and user-friendly
           for a diverse audience.
@@ -44,15 +44,15 @@ const AboutPage = () => (
       <div className="flex flex-col items-center gap-4">
         <h4 className="text-center text-2xl">More about me</h4>
         <p className="flex flex-col gap-4">
-          My journey into software development started nearly four years ago.
+          My journey into software development started four years ago.
           I&apos;m proficient in JavaScript, TypeScript, React.js, Next.js, Node.js, Express,
           Nest.js, PostgreSQL, MongoDB, Git, GitHub, AWS and more.
           I&apos;ve been consistently broadening my skillset as well, currently
-          learning the nuances of C/C++.
+          learning the nuances of Java.
           <span>
-            I thrive on challenges. With almost 4 year of invaluable job
+            I thrive on challenges. With 4+ year of invaluable job
             experience at software firms, I&apos;ve left an indelible mark on
-            all 8 of the company&apos;s flagship projects, showcasing
+            all of the flagship projects that I've worked on, showcasing
             expertise in both frontend and backend of those projects.
           </span>{" "}
           <span>
@@ -68,7 +68,7 @@ const AboutPage = () => (
             >
               arshadchowdhury
             </Link>{" "}
-            <br /> If you wanna work with me I&apos;d be able to do all those
+            <br /> If you wanna work with me I&apos;d be able to do all these
             amazing things for you 😊
           </span>
           <Link
@@ -87,16 +87,16 @@ const AboutPage = () => (
         <h4 className="text-center text-2xl">About my projects</h4>
         <p className="flex flex-col gap-4">
           In the course of my career, I&apos;ve had the privilege of
-          contributing to three significant large-scale projects, the details of
+          contributing to many significantly large-scale projects, the details of
           which, unfortunately, are bound by non-disclosure agreements. While I
-          can&apos;t showcase those specific projects, the websites I&apos;m
+          can&apos;t showcase those specific projects, the apps I&apos;m
           able to share below are a testament to my skills and capabilities.
           <span>
             Each project posed its unique challenges, but my proficiency in
             problem-solving has consistently proven effective. I take pride in
             overcoming obstacles, ensuring that no errors impede the successful
             completion of my projects. Feel free to explore the showcased
-            websites, which reflect both my technical expertise and commitment
+            apps, which reflect both my technical expertise and commitment
             to delivering exceptional results.
           </span>{" "}
           <Link
@@ -115,7 +115,7 @@ const AboutPage = () => (
         <h4 className="text-center text-2xl">About my YouTube Channel</h4>
         <p className="flex flex-col gap-4">
           Beyond my professional endeavors, I actively share my knowledge in
-          programming and web development through my YouTube channel. This
+          programming and software development through my YouTube channel. This
           platform serves as a teaching space where I engage with an audience
           eager to learn about the intricacies of programming. If given the
           opportunity, I am excited to bring my wealth of experience, passion,
