@@ -23,7 +23,8 @@ const ScrollToTop = () => {
 
   return (
     <button
-      className="fixed right-[5%] bottom-[10%] bg-slate-300 dark:bg-slate-600 rounded-full p-2 lg:p-3"
+      aria-label="Scroll to top"
+      className="fixed bottom-[10%] right-[5%] rounded-full bg-slate-300 p-2 shadow-md transition hover:bg-sky-200 dark:bg-slate-700 dark:hover:bg-slate-600 lg:p-3"
       onClick={() => {
         window.scrollTo({
           top: 0,

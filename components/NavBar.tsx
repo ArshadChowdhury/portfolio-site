@@ -4,49 +4,50 @@ import ThemeButton from "./ThemeButton";
 import RightSideDrawer from "./RightSideDrawer";
 
 const linkStyles =
-  "px-6 py-2 rounded-md font-semibold hover:bg-gray-300 dark:hover:bg-gray-900 hover:transform hover:scale-[115%]";
+  "px-5 py-2 rounded-md font-semibold text-slate-700 transition hover:bg-slate-100 hover:text-sky-800 dark:text-slate-200 dark:hover:bg-slate-800 dark:hover:text-sky-300";
 
 const NavBar = () => {
   return (
-    <nav className="bg-white/90 backdrop-blur-sm dark:bg-slate-900/20 dark:text-gray-50 dark:ring-slate-800/80 px-2 w-full py-4 fixed top-0 left-0 ring-1 ring-slate-300 z-50">
+    <nav className="fixed left-0 top-0 z-50 w-full border-b border-slate-200 bg-white/90 px-2 py-4 backdrop-blur-sm dark:border-slate-800 dark:bg-slate-950/80 dark:text-slate-50">
       <div className="flex items-center justify-between max-w-7xl mx-auto">
-        <Link role="link" href="/" className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2">
           <Image
             priority
             src="/logo.png"
-            className="rounded-md max-w-full h-auto"
+            className="h-12 w-auto rounded-md"
             alt="Logo"
-            height={60}
-            width={60}
+            height={434}
+            width={533}
           />
           <div>
-            <h3 className="text-base lg:text-lg">Arshad Chowdhury</h3>
-            <p className="text-xs">Full Stack Developer</p>
+            <span className="block text-base font-medium lg:text-lg">
+              Arshad Chowdhury
+            </span>
+            <span className="block text-xs">AI MVP Developer</span>
           </div>
         </Link>
         <div className="hidden lg:flex items-center gap-4">
-          <Link role="link" className={linkStyles} href={"/about"}>
+          <Link className={linkStyles} href={"/about"}>
             About
           </Link>
-          <Link role="link" className={linkStyles} href={"/projects"}>
+          <Link className={linkStyles} href={"/projects"}>
             Projects
           </Link>
           <Link
             target="_blank"
+            rel="noopener noreferrer"
             href={"/Arshad_Resume.pdf"}
-            role="link"
             className={linkStyles}
           >
             Resume
           </Link>
-          <Link role="link" className={linkStyles} href={"/services"}>
+          <Link className={linkStyles} href={"/services"}>
             Services
           </Link>
           <Link
             href={"/contact"}
-            role="link"
             className={
-              "px-6 py-2 rounded-md font-semibold text-gray-50 bg-violet-500 dark:bg-violet-700 hover:bg-violet-700 dark:hover:bg-violet-800 hover:transform hover:scale-[105%]"
+              "rounded-md bg-sky-600 px-5 py-2 font-semibold text-white transition hover:bg-sky-700"
             }
           >
             Contact Me

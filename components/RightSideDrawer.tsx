@@ -16,11 +16,11 @@ import Image from "next/image";
 import { SocialIcon } from "react-social-icons";
 import { Dialog, Transition } from "@headlessui/react";
 import { usePathname } from "next/navigation";
+import type { Dispatch, SetStateAction } from "react";
 
-// The prop types defind
 type Props = {
   open: boolean;
-  setOpen: any;
+  setOpen: Dispatch<SetStateAction<boolean>>;
 };
 
 const RightSideDrawer = () => {
@@ -30,6 +30,7 @@ const RightSideDrawer = () => {
     <>
       <button
         aria-label="Open Navbar"
+        type="button"
         onClick={() => setDrawerOpen(!drawerOpen)}
       >
         <Bars3BottomRightIcon className="w-8" />
@@ -84,30 +85,33 @@ function NavigationDrawer({ open, setOpen }: Props) {
                           <div className="flex border-b border-gray-600 py-2 justify-between items-center">
                             <Link
                               onClick={() => setOpen(false)}
-                              role="link"
                               href="/"
                               className="flex items-center gap-4"
                             >
                               <Image
-                                // style={{ width: "auto", height: "auto" }}
                                 src="/logo.png"
-                                className="rounded-full w-12 h-12"
+                                className="h-12 w-12 rounded-full object-cover"
                                 alt="Logo"
-                                height={50}
-                                width={50}
+                                height={434}
+                                width={533}
                               />
-                              <h1>Arshad Chowdhury</h1>
+                              <span className="font-semibold">
+                                Arshad Chowdhury
+                              </span>
                             </Link>
-                            <XMarkIcon
+                            <button
+                              type="button"
+                              aria-label="Close navigation menu"
                               onClick={() => setOpen(false)}
-                              className="w-6 md:w-10 cursor-pointer"
-                            />
+                              className="rounded-md p-1 transition hover:bg-slate-200 dark:hover:bg-slate-700"
+                            >
+                              <XMarkIcon className="w-6 md:w-10" />
+                            </button>
                           </div>
 
                           <div className="flex flex-col items-center gap-6">
                             <Link
                               onClick={() => setOpen(false)}
-                              role="link"
                               className={`${linkStyles} ${
                                 isCurrentPage("/")
                                   ? "text-sky-900 dark:text-sky-500"
@@ -120,7 +124,6 @@ function NavigationDrawer({ open, setOpen }: Props) {
                             </Link>
                             <Link
                               onClick={() => setOpen(false)}
-                              role="link"
                               className={`${linkStyles} ${
                                 isCurrentPage("/about")
                                   ? "text-sky-900 dark:text-sky-500"
@@ -133,7 +136,6 @@ function NavigationDrawer({ open, setOpen }: Props) {
                             </Link>
                             <Link
                               onClick={() => setOpen(false)}
-                              role="link"
                               className={`${linkStyles} ${
                                 isCurrentPage("/projects")
                                   ? "text-sky-900 dark:text-sky-500"
@@ -146,13 +148,13 @@ function NavigationDrawer({ open, setOpen }: Props) {
                             </Link>
                             <Link
                               onClick={() => setOpen(false)}
-                              role="link"
                               className={`${linkStyles} ${
                                 isCurrentPage("/Arshad_Resume.pdf")
                                   ? "text-sky-900 dark:text-sky-500"
                                   : ""
                               }`}
                               target="_blank"
+                              rel="noopener noreferrer"
                               href={"/Arshad_Resume.pdf"}
                             >
                               <BookOpenIcon className="w-5" />
@@ -160,7 +162,6 @@ function NavigationDrawer({ open, setOpen }: Props) {
                             </Link>
                             <Link
                               onClick={() => setOpen(false)}
-                              role="link"
                               className={`${linkStyles} ${
                                 isCurrentPage("/services")
                                   ? "text-sky-900 dark:text-sky-500"
@@ -173,7 +174,6 @@ function NavigationDrawer({ open, setOpen }: Props) {
                             </Link>
                             <Link
                               onClick={() => setOpen(false)}
-                              role="link"
                               className={`${linkStyles} ${
                                 isCurrentPage("/contact")
                                   ? "text-sky-900 dark:text-sky-500"
@@ -192,6 +192,7 @@ function NavigationDrawer({ open, setOpen }: Props) {
                                 <SocialIcon
                                   className="scale-90"
                                   target="_blank"
+                                  rel="noopener noreferrer"
                                   url="https://www.linkedin.com/in/mohammed-arshad-67920b213/"
                                 />
                               </li>
@@ -199,6 +200,7 @@ function NavigationDrawer({ open, setOpen }: Props) {
                                 <SocialIcon
                                   className="scale-90"
                                   target="_blank"
+                                  rel="noopener noreferrer"
                                   url="https://twitter.com/Arshaaaaaaaaaad"
                                 />
                               </li>
@@ -206,6 +208,7 @@ function NavigationDrawer({ open, setOpen }: Props) {
                                 <SocialIcon
                                   className="scale-90"
                                   target="_blank"
+                                  rel="noopener noreferrer"
                                   url="mailto:arshadchowdhury46@gmail.com"
                                 />
                               </li>
@@ -213,6 +216,7 @@ function NavigationDrawer({ open, setOpen }: Props) {
                                 <SocialIcon
                                   className="scale-90"
                                   target="_blank"
+                                  rel="noopener noreferrer"
                                   url="https://www.facebook.com/arshad.chowdhury23/"
                                 />
                               </li>
@@ -220,6 +224,7 @@ function NavigationDrawer({ open, setOpen }: Props) {
                                 <SocialIcon
                                   className="scale-90"
                                   target="_blank"
+                                  rel="noopener noreferrer"
                                   url="https://github.com/ArshadChowdhury"
                                 />
                               </li>

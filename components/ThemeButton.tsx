@@ -40,7 +40,7 @@ const ThemeButton = () => {
       default:
         return (
           <>
-            <ComputerDesktopIcon aria-hidden="true" className="w-4" /> System
+            <ComputerDesktopIcon aria-hidden="true" className="w-4" />
           </>
         );
     }
@@ -50,7 +50,6 @@ const ThemeButton = () => {
     <Menu as="div" className="relative inline-block text-left">
       <div>
         <Menu.Button
-          role="button"
           aria-label="Current Theme"
           className="inline-flex w-full justify-center gap-2 items-center rounded bg-black/30 dark:bg-black/20 p-3 text-sm font-medium text-white hover:bg-black/40 dark:hover:bg-black/70 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75"
         >

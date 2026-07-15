@@ -6,34 +6,27 @@ const linkStyles =
 
 const Footer = () => {
   return (
-    <footer className="mb-10">
-      <div className="flex flex-col md:flex-row justify-around gap-10 mx-8">
+    <footer className="mx-auto mb-10 w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="flex flex-col justify-around gap-10 md:flex-row">
         <div className="flex flex-col justify-center items-center md:items-start gap-6 w-full lg:flex-1">
-          <Link role="link" href="/" className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-2">
             <Image
               src={"/logo.png"}
-              className="rounded-md"
-              height={60}
-              width={60}
-              placeholder="blur"
-              blurDataURL={"/logo.png"}
+              className="h-12 w-auto rounded-md"
+              height={434}
+              width={533}
               alt="Logo"
             />
             <div>
-              <h3 className="text-lg">Arshad Chowdhury</h3>
-              <p className="text-xs">Full Stack Developer</p>
+              <span className="block text-lg font-medium">Arshad Chowdhury</span>
+              <span className="block text-xs">AI MVP Developer</span>
             </div>
           </Link>
-          <p className="flex flex-col gap-2 text-center md:text-left text-sm lg:text-base">
-            As a dedicated Full Stack Developer, I am passionate about
-            transforming concepts into robust digital solutions. With a focus on
-            end-to-end development, I specialize in creating seamless,
-            user-centric experiences. My proficiency extends across diverse
-            programming languages and frameworks, enabling me to customize
-            solutions that align with your unique requirements. From inventive
-            problem-solving to collaborative project management, I am committed
-            to enhancing your digital presence. Let&apos;s work together to
-            bring your vision to vibrant life!
+          <p className="flex flex-col gap-2 text-center text-sm leading-6 text-slate-600 dark:text-slate-300 md:text-left lg:text-base">
+            I help founders and businesses worldwide build AI MVPs, SaaS
+            products and full-stack web applications. I can work independently
+            or coordinate a small team of specialists when the project needs
+            more delivery capacity.
           </p>
         </div>
         <div className="flex flex-wrap md:flex-col justify-center items-center gap-4 px-6">

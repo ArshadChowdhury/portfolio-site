@@ -2,131 +2,104 @@ import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
 import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
-
-const projectsInfo = [
-  {
-    imageSrc: "/project_2.png",
-    projectHeading: "Supplers",
-    projectDetails:
-      "Here's Supplers, a leading platform in the furniture and interior design industry, to enhance its functionality and user experience. As a developer, my role was pivotal in implementing robust data management solutions by designing and integrating APIs for CRUD operations. Utilizing a diverse set of technologies including Next.js 12/13, Axios, TanStack Query, Formik, yup, react-hot-toast, react slick, swiper.js and mobX, I contributed to significant improvements in UI/UX through various feature implementations. Our team of 5-6 developer's efforts aimed at delivering a seamless experience for users within the platform, further solidifying Supplers' position as a global community for the furniture and interior design industry.",
-    liveLink: "https://supplers.com/",
-    github: "#",
-  },
-  {
-    imageSrc: "/chefk_desktop.png",
-    projectHeading: "Chef Koochooloo",
-    projectDetails:
-      "Chef Koochooloo, is an NSF award winner backed company, provides a curriculum and technological platform that teaches kids Social Responsibility, Global Competency, and STEAM (science, technology, engineering, art and math) through cooking healthy international recipes, via dynamic educational apps, interactive services and engaging curriculum. I played a pivotal role in the development & enhancement of this educational platform. The project was in Angular 10, we migrated it to Angular 16. Despite having no experience in Angular I managed to learn Angular basics within 2 weeks & swiftly tackle 300-350 bugs within the next 1.5 month, transforming a previously dead project into a smoothly running application, built a lot of features in express & migrated assets from Google Cloud Bucket to AWS s3 Bucket as well through a Python script.",
-    liveLink: "https://app.chefkoochooloo.com/#/",
-    github: "#",
-  },
-  {
-    imageSrc: "/project_1.png",
-    projectHeading: "My Dubai Properties",
-    projectDetails:
-      "My Dubai Properties is a sophisticated real estate platform meticulously crafted for seamless property transactions in the vibrant city of Dubai. Developed by a dedicated client, the app offers an extensive array of properties including apartments, villas, duplexes and more. Its user-centric design ensures a delightful experience, enhanced by the integration of an intuitive map feature for effortless property location. The cutting-edge technology stack comprises Next.js for the frontend and Express for the backend, complemented by technologies such as Axios, TanStack Query, React Hook Form, yup, react-hot-toast, react slick, swiper.js, gsap and many more providing a robust foundation for a secure and efficient real estate marketplace. ",
-    liveLink: "#",
-    github: "https://github.com/ArshadChowdhury/my-dubai-properties",
-  },
-  {
-    imageSrc: "/project_5.png",
-    projectHeading: "Daraz",
-    projectDetails:
-      "The Daraz project serves as a valuable hands-on exercise to enhance my skills in React and gain practical insights into the functionalities of e-commerce websites. Through features such as cart management, add to cart, delete from cart, checkout, and user authentication pages like login and signup, this project provides a comprehensive understanding of the mechanics behind e-commerce platforms. It stands as a significant step in my learning journey, allowing me to apply React concepts and grasp the intricacies of user interactions within an e-commerce context",
-    liveLink: "https://react-daraz-clone.netlify.app/",
-    github: "https://github.com/ArshadChowdhury/react-eCommerce-app-interview",
-  },
-  {
-    imageSrc: "/project_3.png",
-    projectHeading: "E-bazaar",
-    projectDetails:
-      "Introducing E-bazaar, an innovative e-commerce frontend project I've developed. This user-friendly platform allows seamless addition of new products, efficient product search and navigation, cart management including item addition, quantity updates, and deletions. Notably, the use of MongoDB ensures persistent storage of the cart and all products, offering a seamless experience even after page reloads. The project boasts full responsiveness across devices and features intuitive modals and side drawers for convenient product management and cart viewing. With added functionalities such as discount start and end dates, E-bazaar is designed to enhance the overall e-commerce experience.",
-    liveLink: "https://e-bazaar-by-arshad.netlify.app/",
-    github: "https://github.com/ArshadChowdhury/e-bazaar-frontend",
-  },
-  // {
-  //   imageSrc: "/project_4.png",
-  //   projectHeading: "Shop Now",
-  //   projectDetails:
-  //     "Shop Now represents my inaugural foray into Next.js and Tailwind for an e-commerce project. Leveraging Next.js routing, and incorporating essential elements like Link and Image, this project marks a significant leap in my understanding of these technologies. Despite my initial limited knowledge of Next.js and Tailwind, the Shop Clone is a testament to my ability to quickly grasp and implement these tools for a seamless and responsive e-commerce experience.",
-  //   liveLink: "https://nextjs-ecommercebyarshad.netlify.app/",
-  //   github: "https://github.com/ArshadChowdhury/e-commerce-demo-app",
-  // },
-
-  // {
-  //   imageSrc: "/project_6.png",
-  //   projectHeading: "CSV Parser app",
-  //   projectDetails:
-  //     "The CSV Parser App is a specialized tool designed for parsing CSV files containing XYZ values. This app efficiently reads the file, identifies the maximum and minimum XYZ values, and visually represents the maximum X value on a graph. Additionally, users can download the parsed results in a convenient PDF format. This application streamlines the process of extracting and visualizing key data points from CSV files, offering a user-friendly solution for data analysis and visualization.",
-  //   liveLink: "https://xyz-petroleum.netlify.app/",
-  //   github: "https://github.com/ArshadChowdhury/csv-parser-app",
-  // },
-  // {
-  //   imageSrc: "/project_7.png",
-  //   projectHeading: "Image Gallery app",
-  //   projectDetails:
-  //     "The Image Gallery App is a visually appealing solution crafted for efficient image management. Developed with React and Vite, this application allows users to sort and delete multiple images seamlessly. Moreover, it features the capability to add an image for preview, enhancing the overall user experience. The deployment on Netlify ensures accessibility and convenience, making it a versatile and user-friendly image gallery solution.",
-  //   liveLink: "https://image-gallery-by-arshad.netlify.app/",
-  //   github: "https://github.com/ArshadChowdhury/image-gallery",
-  // },
-];
+import { projectsInfo } from "@/data/projects";
 
 export const metadata: Metadata = {
-  title: "Arshad's Projects",
+  title: "Projects",
+  description:
+    "Selected AI-ready web apps, SaaS products, e-commerce builds, migrations and full-stack development work by Arshad Chowdhury.",
+  alternates: {
+    canonical: "/projects",
+  },
 };
 
 const ProjectsPage = () => (
-  <section className="my-20 flex flex-col gap-8 items-center min-h-screen">
-    <h1 className="mt-16 mb-10 text-4xl font-semibold">My Projects</h1>
-    {projectsInfo.map((project, index) => (
-      <div key={index} className="flex flex-col lg:flex-row w-full">
-        {" "}
-        <div className="w-full lg:w-1/2">
-          <Image
-            src={project.imageSrc}
-            className="w-full h-full rounded-md border border-gray-300 dark:border-gray-500 shadow-lg"
-            height="650"
-            width="650"
-            placeholder="blur"
-            blurDataURL={project.imageSrc}
-            alt="Project_image"
-          />
-        </div>
-        <div className="w-full lg:w-1/2">
-          <div className="mx-2 lg:mx-6 my-4 lg:my-2 flex flex-col gap-4">
-            <h4 className="text-2xl">{project.projectHeading}</h4>
-            <p className="text-sm md:text-base">{project.projectDetails}</p>
-            <div className="flex gap-4 underline">
-              {project.liveLink.length > 1 ? (
+  <section className="my-20 flex min-h-screen flex-col items-center gap-8">
+    <div className="mt-10 max-w-3xl text-center lg:mt-16">
+      <span className="text-sm font-semibold uppercase tracking-[0.24em] text-sky-700 dark:text-sky-300">
+        Projects
+      </span>
+      <h1 className="mt-3 text-3xl font-semibold lg:text-5xl">
+        Selected full-stack product work
+      </h1>
+      <p className="mt-5 text-base leading-7 text-slate-600 dark:text-slate-300 lg:text-lg">
+        A mix of production platforms, migrations, e-commerce products and
+        full-stack builds. Some client work is under NDA, so these examples
+        focus on the product execution I can show publicly.
+      </p>
+    </div>
+
+    <div className="grid w-full gap-8">
+      {projectsInfo.map((project) => (
+        <article
+          key={project.projectHeading}
+          className="grid overflow-hidden rounded-lg border border-slate-200 bg-white/75 shadow-sm dark:border-slate-800 dark:bg-slate-900/70 lg:grid-cols-2"
+        >
+          <div className="bg-slate-100 p-3 dark:bg-slate-950/80">
+            <Image
+              src={project.imageSrc}
+              className="h-full w-full rounded-md border border-slate-200 object-cover shadow-sm dark:border-slate-800"
+              height={650}
+              width={850}
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              alt={`${project.projectHeading} project preview`}
+            />
+          </div>
+          <div className="flex flex-col gap-5 p-5 lg:p-8">
+            <div>
+              <h2 className="text-2xl font-semibold">
+                {project.projectHeading}
+              </h2>
+              <p className="mt-2 text-sm font-semibold text-sky-700 dark:text-sky-300">
+                {project.role}
+              </p>
+            </div>
+            <p className="text-sm leading-7 text-slate-600 dark:text-slate-300 md:text-base">
+              {project.projectDetails}
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {project.stack.map((tech) => (
+                <span
+                  key={tech}
+                  className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-semibold text-slate-700 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+            <div className="mt-auto flex gap-4">
+              {project.liveLink ? (
                 <Link
-                  className="hover:text-sky-900 text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 font-semibold"
+                  className="font-semibold text-sky-800 underline hover:text-sky-950 dark:text-sky-300 dark:hover:text-sky-200"
                   target="_blank"
-                  href={project?.liveLink}
+                  rel="noopener noreferrer"
+                  href={project.liveLink}
                 >
                   Live Link
                 </Link>
               ) : null}
-              {project.github.length > 1 ? (
+              {project.github ? (
                 <Link
-                  className="hover:text-sky-900 text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 font-semibold"
+                  className="font-semibold text-sky-800 underline hover:text-sky-950 dark:text-sky-300 dark:hover:text-sky-200"
                   target="_blank"
-                  href={project?.github}
+                  rel="noopener noreferrer"
+                  href={project.github}
                 >
                   GitHub
                 </Link>
               ) : null}
             </div>
           </div>
-        </div>
-      </div>
-    ))}
+        </article>
+      ))}
+    </div>
 
     <Link
-      href={"/contact"}
-      className="flex items-center self-center my-4 gap-4 cursor-pointer learn-more-container-about group text-sm lg:text-lg text-[#3081d0] dark:text-sky-400 font-semibold w-fit"
+      href="/contact"
+      className="learn-more-container-about group my-4 flex w-fit cursor-pointer items-center gap-4 self-center text-sm font-semibold text-sky-700 dark:text-sky-400 lg:text-lg"
     >
       Let&apos;s get started on your project
-      <ArrowLongRightIcon className="w-6 transition-transform transform group-hover:translate-x-1" />
+      <ArrowLongRightIcon className="w-6 transform transition-transform group-hover:translate-x-1" />
     </Link>
   </section>
 );
