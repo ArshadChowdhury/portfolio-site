@@ -4,8 +4,8 @@ import { useEffect, useRef } from "react";
 
 const LOADER_SRC =
   process.env.NEXT_PUBLIC_CARSU_LOADER_URL ||
-  "https://staging.carsu.com/v1/loader.js";
-const WORKSHOP_ID = "55b673e2-67c9-4307-bb73-651b57d58275";
+  "https://widget.carsu.com/v1/loader.js";
+const WORKSHOP_ID = "c86f1bdb-dc83-43db-b9f8-723b601c5ec4";
 
 const LiveDemo = () => {
   const containerRef = useRef<HTMLDivElement>(null);
