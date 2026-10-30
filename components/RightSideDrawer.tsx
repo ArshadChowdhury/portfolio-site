@@ -5,16 +5,21 @@ import {
   HomeIcon,
   InformationCircleIcon,
   BriefcaseIcon,
-  WrenchScrewdriverIcon,
+  RectangleStackIcon,
   ChatBubbleOvalLeftEllipsisIcon,
-  BookOpenIcon,
+  DocumentArrowDownIcon,
+  XMarkIcon,
 } from "@heroicons/react/24/outline";
-import { Fragment, useState } from "react";
-import { XMarkIcon } from "@heroicons/react/24/outline";
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { SocialIcon } from "react-social-icons";
-import { Dialog, Transition } from "@headlessui/react";
+import {
+  Dialog,
+  DialogBackdrop,
+  DialogPanel,
+  DialogTitle,
+} from "@headlessui/react";
 import { usePathname } from "next/navigation";
 import type { Dispatch, SetStateAction } from "react";
 
@@ -50,35 +55,39 @@ function NavigationDrawer({ open, setOpen }: Props) {
   const isCurrentPage = (pathname: string): boolean =>
     currentPathname === pathname;
 
-  return (
-    <>
-      <Transition.Root show={open} as={Fragment}>
-        <Dialog as="div" className="relative z-50" onClose={setOpen}>
-          <Transition.Child
-            as={Fragment}
-            enter="ease-in-out duration-500"
-            enterFrom="opacity-0"
-            enterTo="opacity-100"
-            leave="ease-in-out duration-500"
-            leaveFrom="opacity-100"
-            leaveTo="opacity-0"
-          >
-            <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
-          </Transition.Child>
+  const navLinks = [
+    { href: "/", label: "Home", Icon: HomeIcon },
+    { href: "/about", label: "About", Icon: InformationCircleIcon },
+    { href: "/experience", label: "Experience", Icon: BriefcaseIcon },
+    { href: "/projects", label: "Projects", Icon: RectangleStackIcon },
+    {
+      href: "/Mohammed_Arshad_Resume.pdf",
+      label: "Resume",
+      Icon: DocumentArrowDownIcon,
+      external: true,
+    },
+    {
+      href: "/contact",
+      label: "Contact Me",
+      Icon: ChatBubbleOvalLeftEllipsisIcon,
+    },
+  ];
 
-          <div className="fixed inset-0 overflow-hidden">
-            <div className="absolute inset-0 overflow-hidden">
-              <div className="pointer-events-none fixed inset-y-0 right-0 flex max-w-full">
-                <Transition.Child
-                  as={"div"}
-                  enter="transform transition ease-in-out duration-500 sm:duration-1000"
-                  enterFrom="translate-x-full"
-                  enterTo="translate-x-0"
-                  leave="transform transition ease-in-out duration-500 sm:duration-1000"
-                  leaveFrom="translate-x-0"
-                  leaveTo="translate-x-full"
-                >
-                  <Dialog.Panel className="pointer-events-auto w-screen h-screen max-w-xl">
+  return (
+    <Dialog open={open} onClose={setOpen} className="relative z-50">
+      <DialogBackdrop
+        transition
+        className="fixed inset-0 bg-gray-500/75 transition-opacity duration-500 ease-in-out data-[closed]:opacity-0"
+      />
+
+      <div className="fixed inset-0 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="pointer-events-none fixed inset-y-0 right-0 flex max-w-full">
+            <DialogPanel
+              transition
+              className="pointer-events-auto h-screen w-screen max-w-xl transform transition duration-500 ease-in-out data-[closed]:translate-x-full sm:duration-700"
+            >
+              <DialogTitle className="sr-only">Navigation menu</DialogTitle>
                     <div className="flex h-full flex-col bg-gray-50 dark:bg-gray-800 shadow-xl">
                       <div className="h-0 flex-1 overflow-y-auto">
                         <div className="flex flex-col gap-20 p-4">
@@ -91,12 +100,12 @@ function NavigationDrawer({ open, setOpen }: Props) {
                               <Image
                                 src="/logo.png"
                                 className="h-12 w-12 rounded-full object-cover"
-                                alt="Logo"
+                                alt=""
                                 height={434}
                                 width={533}
                               />
                               <span className="font-semibold">
-                                Arshad Chowdhury
+                                Mohammed Arshad
                               </span>
                             </Link>
                             <button
@@ -109,84 +118,31 @@ function NavigationDrawer({ open, setOpen }: Props) {
                             </button>
                           </div>
 
-                          <div className="flex flex-col items-center gap-6">
-                            <Link
-                              onClick={() => setOpen(false)}
-                              className={`${linkStyles} ${
-                                isCurrentPage("/")
-                                  ? "text-sky-900 dark:text-sky-500"
-                                  : ""
-                              }`}
-                              href={"/"}
-                            >
-                              <HomeIcon className="w-5" />
-                              Home
-                            </Link>
-                            <Link
-                              onClick={() => setOpen(false)}
-                              className={`${linkStyles} ${
-                                isCurrentPage("/about")
-                                  ? "text-sky-900 dark:text-sky-500"
-                                  : ""
-                              }`}
-                              href={"/about"}
-                            >
-                              <InformationCircleIcon className="w-5" />
-                              About
-                            </Link>
-                            <Link
-                              onClick={() => setOpen(false)}
-                              className={`${linkStyles} ${
-                                isCurrentPage("/projects")
-                                  ? "text-sky-900 dark:text-sky-500"
-                                  : ""
-                              }`}
-                              href={"/projects"}
-                            >
-                              <BriefcaseIcon className="w-5" />
-                              Projects
-                            </Link>
-                            <Link
-                              onClick={() => setOpen(false)}
-                              className={`${linkStyles} ${
-                                isCurrentPage("/Arshad_Resume.pdf")
-                                  ? "text-sky-900 dark:text-sky-500"
-                                  : ""
-                              }`}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              href={"/Arshad_Resume.pdf"}
-                            >
-                              <BookOpenIcon className="w-5" />
-                              Resume
-                            </Link>
-                            <Link
-                              onClick={() => setOpen(false)}
-                              className={`${linkStyles} ${
-                                isCurrentPage("/services")
-                                  ? "text-sky-900 dark:text-sky-500"
-                                  : ""
-                              }`}
-                              href={"/services"}
-                            >
-                              <WrenchScrewdriverIcon className="w-5" />
-                              Services
-                            </Link>
-                            <Link
-                              onClick={() => setOpen(false)}
-                              className={`${linkStyles} ${
-                                isCurrentPage("/contact")
-                                  ? "text-sky-900 dark:text-sky-500"
-                                  : ""
-                              }`}
-                              href={"/contact"}
-                            >
-                              <ChatBubbleOvalLeftEllipsisIcon className="w-5" />
-                              Contact Me
-                            </Link>
-                          </div>
+                          <nav aria-label="Mobile">
+                            <ul className="flex flex-col items-center gap-6">
+                              {navLinks.map(({ href, label, Icon, external }) => (
+                                <li key={href} className="flex w-full justify-center">
+                                  <Link
+                                    onClick={() => setOpen(false)}
+                                    className={`${linkStyles} ${
+                                      isCurrentPage(href)
+                                        ? "text-sky-900 dark:text-sky-500"
+                                        : ""
+                                    }`}
+                                    href={href}
+                                    aria-current={isCurrentPage(href) ? "page" : undefined}
+                                    target={external ? "_blank" : undefined}
+                                    rel={external ? "noopener noreferrer" : undefined}
+                                  >
+                                    <Icon aria-hidden className="w-5" />
+                                    {label}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </nav>
 
-                          <nav>
+                          <nav aria-label="Social profiles">
                             <ul className="flex flex-wrap items-center justify-center gap-4">
                               <li>
                                 <SocialIcon
@@ -233,13 +189,10 @@ function NavigationDrawer({ open, setOpen }: Props) {
                         </div>
                       </div>
                     </div>
-                  </Dialog.Panel>
-                </Transition.Child>
-              </div>
-            </div>
+            </DialogPanel>
           </div>
-        </Dialog>
-      </Transition.Root>
-    </>
+        </div>
+      </div>
+    </Dialog>
   );
 }

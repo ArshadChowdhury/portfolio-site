@@ -21,23 +21,26 @@ export default function TestimonialSlider() {
   return (
     <Slider className="mx-auto w-11/12 lg:w-4/5" {...settings}>
       {testimonialsData.map((data) => (
-        <div
+        <figure
           key={data.id}
           className="rounded-lg border border-slate-200 bg-white/80 p-4 shadow-sm transition-all duration-700 dark:border-slate-800 dark:bg-slate-900/80 md:p-6"
         >
           <div className="flex items-center justify-center gap-4">
             <ArrowUturnRightIcon className="w-8 text-sky-700 dark:text-sky-300" />
             <Image
-              priority
               height={60}
               width={60}
               className="rounded-full"
               src={data.img}
-              alt={data.name}
+              alt=""
             />
-            <Link href={data.href} target="_blank" rel="noopener noreferrer">
+            <Link
+              href={data.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${data.name}'s profile`}
+            >
               <Image
-                priority
                 height={40}
                 width={40}
                 className="rounded-sm"
@@ -46,18 +49,18 @@ export default function TestimonialSlider() {
               />
             </Link>
           </div>
-          <blockquote className="flex flex-col items-center gap-4 px-4 pt-6 text-center text-sm leading-7 text-slate-600 dark:text-slate-300 md:text-lg">
+          <blockquote className="px-4 pt-6 text-center text-sm leading-7 text-slate-600 dark:text-slate-300 md:text-lg">
             &ldquo;{data.desc}&rdquo;
-            <footer className="flex flex-col items-center gap-1">
-              <cite className="not-italic font-semibold text-slate-950 dark:text-white">
+          </blockquote>
+          <figcaption className="mt-4 flex flex-col items-center gap-1">
+              <span className="font-semibold text-slate-950 dark:text-white">
                 {data.name}
-              </cite>
+              </span>
               <span className="text-sm text-slate-500 dark:text-slate-400">
                 {data.title}
               </span>
-            </footer>
-          </blockquote>
-        </div>
+          </figcaption>
+        </figure>
       ))}
     </Slider>
   );

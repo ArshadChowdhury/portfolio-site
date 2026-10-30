@@ -37,13 +37,17 @@ const ContactForm = () => {
   });
 
   const onSubmit: SubmitHandler<ContactFormValues> = async (data) => {
-    const myPromise = request.post("contact/portfolio", data).then(() => reset());
-
-    return toast.promise(myPromise, {
-      loading: "Sending message",
-      success: "Message sent",
-      error: "Message was not sent",
-    });
+    try {
+      await toast.promise(request.post("contact/portfolio", data), {
+        loading: "Sending message",
+        success: "Message sent",
+        error: "Message was not sent. Please email me instead.",
+      });
+      reset();
+    } catch (error) {
+      // toast.promise has already shown the failure to the visitor.
+      console.error("Contact form submission failed", error);
+    }
   };
 
   return (
@@ -60,6 +64,9 @@ const ContactForm = () => {
           type="text"
           id="name"
           autoComplete="name"
+          aria-required="true"
+          aria-invalid={errors.name ? "true" : undefined}
+          aria-describedby={errors.name ? "name-error" : undefined}
           {...register("name", {
             required: "Your name is required",
             maxLength: {
@@ -74,7 +81,9 @@ const ContactForm = () => {
           errors={errors}
           name="name"
           render={({ message }) => (
-            <p className="mt-1 text-sm text-red-600">{message}</p>
+            <p id="name-error" className="mt-1 text-sm text-red-600">
+              {message}
+            </p>
           )}
         />
       </div>
@@ -86,6 +95,9 @@ const ContactForm = () => {
           type="email"
           id="email"
           autoComplete="email"
+          aria-required="true"
+          aria-invalid={errors.email ? "true" : undefined}
+          aria-describedby={errors.email ? "email-error" : undefined}
           {...register("email", {
             required: "Email is required",
             pattern: {
@@ -104,19 +116,20 @@ const ContactForm = () => {
           errors={errors}
           name="email"
           render={({ message }) => (
-            <p className="mt-1 text-sm text-red-600">{message}</p>
+            <p id="email-error" className="mt-1 text-sm text-red-600">
+              {message}
+            </p>
           )}
         />
       </div>
       <div className="flex flex-col">
         <label className={labelStyles} htmlFor="phone">
-          Phone
+          Phone <span className="font-normal text-slate-500">(optional)</span>
         </label>
         <Controller
           name="phone"
           control={control}
           rules={{
-            required: "Phone number is required",
             maxLength: {
               value: 30,
               message: "Phone number cannot be over 30 characters",
@@ -125,9 +138,12 @@ const ContactForm = () => {
           render={({ field: { onChange, value } }) => (
             <PhoneInput
               id="phone"
+              international
+              autoComplete="tel"
+              aria-invalid={errors.phone ? "true" : undefined}
+              aria-describedby={errors.phone ? "phone-error" : undefined}
               value={value}
               onChange={(phoneValue) => onChange(phoneValue || "")}
-              defaultCountry="BD"
               placeholder="Enter your phone number"
               className={inputStyles}
             />
@@ -137,22 +153,27 @@ const ContactForm = () => {
           errors={errors}
           name="phone"
           render={({ message }) => (
-            <p className="mt-1 text-sm text-red-600">{message}</p>
+            <p id="phone-error" className="mt-1 text-sm text-red-600">
+              {message}
+            </p>
           )}
         />
       </div>
 
       <div className="flex flex-col">
         <label className={labelStyles} htmlFor="message">
-          Project details
+          Message
         </label>
         <textarea
-          placeholder="Tell me about your AI MVP, web app, or product idea"
+          placeholder="Tell me about the role, team or project"
           id="message"
           rows={4}
+          aria-required="true"
+          aria-invalid={errors.message ? "true" : undefined}
+          aria-describedby={errors.message ? "message-error" : undefined}
           className={`${inputStyles} resize-none`}
           {...register("message", {
-            required: "Project details are required",
+            required: "A message is required",
             maxLength: {
               value: 500,
               message: "Your message must not exceed 500 characters",
@@ -163,7 +184,9 @@ const ContactForm = () => {
           errors={errors}
           name="message"
           render={({ message }) => (
-            <p className="mt-1 text-sm text-red-600">{message}</p>
+            <p id="message-error" className="mt-1 text-sm text-red-600">
+              {message}
+            </p>
           )}
         />
       </div>
@@ -172,7 +195,7 @@ const ContactForm = () => {
         disabled={isSubmitting}
         className="w-full rounded-md bg-sky-600 py-3 font-semibold uppercase tracking-wide text-white transition hover:bg-sky-700 disabled:cursor-not-allowed disabled:bg-slate-400"
       >
-        {isSubmitting ? "Sending..." : "Submit"}
+        {isSubmitting ? "Sending..." : "Send message"}
       </button>
     </form>
   );

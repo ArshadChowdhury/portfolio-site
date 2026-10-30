@@ -1,16 +1,14 @@
 import React from "react";
 import ContactForm from "@/components/ContactForm";
 import { SocialIcon } from "react-social-icons";
-import { Metadata } from "next";
+import { pageMetadata } from "@/app/_lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Contact",
   description:
-    "Contact Arshad Chowdhury to discuss AI MVP development, full-stack web apps, SaaS products, automation tools, or team-based product delivery.",
-  alternates: {
-    canonical: "/contact",
-  },
-};
+    "Contact Mohammed Arshad, Senior Full-Stack Software Engineer, about senior engineering roles in Germany or full-stack, backend and payments work.",
+  path: "/contact",
+});
 
 const ContactPage = () => {
   return (
@@ -20,13 +18,13 @@ const ContactPage = () => {
           Contact
         </span>
         <h1 className="mt-3 text-3xl font-semibold lg:text-5xl">
-          Let&apos;s talk about your AI MVP or web product
+          Get in touch
         </h1>
         <p className="mt-5 text-base leading-7 text-slate-600 dark:text-slate-300 lg:text-lg">
-          Send a few details about your idea, timeline and team needs. I can
-          help as a solo full-stack developer or coordinate a small team.
-          I&apos;m used to working smoothly across time zones and I&apos;ll
-          get back to you soon.
+          Hiring for a senior full-stack or backend role in Germany, or want to
+          talk about multi-tenant SaaS, payments or NestJS? Send a message and
+          I&apos;ll get back to you soon. I&apos;m used to working across time
+          zones with European teams.
         </p>
       </div>
       <div className="w-full max-w-3xl">
@@ -35,11 +33,11 @@ const ContactPage = () => {
         </div>
       </div>
       <div className="flex flex-col justify-center gap-4">
-        <span className="text-center">OR</span>
-        <h4 className="text-center font-medium">
-          You can contact me on any of these platforms as well
-        </h4>
-        <nav>
+        <p className="text-center">OR</p>
+        <h2 className="text-center font-medium">
+          You can reach me on any of these platforms as well
+        </h2>
+        <nav aria-label="Other ways to reach me">
           <ul className="flex flex-wrap items-center justify-center gap-4">
             <li>
               <SocialIcon

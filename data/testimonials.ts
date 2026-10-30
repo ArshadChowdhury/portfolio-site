@@ -39,7 +39,7 @@ export const testimonialsData: Testimonial[] = [
   {
     id: 4,
     name: "Iftekhar Ahmed",
-    title: "Data Scientist",
+    title: "Data Scientist · based in Germany",
     img: "/iftekhar.jpg",
     href: "https://www.linkedin.com/in/ahmed-iftekhar/",
     icon: "/linkedin.png",

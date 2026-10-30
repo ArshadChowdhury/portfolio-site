@@ -2,9 +2,15 @@
 
 import { ThemeProvider } from "next-themes";
 
-const Providers = ({ children }: { children: React.ReactNode }) => {
+type Props = {
+  children: React.ReactNode;
+  // CSP nonce for the inline script next-themes injects to avoid a theme flash.
+  nonce?: string;
+};
+
+const Providers = ({ children, nonce }: Props) => {
   return (
-    <ThemeProvider enableSystem attribute="class" defaultTheme="system">
+    <ThemeProvider enableSystem attribute="class" defaultTheme="system" nonce={nonce}>
       {children}
     </ThemeProvider>
   );

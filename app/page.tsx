@@ -1,20 +1,23 @@
 import GetStarted from "@/components/GetStarted";
+import ExperiencePreview from "@/components/ExperiencePreview";
 import HomePageSlider from "@/components/HomePageSlider";
-import ContactMe from "@/components/ContactMe";
-import EverythingNeeded from "@/components/EverythingNeeded";
-import Testimonials from "@/components/Testimonials";
+import FocusAreas from "@/components/FocusAreas";
 import TechStack from "@/components/TechStack";
+import Testimonials from "@/components/Testimonials";
 import Reveal from "@/components/Reveal";
 
 export default function Home() {
   return (
-    <main className="flex flex-col gap-8">
+    <div className="flex flex-col gap-8">
       <GetStarted />
       <Reveal>
         <HomePageSlider />
       </Reveal>
       <Reveal>
-        <EverythingNeeded />
+        <ExperiencePreview />
+      </Reveal>
+      <Reveal>
+        <FocusAreas />
       </Reveal>
       <Reveal>
         <TechStack />
@@ -22,9 +25,6 @@ export default function Home() {
       <Reveal>
         <Testimonials />
       </Reveal>
-      <Reveal>
-        <ContactMe />
-      </Reveal>
-    </main>
+    </div>
   );
 }

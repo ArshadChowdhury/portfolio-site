@@ -1,8 +1,7 @@
 "use client";
 
 import { useTheme } from "next-themes";
-import { Menu, Transition } from "@headlessui/react";
-import { Fragment } from "react";
+import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import {
   ComputerDesktopIcon,
   SunIcon,
@@ -11,128 +10,50 @@ import {
 import { MoonIcon } from "@heroicons/react/24/solid";
 import toast from "react-hot-toast";
 
+const options = [
+  { value: "system", label: "System", Icon: ComputerDesktopIcon },
+  { value: "light", label: "Light", Icon: SunIcon },
+  { value: "dark", label: "Dark", Icon: MoonIcon },
+] as const;
+
 const ThemeButton = () => {
   const { theme, setTheme } = useTheme();
-
-  function currentTheme() {
-    switch (theme) {
-      case "system":
-        return (
-          <>
-            <ComputerDesktopIcon className="w-4" />
-          </>
-        );
-
-      case "light":
-        return (
-          <>
-            <SunIcon aria-hidden="true" className="w-4" />
-          </>
-        );
-
-      case "dark":
-        return (
-          <>
-            <MoonIcon aria-hidden="true" className="w-4" />
-          </>
-        );
-
-      default:
-        return (
-          <>
-            <ComputerDesktopIcon aria-hidden="true" className="w-4" />
-          </>
-        );
-    }
-  }
+  // `theme` is undefined until next-themes has mounted, so the first client
+  // render matches the server render.
+  const current = options.find((option) => option.value === theme) ?? options[0];
+  const CurrentIcon = current.Icon;
 
   return (
     <Menu as="div" className="relative inline-block text-left">
-      <div>
-        <Menu.Button
-          aria-label="Current Theme"
-          className="inline-flex w-full justify-center gap-2 items-center rounded bg-black/30 dark:bg-black/20 p-3 text-sm font-medium text-white hover:bg-black/40 dark:hover:bg-black/70 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75"
-        >
-          {currentTheme()}
-        </Menu.Button>
-      </div>
-      <Transition
-        as={Fragment}
-        enter="transition ease-out duration-100"
-        enterFrom="transform opacity-0 scale-95"
-        enterTo="transform opacity-100 scale-100"
-        leave="transition ease-in duration-75"
-        leaveFrom="transform opacity-100 scale-100"
-        leaveTo="transform opacity-0 scale-95"
+      <MenuButton
+        aria-label="Change colour theme"
+        className="inline-flex items-center justify-center gap-2 rounded bg-black/30 p-3 text-sm font-medium text-white hover:bg-black/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75 dark:bg-black/20 dark:hover:bg-black/70"
       >
-        <Menu.Items className="absolute right-0 mt-2 w-44 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none">
-          <div className="p-1">
-            <Menu.Item>
-              {({ active }) => (
-                <button
-                  role="button"
-                  aria-label="System Theme"
-                  onClick={() => {
-                    setTheme("system");
-                    toast.success("System theme activated");
-                  }}
-                  className={`${
-                    active ? "bg-violet-500 text-white" : "text-gray-900"
-                  } group flex items-center gap-2 w-full rounded-md px-2 py-2 text-sm`}
-                >
-                  <ComputerDesktopIcon aria-hidden="true" className="w-4" />
-                  System
-                  {theme === "system" ? (
-                    <CheckIcon className="w-5 ml-auto" aria-hidden="true" />
-                  ) : null}
-                </button>
-              )}
-            </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <button
-                  role="button"
-                  aria-label="Light Theme"
-                  onClick={() => {
-                    setTheme("light");
-                    toast.success("Light theme activated");
-                  }}
-                  className={`${
-                    active ? "bg-violet-500 text-white" : "text-gray-900"
-                  } group flex gap-2 w-full items-center rounded-md px-2 py-2 text-sm`}
-                >
-                  <SunIcon aria-hidden="true" className="w-4" />
-                  Light
-                  {theme === "light" ? (
-                    <CheckIcon className="w-5 ml-auto" aria-hidden="true" />
-                  ) : null}
-                </button>
-              )}
-            </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <button
-                  role="button"
-                  aria-label="Dark Theme"
-                  onClick={() => {
-                    setTheme("dark");
-                    toast.success("Dark theme activated");
-                  }}
-                  className={`${
-                    active ? "bg-violet-500 text-white" : "text-gray-900"
-                  } group flex gap-2 w-full items-center rounded-md px-2 py-2 text-sm`}
-                >
-                  <MoonIcon aria-hidden="true" className="w-4" />
-                  Dark
-                  {theme === "dark" ? (
-                    <CheckIcon className="w-5 ml-auto" aria-hidden="true" />
-                  ) : null}
-                </button>
-              )}
-            </Menu.Item>
-          </div>
-        </Menu.Items>
-      </Transition>
+        <CurrentIcon aria-hidden className="w-4" />
+      </MenuButton>
+      <MenuItems
+        transition
+        className="absolute right-0 z-50 mt-2 w-44 origin-top-right rounded-md bg-white p-1 shadow-lg ring-1 ring-black/5 transition duration-100 ease-out focus:outline-none data-[closed]:scale-95 data-[closed]:opacity-0 dark:bg-slate-800 dark:ring-white/10"
+      >
+        {options.map(({ value, label, Icon }) => (
+          <MenuItem key={value}>
+            <button
+              type="button"
+              onClick={() => {
+                setTheme(value);
+                toast.success(`${label} theme activated`);
+              }}
+              className="group flex w-full items-center gap-2 rounded-md px-2 py-2 text-sm text-gray-900 data-[focus]:bg-sky-600 data-[focus]:text-white dark:text-slate-100"
+            >
+              <Icon aria-hidden className="w-4" />
+              {label}
+              {theme === value ? (
+                <CheckIcon aria-hidden className="ml-auto w-5" />
+              ) : null}
+            </button>
+          </MenuItem>
+        ))}
+      </MenuItems>
     </Menu>
   );
 };

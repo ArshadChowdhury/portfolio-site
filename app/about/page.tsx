@@ -1,16 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
-import { Metadata } from "next";
+import { pageMetadata } from "@/app/_lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "About",
   description:
-    "Learn about Arshad Chowdhury, an AI MVP developer and full-stack engineer working with international clients to build useful web products.",
-  alternates: {
-    canonical: "/about",
-  },
-};
+    "Mohammed Arshad, Senior Full-Stack Software Engineer: production systems since 2023, European teams since 2024, based in Dhaka and relocating to Germany.",
+  path: "/about",
+});
+
+const cardStyles =
+  "rounded-lg border border-slate-200 bg-white/75 p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900/70";
 
 const AboutPage = () => (
   <section className="my-20 flex min-h-screen flex-col items-center gap-12">
@@ -22,82 +23,96 @@ const AboutPage = () => (
         height={612}
         width={408}
         sizes="(min-width: 1024px) 26rem, 100vw"
-        alt="Arshad Chowdhury"
+        alt="Mohammed Arshad"
       />
       <div className="flex flex-col gap-5">
         <span className="text-sm font-semibold uppercase tracking-[0.24em] text-sky-700 dark:text-sky-300">
           About me
         </span>
         <h1 className="text-3xl font-semibold lg:text-5xl">
-          I turn early ideas into products people actually use.
+          Backend-leaning full-stack engineer who ships production systems end
+          to end.
         </h1>
         <p className="text-base leading-7 text-slate-600 dark:text-slate-300 lg:text-lg">
-          Hey, I&apos;m Arshad Chowdhury, a full-stack developer from
-          Bangladesh working with clients across North America, Europe and the
-          Middle East. I work across product planning, UI, frontend, backend,
-          APIs, databases and launch support so founders can move from idea to
-          real users faster.
+          I&apos;m Mohammed Arshad, a Senior Full-Stack Software Engineer based
+          in Dhaka, Bangladesh. I&apos;ve built production systems since 2023,
+          and since 2024 with engineering teams in Finland and the Netherlands:
+          currently as a Senior Software Engineer at Roar Media Studio, and
+          before that on the billing, security and backend architecture of
+          Carsu&apos;s multi-tenant SaaS platform.
         </p>
         <p className="text-base leading-7 text-slate-600 dark:text-slate-300 lg:text-lg">
-          My core stack includes JavaScript, TypeScript, React, Next.js,
-          Node.js, Express, Nest.js, PostgreSQL, MongoDB, Git, GitHub and AWS.
-          Years of remote work with international teams taught me to
-          communicate clearly, work across time zones and keep clients in the
-          loop at every step. I also collaborate with a small network of
-          specialists when a project needs more hands across design, backend,
-          QA, or delivery.
+          My depth is in TypeScript, NestJS, Next.js and PostgreSQL, with
+          hands-on experience in multi-tenant SaaS, Stripe payment systems, API
+          architecture, database design, security and cloud infrastructure.
+          At Roar Media I delivered a production-grade MVP end to end as the
+          sole engineer in 12 weeks and run its infrastructure solo.
+        </p>
+        <p className="text-base leading-7 text-slate-600 dark:text-slate-300 lg:text-lg">
+          I&apos;m looking for a senior engineering role in Germany and can
+          relocate within 4–6 weeks of an offer. I&apos;m eligible for the EU
+          Blue Card via the IT specialist pathway, speak English fluently and
+          am at German B1 in structured coursework, targeting B2 by Q3 2027.
         </p>
       </div>
     </div>
 
     <div className="grid gap-4 md:grid-cols-3">
-      <div className="rounded-lg border border-slate-200 bg-white/75 p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900/70">
-        <h2 className="text-xl font-semibold">Product-minded</h2>
+      <div className={cardStyles}>
+        <h2 className="text-xl font-semibold">Backend depth</h2>
         <p className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-300">
-          I care about the user journey, the business goal and the smallest
-          useful release that can prove the idea.
+          API architecture, database modelling, idempotent money paths and the
+          distributed-systems patterns that keep financial data correct.
         </p>
       </div>
-      <div className="rounded-lg border border-slate-200 bg-white/75 p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900/70">
-        <h2 className="text-xl font-semibold">Full-stack</h2>
+      <div className={cardStyles}>
+        <h2 className="text-xl font-semibold">Full-stack ownership</h2>
         <p className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-300">
-          I can move between UI implementation, API design, database work,
-          integrations and deployment details.
+          Comfortable owning the whole surface: frontend implementation, Core
+          Web Vitals, CI/CD, deployments, monitoring and incident response.
         </p>
       </div>
-      <div className="rounded-lg border border-slate-200 bg-white/75 p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900/70">
-        <h2 className="text-xl font-semibold">Team-capable</h2>
+      <div className={cardStyles}>
+        <h2 className="text-xl font-semibold">Security-minded</h2>
         <p className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-300">
-          For bigger MVPs, I can bring additional support so the project keeps
-          quality and speed without stretching one developer too thin.
+          Role guards, tenant scoping, permission-key architecture and the
+          route audits that find fail-open endpoints before customers do.
         </p>
       </div>
     </div>
 
     <div className="grid gap-8 lg:grid-cols-2">
-      <section className="rounded-lg border border-slate-200 bg-white/75 p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900/70">
-        <h2 className="text-2xl font-semibold">About my projects</h2>
+      <section
+        aria-labelledby="about-path-heading"
+        className="rounded-lg border border-slate-200 bg-white/75 p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900/70"
+      >
+        <h2 id="about-path-heading" className="text-2xl font-semibold">How I got here</h2>
         <p className="mt-4 text-base leading-7 text-slate-600 dark:text-slate-300">
-          I&apos;ve contributed to large production projects, migrations,
-          e-commerce products and full-stack web apps. Some work is protected
-          by NDAs, but the public projects show how I approach product
-          execution, UI quality and technical problem-solving.
+          I hold a Bachelor of Laws from Southeast University, Dhaka, and moved
+          into software through two years of structured self-study and
+          open-source work before my first engineering role in 2023. The legal
+          training still shows in how I read contracts, compliance requirements
+          and regulatory edge cases, which is why legal tech and
+          compliance-focused engineering interest me.
         </p>
         <Link
-          href="/projects"
+          href="/experience"
           className="learn-more-container-about group mt-6 flex w-fit items-center gap-4 text-sm font-semibold text-sky-700 dark:text-sky-400 lg:text-lg"
         >
-          Learn about my projects
+          See my full experience
           <ArrowLongRightIcon className="w-6 transform transition-transform group-hover:translate-x-1" />
         </Link>
       </section>
 
-      <section className="rounded-lg border border-slate-200 bg-white/75 p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900/70">
-        <h2 className="text-2xl font-semibold">Beyond client work</h2>
+      <section
+        aria-labelledby="about-beyond-heading"
+        className="rounded-lg border border-slate-200 bg-white/75 p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900/70"
+      >
+        <h2 id="about-beyond-heading" className="text-2xl font-semibold">Beyond work</h2>
         <p className="mt-4 text-base leading-7 text-slate-600 dark:text-slate-300">
-          I keep learning in public through programming content, open-source
+          I learn in public through programming videos, open-source
           contributions and collaboration with other developers. You can find
-          my work on{" "}
+          my code on{" "}
           <Link
             className="font-semibold text-sky-700 underline dark:text-sky-400"
             target="_blank"

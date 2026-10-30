@@ -1,17 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Metadata } from "next";
+import { pageMetadata } from "@/app/_lib/metadata";
 import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
 import { projectsInfo } from "@/data/projects";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Projects",
   description:
-    "Selected AI-ready web apps, SaaS products, e-commerce builds, migrations and full-stack development work by Arshad Chowdhury.",
-  alternates: {
-    canonical: "/projects",
-  },
-};
+    "Production systems by Mohammed Arshad: multi-tenant SaaS with Stripe billing at Carsu, an EdTech platform migration, and full-stack web products.",
+  path: "/projects",
+});
 
 const ProjectsPage = () => (
   <section className="my-20 flex min-h-screen flex-col items-center gap-8">
@@ -20,12 +18,12 @@ const ProjectsPage = () => (
         Projects
       </span>
       <h1 className="mt-3 text-3xl font-semibold lg:text-5xl">
-        Selected full-stack product work
+        Production systems I&apos;ve built and owned
       </h1>
       <p className="mt-5 text-base leading-7 text-slate-600 dark:text-slate-300 lg:text-lg">
-        A mix of production platforms, migrations, e-commerce products and
-        full-stack builds. Some client work is under NDA, so these examples
-        focus on the product execution I can show publicly.
+        Production platforms, migrations and full-stack builds from the last
+        four years. Some work is under NDA, so these focus on what I can
+        describe publicly.
       </p>
     </div>
 
@@ -36,20 +34,41 @@ const ProjectsPage = () => (
           className="grid overflow-hidden rounded-lg border border-slate-200 bg-white/75 shadow-sm dark:border-slate-800 dark:bg-slate-900/70 lg:grid-cols-2"
         >
           <div className="bg-slate-100 p-3 dark:bg-slate-950/80">
-            <Image
-              src={project.imageSrc}
-              className="h-full w-full rounded-md border border-slate-200 object-cover shadow-sm dark:border-slate-800"
-              height={650}
-              width={850}
-              sizes="(min-width: 1024px) 50vw, 100vw"
-              alt={`${project.projectHeading} project preview`}
-            />
+            {project.imageSrc ? (
+              <Image
+                src={project.imageSrc}
+                className="h-full w-full rounded-md border border-slate-200 object-cover shadow-sm dark:border-slate-800"
+                height={650}
+                width={850}
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                alt={`${project.projectHeading} project preview`}
+              />
+            ) : (
+              <div className="flex h-full min-h-[16rem] w-full flex-col items-center justify-center rounded-md border border-slate-200 bg-gradient-to-br from-sky-700 via-slate-900 to-slate-950 p-8 text-center shadow-sm dark:border-slate-800">
+                <span className="text-3xl font-semibold text-white lg:text-4xl">
+                  {project.projectHeading}
+                </span>
+                {project.company ? (
+                  <span className="mt-3 text-sm font-medium text-sky-200">
+                    {project.company}
+                  </span>
+                ) : null}
+                <span className="mt-6 text-xs uppercase tracking-[0.2em] text-slate-300">
+                  Production SaaS · screenshots under NDA
+                </span>
+              </div>
+            )}
           </div>
           <div className="flex flex-col gap-5 p-5 lg:p-8">
             <div>
               <h2 className="text-2xl font-semibold">
                 {project.projectHeading}
               </h2>
+              {project.company || project.period ? (
+                <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
+                  {[project.company, project.period].filter(Boolean).join(" · ")}
+                </p>
+              ) : null}
               <p className="mt-2 text-sm font-semibold text-sky-700 dark:text-sky-300">
                 {project.role}
               </p>
@@ -75,7 +94,7 @@ const ProjectsPage = () => (
                   rel="noopener noreferrer"
                   href={project.liveLink}
                 >
-                  Live Link
+                  Live site
                 </Link>
               ) : null}
               {project.github ? (
@@ -98,7 +117,7 @@ const ProjectsPage = () => (
       href="/contact"
       className="learn-more-container-about group my-4 flex w-fit cursor-pointer items-center gap-4 self-center text-sm font-semibold text-sky-700 dark:text-sky-400 lg:text-lg"
     >
-      Let&apos;s get started on your project
+      Hiring for a senior role? Get in touch
       <ArrowLongRightIcon className="w-6 transform transition-transform group-hover:translate-x-1" />
     </Link>
   </section>

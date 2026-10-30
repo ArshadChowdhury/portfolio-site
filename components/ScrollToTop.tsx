@@ -24,12 +24,12 @@ const ScrollToTop = () => {
   return (
     <button
       aria-label="Scroll to top"
-      className="fixed bottom-[10%] right-[5%] rounded-full bg-slate-300 p-2 shadow-md transition hover:bg-sky-200 dark:bg-slate-700 dark:hover:bg-slate-600 lg:p-3"
+      className="fixed bottom-6 right-6 z-40 rounded-full bg-slate-300 p-2 shadow-md transition hover:bg-sky-200 dark:bg-slate-700 dark:hover:bg-slate-600 lg:p-3"
       onClick={() => {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
+        const reduceMotion = window.matchMedia(
+          "(prefers-reduced-motion: reduce)"
+        ).matches;
+        window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
       }}
       style={{ display: showButton ? "block" : "none" }}
     >

@@ -2,10 +2,10 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Arshad Chowdhury | AI MVP Developer & Full-Stack Engineer",
-    short_name: "Arshad Chowdhury",
+    name: "Mohammed Arshad | Senior Full-Stack Software Engineer",
+    short_name: "Mohammed Arshad",
     description:
-      "AI MVP developer and full-stack engineer helping founders and teams build production-ready AI SaaS products, web apps, automation tools and scalable MVPs.",
+      "Senior Full-Stack Software Engineer building multi-tenant SaaS, payment systems and production APIs with TypeScript, NestJS, Next.js and PostgreSQL.",
     start_url: "/",
     display: "standalone",
     background_color: "#020617",

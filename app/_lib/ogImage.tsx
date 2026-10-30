@@ -2,8 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
-export const alt =
-  "Arshad Chowdhury — AI MVP Developer & Full Stack Engineer";
+export const alt = "Mohammed Arshad, Senior Full-Stack Software Engineer";
 
 // Shared 1200x630 social banner used by both the Open Graph and Twitter
 // image routes. Kept in a private (_lib) folder so it is not a route itself.
@@ -34,19 +33,20 @@ export function renderOgImage() {
             color: "#7dd3fc",
           }}
         >
-          AI MVP Developer · Full-Stack Engineer
+          Senior Full-Stack Software Engineer
         </div>
         <div
           style={{
             display: "flex",
             marginTop: 28,
-            fontSize: 68,
+            fontSize: 60,
             fontWeight: 700,
             lineHeight: 1.1,
-            maxWidth: 900,
+            maxWidth: 1000,
           }}
         >
-          I build AI MVPs that get founders to real users — fast.
+          Multi-tenant SaaS, payments and production APIs with TypeScript,
+          NestJS, Next.js and PostgreSQL.
         </div>
         <div
           style={{
@@ -57,7 +57,7 @@ export function renderOgImage() {
             color: "#e2e8f0",
           }}
         >
-          Arshad Chowdhury
+          Mohammed Arshad · Open to senior roles in Germany
         </div>
       </div>
     ),

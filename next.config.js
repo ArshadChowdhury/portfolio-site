@@ -14,11 +14,29 @@ const securityHeaders = [
 ];
 
 const nextConfig = {
+  poweredByHeader: false,
+  images: {
+    formats: ["image/avif", "image/webp"],
+  },
   async headers() {
     return [
       {
         source: "/:path*",
         headers: securityHeaders,
+      },
+    ];
+  },
+  async redirects() {
+    return [
+      // Former freelance services page; content now lives on /experience.
+      { source: "/services", destination: "/experience", permanent: true },
+      // Former unlisted live-demo page.
+      { source: "/showcase", destination: "/projects", permanent: true },
+      // Resume renamed to the legal name; keep old shared links working.
+      {
+        source: "/Arshad_Resume.pdf",
+        destination: "/Mohammed_Arshad_Resume.pdf",
+        permanent: true,
       },
     ];
   },

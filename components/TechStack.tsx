@@ -1,17 +1,19 @@
 import { techStack } from "@/data/techStack";
 
 const TechStack = () => (
-  <section className="flex flex-col items-center gap-8 py-12 lg:py-16">
+  <section
+    aria-labelledby="stack-heading"
+    className="flex flex-col items-center gap-8 py-12 lg:py-16"
+  >
     <div className="max-w-3xl text-center">
       <span className="text-sm font-semibold uppercase tracking-[0.24em] text-sky-700 dark:text-sky-300">
         Tech stack
       </span>
-      <h2 className="mt-3 text-2xl font-semibold lg:text-4xl">
-        Tools I use to ship products
+      <h2 id="stack-heading" className="mt-3 text-2xl font-semibold lg:text-4xl">
+        What I work with
       </h2>
       <p className="mt-4 text-sm leading-6 text-slate-600 dark:text-slate-300 lg:text-base">
-        A modern, production-tested stack — from frontend polish to backend,
-        data and deployment.
+        Primary stack first, then the tools I have used in production.
       </p>
     </div>
     <div className="grid w-full max-w-5xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
