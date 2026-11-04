@@ -14,7 +14,7 @@ const GetStarted = () => (
         className="animate-fade-up rounded-2xl border border-sky-200 bg-white/80 px-4 py-2 text-center text-sm font-semibold text-sky-800 shadow-sm dark:border-sky-900 dark:bg-slate-900/80 dark:text-sky-300 sm:rounded-full lg:text-left"
         style={{ animationDelay: "0.05s" }}
       >
-        Senior Full-Stack Software Engineer
+        Full-Stack Software Engineer
         <span className="hidden sm:inline"> · </span>
         <span className="block sm:inline">Open to roles in Germany</span>
       </p>
@@ -33,8 +33,8 @@ const GetStarted = () => (
           style={{ animationDelay: "0.25s" }}
         >
           TypeScript, NestJS, Next.js and PostgreSQL. Shipping production
-          systems with engineering teams in Finland and the Netherlands since
-          2024, from multi-tenant SaaS and Stripe billing at Carsu to an MVP
+          systems with engineering teams in Sweden, Finland and the Netherlands since
+          2023, from multi-tenant SaaS and Stripe billing at Carsu to an MVP
           delivered end to end at Roar Media Studio. Based in Dhaka and
           relocating to Germany.
         </p>
@@ -67,7 +67,7 @@ const GetStarted = () => (
             Since 2023
           </strong>
           <span className="text-slate-600 dark:text-slate-300">
-            production engineering, with European teams since 2024
+            production engineering with European teams
           </span>
         </div>
         <div className={statCardStyles}>
@@ -101,7 +101,7 @@ const GetStarted = () => (
           height={612}
           width={408}
           sizes="(min-width: 1024px) 24rem, 100vw"
-          alt="Mohammed Arshad, Senior Full-Stack Software Engineer"
+          alt="Mohammed Arshad, Full-Stack Software Engineer"
         />
       </div>
     </div>

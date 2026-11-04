@@ -6,7 +6,7 @@ import { pageMetadata } from "@/app/_lib/metadata";
 export const metadata = pageMetadata({
   title: "About",
   description:
-    "Mohammed Arshad, Senior Full-Stack Software Engineer: production systems since 2023, European teams since 2024, based in Dhaka and relocating to Germany.",
+    "Mohammed Arshad, Full-Stack Software Engineer: production systems with European teams since 2023, based in Dhaka and relocating to Germany.",
   path: "/about",
 });
 
@@ -34,10 +34,9 @@ const AboutPage = () => (
           to end.
         </h1>
         <p className="text-base leading-7 text-slate-600 dark:text-slate-300 lg:text-lg">
-          I&apos;m Mohammed Arshad, a Senior Full-Stack Software Engineer based
-          in Dhaka, Bangladesh. I&apos;ve built production systems since 2023,
-          and since 2024 with engineering teams in Finland and the Netherlands:
-          currently as a Senior Software Engineer at Roar Media Studio, and
+          I&apos;m Mohammed Arshad, a Full-Stack Software Engineer based
+          in Dhaka, Bangladesh. I&apos;ve built production systems since 2023 with engineering teams in Sweden, Finland and the Netherlands:
+          currently as a Full Stack Software Engineer at Roar Media Studio, and
           before that on the billing, security and backend architecture of
           Carsu&apos;s multi-tenant SaaS platform.
         </p>
@@ -49,7 +48,7 @@ const AboutPage = () => (
           sole engineer in 12 weeks and run its infrastructure solo.
         </p>
         <p className="text-base leading-7 text-slate-600 dark:text-slate-300 lg:text-lg">
-          I&apos;m looking for a senior engineering role in Germany and can
+          I&apos;m looking for a full stack software engineering role in Germany and can
           relocate within 4–6 weeks of an offer. I&apos;m eligible for the EU
           Blue Card via the IT specialist pathway, speak English fluently and
           am at German B1 in structured coursework, targeting B2 by Q3 2027.

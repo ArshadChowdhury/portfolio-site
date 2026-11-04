@@ -6,7 +6,7 @@ import { pageMetadata } from "@/app/_lib/metadata";
 export const metadata = pageMetadata({
   title: "Contact",
   description:
-    "Contact Mohammed Arshad, Senior Full-Stack Software Engineer, about senior engineering roles in Germany or full-stack, backend and payments work.",
+    "Contact Mohammed Arshad, Full-Stack Software Engineer, about software engineering roles in Germany or full-stack, backend and payments work.",
   path: "/contact",
 });
 
@@ -21,7 +21,7 @@ const ContactPage = () => {
           Get in touch
         </h1>
         <p className="mt-5 text-base leading-7 text-slate-600 dark:text-slate-300 lg:text-lg">
-          Hiring for a senior full-stack or backend role in Germany, or want to
+          Hiring for a full-stack or backend role in Germany ?? or want to
           talk about multi-tenant SaaS, payments or NestJS? Send a message and
           I&apos;ll get back to you soon. I&apos;m used to working across time
           zones with European teams.

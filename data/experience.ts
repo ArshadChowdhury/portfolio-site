@@ -11,7 +11,7 @@ export type Experience = {
 export const experience: Experience[] = [
   {
     period: "11/2025 – present",
-    title: "Senior Software Engineer",
+    title: "Full Stack Software Engineer",
     company: "Roar Media Studio",
     location: "Vantaa, Finland",
     workMode: "Remote",
@@ -23,8 +23,8 @@ export const experience: Experience[] = [
     stack: ["Next.js", "NestJS", "PostgreSQL", "CI/CD"],
   },
   {
-    period: "04/2026 – 10/2026",
-    title: "Senior Software Engineer",
+    period: "04/2026 – 11/2026",
+    title: "Full Stack Software Engineer",
     company: "Carsu Technologies",
     location: "Amsterdam, Netherlands",
     workMode: "Remote",
@@ -37,7 +37,7 @@ export const experience: Experience[] = [
     stack: ["NestJS", "Next.js", "PostgreSQL", "Stripe", "Azure"],
   },
   {
-    period: "01/2024 – 11/2025",
+    period: "01/2024 – 10/2025",
     title: "Full-Stack Software Engineer",
     company: "Tutors Finland Oy",
     location: "Espoo, Finland",
@@ -51,7 +51,7 @@ export const experience: Experience[] = [
     stack: ["Angular", "Node.js", "Express", "AWS", "Google Cloud"],
   },
   {
-    period: "01/2023 – 12/2023",
+    period: "03/2023 – 12/2023",
     title: "Software Engineer (Frontend)",
     company: "Repliq Limited",
     location: "Dhaka, Bangladesh",

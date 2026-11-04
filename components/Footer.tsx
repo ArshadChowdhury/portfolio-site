@@ -74,7 +74,7 @@ const Footer = () => {
                 id="footer-cta-heading"
                 className="mt-3 text-2xl font-semibold text-slate-950 dark:text-white lg:text-4xl"
               >
-                Hiring a senior full-stack engineer in Germany?
+                Hiring a full-stack engineer in Germany?
               </h2>
               <p className="mt-3 max-w-xl text-sm leading-6 text-slate-600 dark:text-slate-300 lg:text-base">
                 I bring backend depth in TypeScript, NestJS and PostgreSQL,
@@ -117,7 +117,7 @@ const Footer = () => {
               <div>
                 <span className="block text-lg font-semibold">Mohammed Arshad</span>
                 <span className="block text-xs text-slate-600 dark:text-slate-300">
-                  Senior Full-Stack Software Engineer
+                  Full-Stack Software Engineer
                 </span>
               </div>
             </Link>
@@ -126,11 +126,10 @@ const Footer = () => {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
               </span>
-              Available for senior roles
+              Available for senior roles as well
             </span>
             <p className="max-w-md text-sm leading-6 text-slate-600 dark:text-slate-300">
-              Production systems since 2023, the last three years with teams in
-              Finland and the Netherlands: multi-tenant SaaS, Stripe billing,
+              Production systems since 2023, the last four years with teams in Sweden, Finland and the Netherlands: multi-tenant SaaS, Stripe billing,
               APIs and the infrastructure behind them.
             </p>
             <ul className="flex flex-wrap gap-2">

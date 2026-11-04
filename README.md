@@ -1,6 +1,6 @@
 # Mohammed Arshad – portfolio
 
-Personal site of Mohammed Arshad, Senior Full-Stack Software Engineer.
+Personal site of Mohammed Arshad, Full-Stack Software Engineer.
 Live at <https://arshadchowdhury.vercel.app>.
 
 ## Stack

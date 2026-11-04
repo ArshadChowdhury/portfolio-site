@@ -10,7 +10,7 @@ import { experience, education, languages } from "@/data/experience";
 export const metadata = pageMetadata({
   title: "Experience",
   description:
-    "Experience of Mohammed Arshad: Senior Software Engineer at Roar Media Studio and Carsu Technologies, earlier at Tutors Finland Oy and Repliq Limited.",
+    "Experience of Mohammed Arshad: Full Stack Software Engineer at Roar Media Studio and Carsu Technologies, earlier at Tutors Finland Oy and Repliq Limited.",
   path: "/experience",
 });
 
@@ -24,7 +24,7 @@ const ExperiencePage = () => (
         Experience
       </span>
       <h1 className="mt-3 text-3xl font-semibold lg:text-5xl">
-        Production engineering since 2023, with European teams since 2024
+        Production engineering since 2023 with European teams
       </h1>
       <p className="mt-5 text-base leading-7 text-slate-600 dark:text-slate-300 lg:text-lg">
         Production systems for companies in the Netherlands, Finland and

@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
-export const alt = "Mohammed Arshad, Senior Full-Stack Software Engineer";
+export const alt = "Mohammed Arshad, Full-Stack Software Engineer";
 
 // Shared 1200x630 social banner used by both the Open Graph and Twitter
 // image routes. Kept in a private (_lib) folder so it is not a route itself.
@@ -33,7 +33,7 @@ export function renderOgImage() {
             color: "#7dd3fc",
           }}
         >
-          Senior Full-Stack Software Engineer
+          Full-Stack Software Engineer
         </div>
         <div
           style={{
@@ -57,7 +57,7 @@ export function renderOgImage() {
             color: "#e2e8f0",
           }}
         >
-          Mohammed Arshad · Open to senior roles in Germany
+          Mohammed Arshad · Open to software engineering roles in Germany
         </div>
       </div>
     ),

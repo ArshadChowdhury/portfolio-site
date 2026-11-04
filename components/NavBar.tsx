@@ -19,7 +19,7 @@ const NavBar = () => {
           />
           <span>
             <span className="block text-base font-medium lg:text-lg">Mohammed Arshad</span>
-            <span className="block text-xs">Senior Full-Stack Engineer</span>
+            <span className="block text-xs">Full-Stack Engineer</span>
           </span>
         </Link>
         <div className="hidden items-center gap-4 lg:flex">

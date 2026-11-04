@@ -23,7 +23,7 @@ export const projectsInfo: Project[] = [
     projectHeading: "Carsu",
     company: "Carsu Technologies, Amsterdam",
     period: "04/2026 – 10/2026",
-    role: "Senior Software Engineer: billing, security and multi-tenant backend",
+    role: "Full Stack Software Engineer: billing, security and multi-tenant backend",
     stack: ["NestJS", "Next.js", "PostgreSQL", "Stripe", "Azure"],
     projectDetails:
       "Multi-tenant SaaS platform for automotive workshops, localised in 8 languages and serving customers across Europe. I own the Stripe billing domain: webhook-driven state machines, idempotent money paths, trials, promotional credits, refunds and dispute clawbacks. I also closed fail-open authorisation gaps across the multi-tenant permission system through systematic route audits, role guards, tenant scoping and a permission-key architecture.",

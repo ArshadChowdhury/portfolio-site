@@ -117,7 +117,7 @@ const ProjectsPage = () => (
       href="/contact"
       className="learn-more-container-about group my-4 flex w-fit cursor-pointer items-center gap-4 self-center text-sm font-semibold text-sky-700 dark:text-sky-400 lg:text-lg"
     >
-      Hiring for a senior role? Get in touch
+      Hiring for a full stack engineer role? Get in touch
       <ArrowLongRightIcon className="w-6 transform transition-transform group-hover:translate-x-1" />
     </Link>
   </section>
