@@ -22,7 +22,7 @@ export const projectsInfo: Project[] = [
     imageSrc: "/carsu_desktop.png",
     projectHeading: "Carsu",
     company: "Carsu Technologies, Amsterdam",
-    period: "04/2026 – 10/2026",
+    period: "04/2026 – 11/2026",
     role: "Full Stack Software Engineer: billing, security and multi-tenant backend",
     stack: ["NestJS", "Next.js", "PostgreSQL", "Stripe", "Azure"],
     projectDetails:
@@ -34,7 +34,7 @@ export const projectsInfo: Project[] = [
     imageSrc: "/chefk_desktop.png",
     projectHeading: "Chef Koochooloo",
     company: "Tutors Finland Oy, Espoo",
-    period: "2024 – 2025",
+    period: "01/2024 – 10/2025",
     role: "Technical lead: Angular migration, API re-architecture and cloud migration",
     stack: ["Angular", "Express", "AWS S3", "Google Cloud"],
     projectDetails:
@@ -46,7 +46,7 @@ export const projectsInfo: Project[] = [
     imageSrc: "/project_2.png",
     projectHeading: "Supplers",
     company: "Repliq Limited, Dhaka",
-    period: "2023",
+    period: "03/2023 - 12/2023",
     role: "Feature development on a production marketplace: authentication, real-time chat, Stripe payments and admin dashboard",
     stack: ["Next.js", "MobX", "TanStack Query", "Stripe", "Formik"],
     projectDetails:
@@ -57,6 +57,8 @@ export const projectsInfo: Project[] = [
   {
     imageSrc: "/project_1.png",
     projectHeading: "My Dubai Properties",
+    company: "Freelance for a client",
+    period: "01/2022 - 09/2022",
     role: "Full-stack development for a real estate product",
     stack: ["Next.js", "Express", "React Hook Form", "TanStack Query", "GSAP"],
     projectDetails:
