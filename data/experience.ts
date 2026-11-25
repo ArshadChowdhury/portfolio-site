@@ -74,7 +74,7 @@ export type Education = {
 
 export const education: Education[] = [
   {
-    period: "03/2020 – 12/2022",
+    period: "03/2020 – 02/2023",
     title: "Full-stack software engineering, self-directed",
     institution: "freeCodeCamp, project-based learning, open source",
     details:
